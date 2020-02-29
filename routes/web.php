@@ -15,5 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes(['register'=>false]);
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/cars', 'CarTypeController@getCarTypes')->name('cars');
+Route::get('/services', 'ServiceController@getServices')->name('services');
+Route::get('/sub/services', 'SubServiceController@getSubServices')->name('sub_services');
 Route::get('booking_form','BookingController@booking_from')->name('booking_form');
 Route::post('create_booking_details','BookingController@create_booking_details')->name('create_booking_details');
+
