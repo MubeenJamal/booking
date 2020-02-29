@@ -17,6 +17,7 @@ class AddServicesTable extends Migration
         {
             $table->bigIncrements('id');
             $table->string('services_type');
+            $table->string('icon')->nullable();
             $table->timestamps();
         });
     }

@@ -17,6 +17,7 @@ class AddCarTypesTable extends Migration
         {
             $table->bigIncrements('id');
             $table->string('car_type');
+            $table->string('icon')->nullable();
             $table->timestamps();
         });
     }
