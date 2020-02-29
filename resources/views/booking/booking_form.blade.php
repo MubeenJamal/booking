@@ -14,10 +14,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
 
 	<!-- Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<!-- <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" /> -->
 
 	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<!-- <link type="text/css" rel="stylesheet" href="css/style.css" /> -->
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,8 +34,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="booking-form">
-						<form action="{{route('create_booking_details')}}" method="post">
-							{{csrf_field()}}
+						<form action="" method="post" id="bookingForm">
+							<meta name="csrf-token" content="{{ csrf_token() }}" />
 							<div class="row no-margin">
 								<div class="col-md-3">
 									<div class="form-header">
@@ -47,13 +47,13 @@
 										<div class="col-md-4">
 											<div class="form-group">
 												<span class="form-label">Check In</span>
-												<input class="form-control" type="date" name="start_date">
+												<input class="form-control" type="date" name="start_date" id="start_date">
 											</div>
 										</div>
 										<div class="col-md-2">
 											<div class="form-group">
 												<span class="form-label">check in time</span>
-												<select class="form-control" name="start_time">
+												<select class="form-control" name="start_time" id="start_time">
 													<option>1</option>
 													<option>2</option>
 													<option>3</option>
@@ -64,14 +64,14 @@
 										<div class="col-md-4">
 											<div class="form-group">
 												<span class="form-label">Check out</span>
-												<input class="form-control" type="date" name="end_date">
+												<input class="form-control" type="date" name="end_date" id="end_date">
 											</div>
 										</div>
 										
 										<div class="col-md-2">
 											<div class="form-group">
 												<span class="form-label">check out time</span>
-												<select class="form-control" name="end_time">
+												<select class="form-control" name="end_time" id="end_time">
 													<option>0</option>
 													<option>1</option>
 													<option>2</option>
@@ -96,3 +96,32 @@
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	
+	$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	    }
+	});
+
+	$(document).ready(function(){
+		$('#bookingForm').on('submit', function(e) {
+	       e.preventDefault(); 
+	       var start_date = $('#start_date').val();
+	       var start_time = $('#start_time').val();
+	       var end_date = $('#end_date').val();
+	       var end_time = $('#end_time').val();
+	       $.ajax({
+
+	           type: "POST",
+	           url: 'create_booking_details',
+	           data: {start_date:start_date, start_time:start_time, end_date:end_date, end_time:end_time},
+	           success: function( msg ) {
+	               alert( msg );
+	           }
+	       });
+	   });
+	});
+	
+</script>

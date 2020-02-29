@@ -21,6 +21,7 @@ class BookingController extends Controller
     	);
     	// $data = request()->except(['submit']);
     	$date_time = Booking::insert($data);
+    	
     	dd($date_time);
     	return view('booking.booking_form');
     }
