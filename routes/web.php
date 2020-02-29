@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('booking_form','BookingController@booking_from')->name('booking_form');
+Route::post('create_booking_details','BookingController@create_booking_details')->name('create_booking_details');
