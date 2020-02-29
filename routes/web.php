@@ -24,3 +24,6 @@ Route::get('/sub/services', 'SubServiceController@getSubServices')->name('sub_se
 Route::get('booking_form','BookingController@booking_from')->name('booking_form');
 Route::post('create_booking_details','BookingController@create_booking_details')->name('create_booking_details');
 
+Route::get('payment', 'PayPalController@payment')->name('payment');
+Route::get('cancel', 'PayPalController@cancel')->name('payment.cancel');
+Route::get('payment/success', 'PayPalController@success')->name('payment.success');
