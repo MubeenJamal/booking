@@ -1,0 +1,301 @@
+/* Other CSS starts here*/
+
+body{
+  overflow-x: hidden;
+  font-family: "Open Sans", Sans-serif;
+}
+
+.section1{
+  padding: 30px 60px;
+  background-color: #333;
+  margin: 0 60px;
+}
+
+.section1-header h3{
+  color: #fff;
+  text-align: center;
+  font-size: 2.6666666666667rem;
+  padding-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin:0;
+}
+
+.section1-header p{
+  color: #fff;
+  margin-bottom: 1.75em;
+  text-align: center;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+.section1-form label{
+  width: 100%;
+  font-size: 20px;
+  text-align: left;
+  color: #FCC916;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.date{
+  position: relative;
+}
+
+.date input{
+  cursor: pointer;
+}
+
+.date .input-group-addon{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.date .input-group-addon .fa-calendar-alt{
+  color: #9a9a9a;
+}
+
+.section1-form .form-control::placeholder{
+  color: #9a9a9a;
+  font-size: 14px;
+  font-size: 400;
+}
+
+.section1-form select{
+  color: #9a9a9a;
+}
+
+.page1{
+  background-color: #fff;
+  margin: 0 60px;
+  padding: 15px;
+}
+
+.page1-header h3{
+  color: #000;
+  text-align: center;
+  font-size: 2.6666666666667rem;
+  padding-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin:0;
+}
+
+.page1-header p{
+  text-align: center;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 1.75em;
+}
+
+.page1-car img{
+  max-height: 90px;
+  display: block;
+  margin: 0 auto;
+}
+
+.page1-btn{
+  text-align: right;
+  margin: 1.5rem 80px;
+}
+
+.arrival-time {
+  background: #fcc916;
+  margin-bottom: 30px;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+.arri {
+  color: #3a3a3a;
+  display: inline-block;
+  font-weight: bold;
+  padding: 5px 30px;
+  margin: 0px 20px;
+  text-align: center;
+}
+
+.arrival-time:after {
+    content: '';
+    background-image: url(../images/parking-lines.png);
+    width: 220px;
+    height: 110px;
+    display: inline-block;
+    position: absolute;
+    background-size: 100%;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: fliph;
+    filter: fliph;
+}
+
+.arrival-time:before {
+    content: '';
+    background-image: url(../images/parking-lines.png);
+    width: 220px;
+    height: 110px;
+    display: inline-block;
+    position: absolute;
+    background-size: 100%;
+    right: 0;
+    top: 0 background-repeat: no-repeat;
+}
+
+/*.arri.services {
+  padding: 5px 100px;
+}*/
+
+.sdate {
+  font-size: 25px;
+}
+
+.total-price, .service {
+  line-height: 44px;
+}
+
+.total-price {
+  font-size: 35px;
+}
+
+/* OTHER CSS ends here*/
+
+/*Custom Navbar starts here*/
+
+.custom-navbar{
+  padding: 30px 0;
+}
+
+.custom-navbar ul li a{
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+}
+
+.custom-navbar ul li a:before{
+  content: "";
+  position: absolute;
+  top:100%;
+  left:0;
+  width: 0;
+  margin-top: 5px;
+  border-bottom: 3px solid #fff;
+  transition: all 0.4s linear;
+}
+
+.custom-navbar ul li a:hover:before{
+  width: 100%;
+}
+
+.inner-custom-navbar{
+  padding: 30px 0;
+  background-color: #000;
+}
+
+.inner-custom-navbar ul li a{
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+}
+
+.inner-custom-navbar ul li a:before{
+  content: "";
+  position: absolute;
+  top:100%;
+  left:0;
+  width: 0;
+  margin-top: 5px;
+  border-bottom: 3px solid #fff;
+  transition: all 0.4s linear;
+}
+
+.inner-custom-navbar ul li a:hover:before{
+  width: 100%;
+}
+/*Custom Navbar ends here*/
+
+/* BUTTON CSS starts here*/
+.custom-btn {
+  background: #FCC916;
+  color: #000;
+  font-size: 17px;
+  padding: 7px 40px;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.custom-btn:hover {
+  text-decoration: none;
+  background-color: #fff;
+  color: #333;
+  border-color: #FCC916;
+  transition: 1s all linear;
+}
+/* BUTTON CSS ends here*/
+
+
+/* SECTIONS CSS starts here */
+
+.bg-img{
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.inner-bg{
+  background-color: #cccccc;
+}
+
+.footer-section{
+  padding-top: 20px;
+  background-color: #fff;
+  border-style: solid;
+  border-top-color: #d82a29;
+  border-right-color: #fff;
+  border-left-color: #fff;
+  border-bottom-color: #fff;
+}
+/* SECTIONS CSS ends here*/
+
+/*Scrollbar Designing starts here*/
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    box-shadow: inset 0 0 5px grey;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    transition: all .3s linear;
+  }
+/*Scrollbar Desgining ends here*/

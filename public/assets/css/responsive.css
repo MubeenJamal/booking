@@ -1,0 +1,57 @@
+/* RESPONSIVE CSS here*/
+
+/*Mobiles Devices*/
+  @media (max-width: 575px) {
+
+    .section1 {
+      margin: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .section1-header h3 {
+      font-size: 28px;
+      line-height: 1.5;
+    }
+    .navbar-toggler .fa-bars{
+      color: #fff;
+    }
+    .navbar-toggler{
+      margin-left: auto;
+    }
+    .navbar-brand {
+      display: contents;
+    }
+    .custom-navbar ul li a {
+      margin-left: 15px;
+    }
+    .arrival-time:before {
+      background-image:none;
+    }
+    .arrival-time:after {
+      background-image:none;
+    }
+    .page1-header h3 {
+      font-size: 30px;
+    }
+  }
+
+  /*IPAD*/
+  @media (min-width: 768px) and (max-width: 991px) {
+/*    body {
+      background-color: yellow;
+    }*/
+  }
+
+  /*IPAD PRO*/
+  @media (min-width: 992px) and (max-width: 1199px) {
+/*    body {
+      background-color: lightgreen;
+    }*/
+  }
+
+  /*Large Devices*/
+  @media (min-width: 1920px) {
+/*    body {
+      background-color: lightblue;
+    }*/
+  }
