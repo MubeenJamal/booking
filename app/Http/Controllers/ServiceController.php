@@ -7,10 +7,17 @@ use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
+
+	public function select_service(Request $request)
+	{
+		return view('service');
+	}
     public function getServices()
     {
-        $services = Service::all();
+        $services['services'] = Service::all();
 
-        dd($services);
+        // dd($services);
+        return view('service')->with($services);
     }
+
 }

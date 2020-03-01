@@ -70,7 +70,10 @@ body{
 .page1{
   background-color: #fff;
   margin: 0 60px;
-  padding: 15px;
+  padding: 15px 15px 0 15px;
+  -moz-box-shadow: -5px -5px 5px #b5b5b7;
+  -webkit-box-shadow: -5px -5px 5px #b5b5b7;
+  box-shadow: -5px -5px 5px #b5b5b7;
 }
 
 .page1-header h3{
@@ -99,7 +102,7 @@ body{
 
 .page1-btn{
   text-align: right;
-  margin: 1.5rem 80px;
+  margin: 2rem 0;
 }
 
 .arrival-time {
@@ -114,8 +117,8 @@ body{
   color: #3a3a3a;
   display: inline-block;
   font-weight: bold;
-  padding: 5px 30px;
-  margin: 0px 20px;
+  padding: 1px 0;
+  margin: 0px 18px;
   text-align: center;
 }
 
@@ -147,23 +150,193 @@ body{
     position: absolute;
     background-size: 100%;
     right: 0;
-    top: 0 background-repeat: no-repeat;
+    top: 0;
+    background-repeat: no-repeat;
 }
-
-/*.arri.services {
-  padding: 5px 100px;
-}*/
 
 .sdate {
   font-size: 25px;
+  color: #000;
 }
 
-.total-price, .service {
-  line-height: 44px;
+.services.arri .service{
+  color: #000;
 }
 
 .total-price {
   font-size: 35px;
+}
+
+.footer-icon{
+  margin-top: 20px;
+}
+
+.footer-icon img{
+  border-radius: 50%;
+  width:91px;
+  display: block;
+  margin:0 auto;
+}
+
+.blue-border1{
+  border: 4px solid #41bae9;
+  width: 100%;
+}
+
+.blue-border2{
+  border: 4px solid #b3e3ec;
+  width: 100%;
+}
+
+.black-bg{
+  background-color: #000;
+  padding: 10px;
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-bottom: 8px solid #fff;
+}
+
+.black-bg p{
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  margin:0;
+  font-size: 18px;
+}
+
+.page2{
+  background-color: #fff;
+  margin: 0 60px;
+  padding: 15px 15px 0 15px;
+  -moz-box-shadow: -5px -5px 5px #b5b5b7;
+  -webkit-box-shadow: -5px -5px 5px #b5b5b7;
+  box-shadow: -5px -5px 5px #b5b5b7;
+}
+
+.page2-radio{
+  margin-bottom: 20px;
+}
+
+.page2-header h3{
+  color: #000;
+  text-align: center;
+  font-size: 2.6666666666667rem;
+  padding-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin:0;
+}
+
+.page2-header p{
+  text-align: center;
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.page2-radio .custom-control .custom-control-label{
+  text-align: center;
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1;
+}
+
+.page2-radio .custom-control{
+  text-align: center;
+
+}
+
+.page2-radio p{
+  text-align: center;
+  font-size: 24px;
+  margin:0;
+}
+
+.black-bg p span {
+    color: #eace49;
+}
+
+.black-bg p span:last-child {
+    text-decoration: underline;
+}
+
+.page3{
+  background-color: #fff;
+  margin: 0 60px;
+  padding: 15px 15px 0 15px;
+  -moz-box-shadow: -5px -5px 5px #b5b5b7;
+  -webkit-box-shadow: -5px -5px 5px #b5b5b7;
+  box-shadow: -5px -5px 5px #b5b5b7;
+}
+
+.page3-header h3{
+  color: #000;
+  text-align: center;
+  font-size: 2.6666666666667rem;
+  padding-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin:0;
+}
+
+.page3 .page3-header p{
+  text-align: center;
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.page3-radio{
+  margin-bottom: 20px;
+}
+
+.page3-radio .custom-control .custom-control-label{
+  text-align: center;
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1;
+}
+
+.page3-radio .custom-control{
+  text-align: left;
+}
+
+.page3-radio p{
+  text-align: center;
+  font-size: 18px;
+  margin:0;
+}
+
+.page3-radio .custom-radio{
+  padding-left: 150px;
+}
+
+/* HIDE RADIO */
+.page1-car [type="radio"] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.page1-car label{
+  display: block;
+}
+
+/* IMAGE STYLES */
+.page1-car [type="radio"] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+.page1-car [type="radio"]:checked + img {
+  opacity: .5;
 }
 
 /* OTHER CSS ends here*/
@@ -238,7 +411,7 @@ body{
   color: #000;
   font-size: 17px;
   padding: 7px 40px;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: 2px;
 }
 
@@ -247,6 +420,24 @@ body{
   background-color: #fff;
   color: #333;
   border-color: #FCC916;
+  transition: 1s all linear;
+}
+
+.custom-btn2 {
+  background: #000;
+  color: #eace49;
+  font-size: 14px;
+  padding: 5px 30px;
+  font-weight: 700;
+  border-radius: 2px;
+  text-decoration: underline;
+}
+
+.custom-btn2:hover {
+  /*text-decoration: none;*/
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
   transition: 1s all linear;
 }
 /* BUTTON CSS ends here*/

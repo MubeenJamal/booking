@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
         <title>Welcome To ParkMe</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="{{ asset('public/assets/images/favicon.ico')}}" type="image/x-icon" media="all">
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" media="all">
         <meta name="title" content="Park Me">
   		<meta name="description" content="">
   		<meta name="keywords" content="">
   		<meta name="author" content="ParkMe">
 
-        <link rel="stylesheet" href="{{ asset('public/assets/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('public/assets/fonts/fontawesome/css/all.css')}}">
+        <link rel="stylesheet" href="{{ asset('public/assets/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('public/assets/fonts/fontawesome/css/all.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('public/assets/css/normalize.css')}}">
-        <link rel="stylesheet" href="{{ asset('public/assets/css/style.css')}}">
+        <link rel="stylesheet" href="{{ asset('public/assets/css/normalize.css') }}">
+        <link rel="stylesheet" href="{{ asset('public/assets/css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('public/assets/css/responsive.css') }}">
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
@@ -26,7 +26,7 @@
 		<nav class="navbar navbar-expand-sm custom-navbar">
 			<div class="container">
 			    <a class="navbar-brand" href="index.html">
-					<img src="{{ asset('public/assets/images/logo.svg')}}" style="width: 15%;" class="img-fluid" alt="img" />
+					<img src="public/assets/images/logo.svg" style="width: 15%;" class="img-fluid" alt="img" />
 				</a>
 			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 			    	<span class="fa fa-bars"></span>
@@ -64,7 +64,7 @@
 									<div class="form-group">
 			                        	<label>arrivee</label>
 										<div class="date">
-										    <input class="form-control form-control-lg" type="text" placeholder="Select Date" name="start_date" />
+										    <input class="form-control form-control-lg" type="text" placeholder="Select Date" />
 										    <span class="input-group-addon">
 										    	<i class="fa fa-calendar-alt"></i>
 										    </span>
@@ -77,7 +77,7 @@
 								<div class="section1-form">
 									<div class="form-group">
 									  <label class="invisible" for="arriveeTime">arrivee</label>
-									  <select class="form-control form-control-lg" id="arriveeTime" name="start_time">
+									  <select class="form-control form-control-lg" id="arriveeTime">
 									    <option>5:00</option>
 									    <option>5:15</option>
 									    <option>5:30</option>
@@ -92,7 +92,7 @@
 									<div class="form-group">
 			                        	<label>depart</label>
 										<div class="date">
-										    <input class="form-control form-control-lg" type="text" placeholder="Select Date" name="end_date" />
+										    <input class="form-control form-control-lg" type="text" placeholder="Select Date" />
 										    <span class="input-group-addon">
 										    	<i class="fa fa-calendar-alt"></i>
 										    </span>
@@ -105,7 +105,7 @@
 								<div class="section1-form">
 									<div class="form-group">
 									  <label class="invisible" for="departTime">depart</label>
-									  <select class="form-control custom-select-lg" id="departTime" name="end_time">
+									  <select class="form-control custom-select-lg" id="departTime">
 									    <option>5:00</option>
 									    <option>5:15</option>
 									    <option>5:30</option>
@@ -113,7 +113,7 @@
 									  </select>
 									</div>
 									<div class="form-group text-right mt-4">
-										<a href="{{route('cars')}}" class="custom-btn">Je reserve ></a>
+										<a href="/" class="custom-btn">Je reserve ></a>
 									</div>
 								</div>
 							</div>
@@ -128,9 +128,9 @@
 
 	    <!-- JavaSrcipts -->
 
-	    <script src="{{ asset('public/assets/js/jquery.min.js')}}"></script>
-		<script src="{{ asset('public/assets/js/bootstrap.min.js')}}"></script>
-		<script src="{{ asset('public/assets/js/custom.js')}}"></script>
+	    <script src="{{ asset('public/assets/js/jquery.min.js') }}"></script>
+		<script src="{{ asset('public/assets/js/bootstrap.min.js') }}"></script>
+		<script src="{{ asset('public/assets/js/custom.js') }}"></script>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
 
