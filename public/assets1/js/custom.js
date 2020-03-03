@@ -69,7 +69,6 @@ function SmoothScroll(target, speed, smooth) {
 
 $(function () { $(".date").datepicker({ }) });
 
-/* Page 2 Grey Circle show hide boxes starts here*/
 
 $(".box2,.box3").hide();
 $(".box1").show();
@@ -88,64 +87,3 @@ $(".img3").click(function(){
   $(".box3").show();
   $(".box1,.box2").hide();
 });
-
-/* Page 2 Grey Circle show hide boxes ends here*/
-
-/* Index button css starts here */
-
-$("#page1,#page2,#page3").hide();
-$("#index").show();
-
-$("#index-btn").click(function(){
-  $("#page1").show();
-  $("#page2,#page3,#index").hide();
-  $("body").addClass("inner-bg");
-  $("body").removeClass("bg-img");
-
-  $(".navbar").addClass("inner-custom-navbar");
-  $(".navbar").removeClass("custom-navbar");
-});
-
-/* Index button css ends here */
-
-/* Page 1 button css starts here */
-
-$("#page1Next-btn").click(function(){
-  $("#page2").show();
-  $("#index,#page1,#page3").hide();
-});
-
-$("#page1Prev-btn").click(function(){
-  $("#index").show();
-  $("#page1,#page2,#page3").hide();
-  $("body").removeClass("inner-bg");
-  $("body").addClass("bg-img");
-
-  $(".navbar").removeClass("inner-custom-navbar");
-  $(".navbar").addClass("custom-navbar");
-});
-
-/* Page 1 button css ends here */
-
-/* Page 2 button css starts here */
-
-$("#page2Next-btn").click(function(){
-  $("#page3").show();
-  $("#index,#page1,#page2").hide();
-});
-
-$("#page2Prev-btn").click(function(){
-  $("#page1").show();
-  $("#index,#page2,#page3").hide();
-});
-
-/* Page 2 button css starts here */
-
-/* Page 3 button css starts here */
-
-$("#page3Prev-btn").click(function(){
-  $("#page2").show();
-  $("#index,#page1,#page3").hide();
-});
-
-/* Page 3 button css ends here */
