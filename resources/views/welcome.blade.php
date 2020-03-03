@@ -191,17 +191,17 @@
 				            </div>
 
 				            <div class="row">
-								
+								@foreach($car_types as $car_type)
 	                    		<div class="col-sm-4 col-12">
 									<div class="page1-car">
 										<label>
-											<input type="radio" name="cat_type" value="small" checked />
-											<img src="{{ asset('public/assets/images/car1.png')}}" class="img-fluid" alt="img" />
+											<input type="radio" name="cat_type" value="{{$car_type->car_type}}" checked />
+											<img src="{{ asset('public/assets/images/'.$car_type->icon)}}" class="img-fluid" alt="img" />
 										</label>
 									</div>
 								</div>
-
-								<div class="col-sm-4 col-12">
+								@endforeach
+								<!-- <div class="col-sm-4 col-12">
 									<div class="page1-car">
 										<label>
 											<input type="radio" name="cat_type" value="medium" />
@@ -217,7 +217,7 @@
 											<img src="{{ asset('public/assets/images/car3.png')}}" class="img-fluid" alt="img" />
 										</label>
 									</div>
-								</div>
+								</div> -->
 				            </div>
 
 				            <div class="row">
@@ -233,12 +233,14 @@
 			        	<div class="row">
 							<div class="col-sm-6 offset-sm-3">
 								<div class="row">
+									@foreach($services as $service)
 									<div class="col-sm-4 col-4">
 										<div class="footer-icon">
-											<img src="{{ asset('public/assets/images/img1.png')}}" class="img-fluid" alt="img" />
+											<img src="{{ asset('public/assets/images/'.$service->icon)}}" class="img-fluid" alt="img" />
 										</div>
 									</div>
-									<div class="col-sm-4 col-4">
+									@endforeach
+									<!-- <div class="col-sm-4 col-4">
 										<div class="footer-icon">
 											<img src="{{ asset('public/assets/images/img2.png')}}" class="img-fluid" alt="img" />
 										</div>
@@ -247,7 +249,7 @@
 										<div class="footer-icon">
 											<img src="{{ asset('public/assets/images/img3.png')}}" class="img-fluid" alt="img" />
 										</div>
-									</div>
+									</div> -->
 								</div>
 							</div>
 			        	</div>
@@ -331,24 +333,23 @@
 								<div class="page2-radio">
 
 									<div class="row">
+										@foreach($washing as $wash)
 										<div class="col-sm-6 col-8">
 											<form>
 											  <div class="custom-control custom-radio">
-
-											    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="customEx">
-
-											    <label class="custom-control-label" for="customRadio">Plein de carburant 1</label>
+											    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="{{$wash->service_name}}">
+											    <label class="custom-control-label" for="customRadio">{{$wash->service_name}}</label>
 											  </div>
-
+											
 											</form>
 										</div>
-
 										<div class="col-sm-6 col-4">
 											<p>
-												<small>1</small>
-												<b>0</b> €
+												<!-- <small>1</small> -->
+												<b>{{$wash->price}}</b> €
 											</p>
 										</div>
+										@endforeach
 									</div>
 									
 								</div>
@@ -394,13 +395,14 @@
 								<div class="page2-radio">
 
 									<div class="row">
+										@foreach($gasoline as $fuel)
 										<div class="col-sm-6 col-8">
 											<form>
 											  <div class="custom-control custom-radio">
 
-											    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="customEx">
+											    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="{{$fuel->service_name}}">
 
-											    <label class="custom-control-label" for="customRadio">Plein de carburant 2</label>
+											    <label class="custom-control-label" for="customRadio">{{$fuel->service_name}}</label>
 											  </div>
 
 											</form>
@@ -408,10 +410,11 @@
 
 										<div class="col-sm-6 col-4">
 											<p>
-												<small>1</small>
-												<b>0</b> €
+												<!-- <small>1</small> -->
+												<b>{{$fuel->price}}</b> €
 											</p>
 										</div>
+										@endforeach
 									</div>
 									
 								</div>
@@ -457,13 +460,14 @@
 								<div class="page2-radio">
 
 									<div class="row">
+										@foreach($maintenance as $mechanic)
 										<div class="col-sm-6 col-8">
 											<form>
 											  <div class="custom-control custom-radio">
 
-											    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="customEx">
+											    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="{{$mechanic->service_name}}">
 
-											    <label class="custom-control-label" for="customRadio">Plein de carburant 3</label>
+											    <label class="custom-control-label" for="customRadio">{{$mechanic->service_name}}</label>
 											  </div>
 
 											</form>
@@ -471,10 +475,11 @@
 
 										<div class="col-sm-6 col-4">
 											<p>
-												<small>1</small>
-												<b>0</b> €
+												<!-- <small>1</small> -->
+												<b>{{$mechanic->price}}</b> €
 											</p>
 										</div>
+										@endforeach
 									</div>
 									
 								</div>
