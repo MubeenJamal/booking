@@ -16,9 +16,9 @@ class PayPalController extends Controller
         $data = [];
         $data['items'] = [
             [
-                'name' => 'ItSolutionStuff.com',
+                'name' => 'Car booking',
                 'price' => 100,
-                'desc'  => 'Description for ItSolutionStuff.com',
+                'desc'  => 'Description for car booking',
                 'qty' => 1
             ]
         ];
@@ -28,13 +28,13 @@ class PayPalController extends Controller
         $data['return_url'] = route('payment.success');
         $data['cancel_url'] = route('payment.cancel');
         $data['total'] = 100;
-  
+
         $provider = new ExpressCheckout;
   
         $response = $provider->setExpressCheckout($data);
   
-        $response = $provider->setExpressCheckout($data, true);
-  
+        // $response = $provider->setExpressCheckout($data, true);
+    dd($response);
         return redirect($response['paypal_link']);
     }
    
