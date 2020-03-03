@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes(['register'=>false]);
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/cars', 'CarTypeController@getCarTypes')->name('cars');
+Route::post('/cars', 'CarTypeController@getCarTypes')->name('cars');
 Route::get('/services', 'ServiceController@getServices')->name('services');
 Route::get('/sub/services', 'SubServiceController@getSubServices')->name('sub_services');
 Route::get('booking_form','BookingController@booking_from')->name('booking_form');
