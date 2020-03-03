@@ -15,8 +15,6 @@ use App\CarType;
 use App\SubService;
 Route::get('/', function () {
 
-    return view('payment');
-
 	$services['car_types'] = CarType::all();
 	$services['services'] = Service::all();
 	$services['washing'] = Service::join('sub_services','sub_services.sub_services_type','=' ,'services.id')->where('services.services_type','washing')->get();

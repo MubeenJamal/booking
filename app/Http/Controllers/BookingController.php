@@ -13,16 +13,11 @@ class BookingController extends Controller
 
     public function create_booking_details(Request $request)
     {
-    	$data = array(
-    		'start_date' => $request->start_date,
-    		'start_time' => $request->start_time,
-    		'end_date' => $request->end_date,
-    		'end_time' => $request->end_time,
-    	);
-    	// $data = request()->except(['submit']);
-    	$date_time = Booking::insert($data);
-    	
-    	// dd($date_time);
-    	return view('booking.booking_form');
+    	$data = $request->except(['_token']);
+    	$ins = Booking::insert($data);
+		if($ins)
+			echo "Insert";
+		else
+			echo "not inserted";
     }
 }

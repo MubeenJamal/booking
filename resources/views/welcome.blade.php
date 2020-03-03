@@ -43,7 +43,8 @@
 		</nav>
 
 		<main>
-
+			<form method="post" action="{{route('create_booking_details')}}">
+			{{csrf_field()}}
 		    <!-- Index.html page -->
 		    <section id="index">
 		    	<div class="container">
@@ -195,7 +196,7 @@
 	                    		<div class="col-sm-4 col-12">
 									<div class="page1-car">
 										<label>
-											<input type="radio" name="cat_type" value="{{$car_type->car_type}}" checked />
+											<input type="radio" name="car_type" value="{{$car_type->car_type}}" checked />
 											<img src="{{ asset('public/assets/images/'.$car_type->icon)}}" class="img-fluid" alt="img" />
 										</label>
 									</div>
@@ -335,13 +336,12 @@
 									<div class="row">
 										@foreach($washing as $wash)
 										<div class="col-sm-6 col-8">
-											<form>
+											
 											  <div class="custom-control custom-radio">
-											    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="{{$wash->service_name}}">
+											    <input type="radio" class="custom-control-input" id="customRadio" name="service" value="{{$wash->service_name}}">
 											    <label class="custom-control-label" for="customRadio">{{$wash->service_name}}</label>
 											  </div>
 											
-											</form>
 										</div>
 										<div class="col-sm-6 col-4">
 											<p>
@@ -397,15 +397,12 @@
 									<div class="row">
 										@foreach($gasoline as $fuel)
 										<div class="col-sm-6 col-8">
-											<form>
 											  <div class="custom-control custom-radio">
 
-											    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="{{$fuel->service_name}}">
+											    <input type="radio" class="custom-control-input" id="customRadio" name="service" value="{{$fuel->service_name}}">
 
 											    <label class="custom-control-label" for="customRadio">{{$fuel->service_name}}</label>
 											  </div>
-
-											</form>
 										</div>
 
 										<div class="col-sm-6 col-4">
@@ -462,15 +459,12 @@
 									<div class="row">
 										@foreach($maintenance as $mechanic)
 										<div class="col-sm-6 col-8">
-											<form>
 											  <div class="custom-control custom-radio">
 
-											    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="{{$mechanic->service_name}}">
+											    <input type="radio" class="custom-control-input" id="customRadio" name="service" value="{{$mechanic->service_name}}">
 
 											    <label class="custom-control-label" for="customRadio">{{$mechanic->service_name}}</label>
 											  </div>
-
-											</form>
 										</div>
 
 										<div class="col-sm-6 col-4">
@@ -516,7 +510,7 @@
 								<div class="col-sm-4 col-4">
 									<div class="footer-icon">
 										<label>
-											<input type="radio" name="example1" value="washing" checked />
+											<input type="radio" name="service_type" value="washing" checked />
 											<img src="{{ asset('public/assets/images/img1.png')}}" class="img-fluid img1" alt="img" />
 										</label>
 									</div>
@@ -524,7 +518,7 @@
 								<div class="col-sm-4 col-4">
 									<div class="footer-icon">
 										<label>
-											<input type="radio" name="example1" value="gasoline" />
+											<input type="radio" name="service_type" value="gasoline" />
 										<img src="{{ asset('public/assets/images/img2.png')}}" class="img-fluid img2" alt="img" />
 										</label>
 									</div>
@@ -532,7 +526,7 @@
 								<div class="col-sm-4 col-4">
 									<div class="footer-icon">
 										<label>
-											<input type="radio" name="example1" value="maintenance" />
+											<input type="radio" name="service_type" value="maintenance" />
 											<img src="{{ asset('public/assets/images/img3.png')}}" class="img-fluid img3" alt="img" />
 										</label>
 									</div>
@@ -621,15 +615,12 @@
 
 									<div class="row">
 										<div class="col-sm-6 col-8">
-											<form>
 											  <div class="custom-control custom-radio">
 
 											    <input type="radio" class="custom-control-input" id="customRadio" name="example" value="customEx">
 
 											    <label class="custom-control-label" for="customRadio">Changement pneu</label>
 											  </div>
-
-											
 										</div>
 
 										<div class="col-sm-6 col-4">
@@ -707,11 +698,12 @@
 
 		        	<div class="page1-btn">
 		        		<a href="javascript:void(0);" class="custom-btn2" id="page3Prev-btn">Passer a la derniere etape</a>
-						<a href="javascript:void(0);" class="custom-btn">SUIVANT</a>
+						<button class="custom-btn">SUIVANT</button>
 					</div>
 		        </div>
 		    </section>
 		    <!-- Page 3 Ends -->
+			</form>
 		</main>
 
 	    <!-- JavaSrcipts -->

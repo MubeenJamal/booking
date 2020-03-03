@@ -16,7 +16,7 @@ class AddBookingDetailsTable extends Migration
         Schema::create('booking_details', function(Blueprint $table)
         {
             $table->bigIncrements('id');
-            $table->integer('user_id');
+            $table->integer('user_id')->nullable();
             $table->string('start_date');
             $table->string('start_time');
             $table->string('end_date');
