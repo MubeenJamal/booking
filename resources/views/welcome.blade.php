@@ -334,12 +334,12 @@
 								<div class="page2-radio">
 
 									<div class="row">
-										@foreach($washing as $wash)
+										@foreach($washing as $k => $wash)
 										<div class="col-sm-6 col-8">
 											
 											  <div class="custom-control custom-radio">
-											    <input type="radio" class="custom-control-input" id="customRadio" name="service" value="{{$wash->service_name}}">
-											    <label class="custom-control-label" for="customRadio">{{$wash->service_name}}</label>
+											    <input type="radio" class="custom-control-input" id="customRadio.{{$k}}" name="service" value="{{$wash->service_name}}">
+											    <label class="custom-control-label" for="customRadio.{{$k}}">{{$wash->service_name}}</label>
 											  </div>
 											
 										</div>
@@ -349,6 +349,7 @@
 												<b>{{$wash->price}}</b> €
 											</p>
 										</div>
+										<?php $k++; ?>
 										@endforeach
 									</div>
 									
@@ -395,13 +396,13 @@
 								<div class="page2-radio">
 
 									<div class="row">
-										@foreach($gasoline as $fuel)
+										@foreach($gasoline as $k => $fuel)
 										<div class="col-sm-6 col-8">
 											  <div class="custom-control custom-radio">
 
-											    <input type="radio" class="custom-control-input" id="customRadio" name="service" value="{{$fuel->service_name}}">
+											    <input type="radio" class="custom-control-input" id="customRadio.{{$k}}" name="service" value="{{$fuel->service_name}}">
 
-											    <label class="custom-control-label" for="customRadio">{{$fuel->service_name}}</label>
+											    <label class="custom-control-label" for="customRadio.{{$k}}">{{$fuel->service_name}}</label>
 											  </div>
 										</div>
 
@@ -411,6 +412,7 @@
 												<b>{{$fuel->price}}</b> €
 											</p>
 										</div>
+										<?php $k++; ?>
 										@endforeach
 									</div>
 									
@@ -457,13 +459,13 @@
 								<div class="page2-radio">
 
 									<div class="row">
-										@foreach($maintenance as $mechanic)
+										@foreach($maintenance as $k => $mechanic)
 										<div class="col-sm-6 col-8">
 											  <div class="custom-control custom-radio">
 
-											    <input type="radio" class="custom-control-input" id="customRadio" name="service" value="{{$mechanic->service_name}}">
+											    <input type="radio" class="custom-control-input" id="customRadio.{{$k}}" name="service" value="{{$mechanic->service_name}}">
 
-											    <label class="custom-control-label" for="customRadio">{{$mechanic->service_name}}</label>
+											    <label class="custom-control-label" for="customRadio.{{$k}}">{{$mechanic->service_name}}</label>
 											  </div>
 										</div>
 
@@ -473,6 +475,7 @@
 												<b>{{$mechanic->price}}</b> €
 											</p>
 										</div>
+										<?php $k++; ?>
 										@endforeach
 									</div>
 									
