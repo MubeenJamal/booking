@@ -12,12 +12,12 @@
 
         <link rel="stylesheet" href="{{ asset('public/assets/css/bootstrap.min.css') }}">
 	    <link rel="stylesheet" href="{{ asset('public/assets/fonts/fontawesome/css/all.css') }}">
-	    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+	    <link href="{{ asset('public/assets/fonts/fontawesome/css/css.css') }}" rel="stylesheet">
 	    <link rel="stylesheet" href="{{ asset('public/assets/css/normalize.css') }}">
 	    <link rel="stylesheet" href="{{ asset('public/assets/css/style.css') }}">
 	    <link rel="stylesheet" href="{{ asset('public/assets/css/responsive.css') }}">
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/css/datepicker.css') }}" rel="stylesheet" type="text/css" />
 
     </head>
     <body onload="init()" class="bg-img">
@@ -65,11 +65,12 @@
 									<div class="form-group">
 			                        	<label>arrivee</label>
 										<div class="date">
-										    <input class="form-control form-control-lg" type="text" placeholder="Select Date" name="start_date" id="start_date" />
+										    <input class="form-control form-control-lg" type="text" placeholder="Select Date" name="start_date" id="arrivalDate" />
 										    <span class="input-group-addon">
 										    	<i class="fa fa-calendar-alt"></i>
 										    </span>
 										</div>
+										<label id="arrivalError">Arrival Date Not Selected</label>
 									</div>
 								</div>
 							</div>
@@ -93,11 +94,12 @@
 									<div class="form-group">
 			                        	<label>depart</label>
 										<div class="date">
-										    <input class="form-control form-control-lg" type="text" placeholder="Select Date" name="end_date" id="end_date" />
+										    <input class="form-control form-control-lg" type="text" placeholder="Select Date" name="end_date" id="departureDate" />
 										    <span class="input-group-addon">
 										    	<i class="fa fa-calendar-alt"></i>
 										    </span>
 										</div>
+										<label id="departError">Departure Date Not Selected</label>
 									</div>
 								</div>
 							</div>
@@ -138,23 +140,23 @@
 										<div class="col-sm-3 col-3">
 									      <div class="arrive arri">
 									        <label> ARRIVE </label>
-									        <div class="sdate" id="arrive_date">03/03</div>
-									        <div class="stime" id="arrive_time">5:00</div>
+									        <div class="sdate">03/03</div>
+									        <div class="stime">5:00</div>
 									      </div>
 										</div>
 
 										<div class="col-sm-3 col-3">
 									      <div class="departure arri">
 									        <label> DEPART </label>
-									        <div class="sdate" id="depart_date">03/18</div>
-									        <div class="stime" id= "depart_time">5:00</div>
+									        <div class="edate">03/18</div>
+									        <div class="etime">5:00</div>
 									      </div>
 										</div>
 
 										<div class="col-sm-3 col-3">
 									      <div class="services arri">
 									        <label> SERVICE </label>
-									        <div class="service">Navette PARKME (0€)</div>
+									        <div class="service setServiceType">--</div>
 									        <div class=""> &nbsp; </div>
 									      </div>
 										</div>
@@ -291,7 +293,7 @@
 									<div class="col-sm-3 col-3">
 								      <div class="services arri">
 								        <label> SERVICE </label>
-								        <div class="service">Navette PARKME (0€)</div>
+								        <div class="service setServiceType">--</div>
 								        <div class=""> &nbsp; </div>
 								      </div>
 									</div>
@@ -338,7 +340,7 @@
 										<div class="col-sm-6 col-8">
 											
 											  <div class="custom-control custom-radio">
-											    <input type="radio" class="custom-control-input" id="customRadio.{{$k}}" name="service" value="{{$wash->service_name}}">
+											    <input type="radio" class="custom-control-input" id="customRadio.{{$k}}" name="service" value="{{$wash->service_name.'-'.$wash->price}}">
 											    <label class="custom-control-label" for="customRadio.{{$k}}">{{$wash->service_name}}</label>
 											  </div>
 											
@@ -400,7 +402,7 @@
 										<div class="col-sm-6 col-8">
 											  <div class="custom-control custom-radio">
 
-											    <input type="radio" class="custom-control-input" id="customRadio1.{{$k}}" name="service" value="{{$fuel->service_name}}">
+											    <input type="radio" class="custom-control-input" id="customRadio1.{{$k}}" name="service" value="{{$fuel->service_name.'-'.$fuel->price}}">
 
 											    <label class="custom-control-label" for="customRadio1.{{$k}}">{{$fuel->service_name}}</label>
 											  </div>
@@ -463,7 +465,7 @@
 										<div class="col-sm-6 col-8">
 											  <div class="custom-control custom-radio">
 
-											    <input type="radio" class="custom-control-input" id="customRadio2.{{$k}}" name="service" value="{{$mechanic->service_name}}">
+											    <input type="radio" class="custom-control-input" id="customRadio2.{{$k}}" name="service" value="{{$mechanic->service_name.'-'.$mechanic->price}}">
 
 											    <label class="custom-control-label" for="customRadio2.{{$k}}">{{$mechanic->service_name}}</label>
 											  </div>
@@ -513,7 +515,7 @@
 								<div class="col-sm-4 col-4">
 									<div class="footer-icon">
 										<label>
-											<input type="radio" name="service_type" value="washing" checked />
+											<input type="radio" name="service_type" value="washing" onChange="setSelectedValues()"/>
 											<img src="{{ asset('public/assets/images/img1.png')}}" class="img-fluid img1" alt="img" />
 										</label>
 									</div>
@@ -521,7 +523,7 @@
 								<div class="col-sm-4 col-4">
 									<div class="footer-icon">
 										<label>
-											<input type="radio" name="service_type" value="gasoline" />
+											<input type="radio" name="service_type" value="gasoline" onChange="setSelectedValues()"/>
 										<img src="{{ asset('public/assets/images/img2.png')}}" class="img-fluid img2" alt="img" />
 										</label>
 									</div>
@@ -529,7 +531,7 @@
 								<div class="col-sm-4 col-4">
 									<div class="footer-icon">
 										<label>
-											<input type="radio" name="service_type" value="maintenance" />
+											<input type="radio" name="service_type" value="maintenance" onChange="setSelectedValues()"/>
 											<img src="{{ asset('public/assets/images/img3.png')}}" class="img-fluid img3" alt="img" />
 										</label>
 									</div>
@@ -555,37 +557,37 @@
 
 								<div class="row">
 									
-									<div class="col-sm-3 col-3">
-								      <div class="arrive arri">
-								        <label> ARRIVE </label>
-								        <div class="sdate">03/03</div>
-								        <div class="stime">5:00</div>
-								      </div>
-									</div>
+								<div class="col-sm-3 col-3">
+									      <div class="arrive arri">
+									        <label> ARRIVE </label>
+									        <div class="sdate">03/03</div>
+									        <div class="stime">5:00</div>
+									      </div>
+										</div>
 
-									<div class="col-sm-3 col-3">
-								      <div class="departure arri">
-								        <label> DEPART </label>
-								        <div class="sdate">03/18</div>
-								        <div class="stime">5:00</div>
-								      </div>
-									</div>
+										<div class="col-sm-3 col-3">
+									      <div class="departure arri">
+									        <label> DEPART </label>
+									        <div class="edate">03/18</div>
+									        <div class="etime">5:00</div>
+									      </div>
+										</div>
 
-									<div class="col-sm-3 col-3">
-								      <div class="services arri">
-								        <label> SERVICE </label>
-								        <div class="service">Navette PARKME (0€)</div>
-								        <div class=""> &nbsp; </div>
-								      </div>
-									</div>
+										<div class="col-sm-3 col-3">
+									      <div class="services arri">
+									        <label> SERVICE </label>
+									        <div class="service setServiceType">--</div>
+									        <div class=""> &nbsp; </div>
+									      </div>
+										</div>
 
-									<div class="col-sm-3 col-3">
-								      <div class="departure arri">
-								        <label> TOTAL </label>
-								        <div class="total-price"> € 0.00 </div>
-								        <div class=""> &nbsp; </div>
-								      </div>
-									</div>
+										<div class="col-sm-3 col-3">
+									      <div class="departure arri">
+									        <label> TOTAL </label>
+									        <div class="total-price"> € 0.00 </div>
+									        <div class=""> &nbsp; </div>
+									      </div>
+										</div>
 
 								</div>
 							</div>
@@ -715,57 +717,7 @@
 		<script src="{{ asset('public/assets/js/bootstrap.min.js')}}"></script>
 		<script src="{{ asset('public/assets/js/custom.js')}}"></script>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+		<script src="{{ asset('public/assets/js/bootstrap-datepicker.js')}}"></script>
 
     </body>
 </html>
-
- <script type="text/javascript">
-	
-	$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-	    }
-	});
-
-	$(document).ready(function(){
-// 		$('#submit_date').on('click', function(e) {
-// 	       e.preventDefault(); 
-// 	       var start_date = $('#start_date').val();
-// 	       var start_time = $('#arriveeTime').val();
-// 	       var end_date = $('#end_date').val();
-// 	       var end_time = $('#departTime').val();
-// 	       $.ajax({
-
-// 	           type: "POST",
-// 	           url: 'cars',
-// 	           data: {start_date:start_date, start_time:start_time, end_date:end_date, end_time:end_time},
-// 	           success: function( msg ) {
-
-// 	           	msg = JSON.parse(msg)
-// 	           	// console.log(msg);
-// 	           	console.log(msg.car_types);
-// 	           	// console.log(car_types);
-// 	           	// var html = '<section>'+msg.car_types+'</section>';
-// 	           	document.getElementsByTagName('main')[0].innerHTML = msg.car_types;
-// 	           	// $('.car_type').html(msg.car_types);
-// 	               // $(document.body).prepend(html);
-// 	           }
-// 	       });
-// 	   });
-
-	$('#index-btn').on('click', function(e) {
-	       e.preventDefault(); 
-	       var start_date = $('#start_date').val();
-	       var start_time = $('#arriveeTime').val();
-	       var end_date = $('#end_date').val();
-	       var end_time = $('#departTime').val();
-	       document.getElementById("arrive_date").innerHTML = start_date;
-	       document.getElementById("arrive_time").innerHTML = start_time;
-	       document.getElementById("depart_date").innerHTML = end_date;
-	       document.getElementById("depart_time").innerHTML = end_time;
-	       //alert(start_date);
-	   });
-});
-	
-</script> 

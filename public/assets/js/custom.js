@@ -67,7 +67,7 @@ function SmoothScroll(target, speed, smooth) {
 	}()
 }
 
-$(function () { $(".date").datepicker({ }) });
+$(function () { $("#arrivalDate,#departureDate").datepicker({ minDate: 0 }) });
 
 /* Page 2 Grey Circle show hide boxes starts here*/
 
@@ -93,24 +93,69 @@ $(".img3").click(function(){
 
 /* Index button css starts here */
 
-$("#page1,#page2,#page3").hide();
+$("#page1,#page2,#page3,#arrivalError,#departError").hide();
 $("#index").show();
 
 $("#index-btn").click(function(){
+
+if($("#arrivalDate").val() == "") {
+	$("#arrivalError").show();
+	//alert("103");
+}
+if($("#departureDate").val() == ""){
+	$("#departError").show();
+	//alert("107");
+}
+if($("#arrivalDate").val() != "") {
+	$("#arrivalError").hide();
+	//alert("111");
+}
+
+if($("#departureDate").val() != ""){
+	$("#departError").hide();
+	//alert("115");
+}
+if($("#departureDate").val() != "" && $("#arrivalDate").val() != ""){
+	setSelectedValues();
   $("#page1").show();
   $("#page2,#page3,#index").hide();
   $("body").addClass("inner-bg");
   $("body").removeClass("bg-img");
-
   $(".navbar").addClass("inner-custom-navbar");
   $(".navbar").removeClass("custom-navbar");
+}
+
 });
 
 /* Index button css ends here */
 
+function setSelectedValues(){
+	// document.getElementById("arrive_date").innerHTML = $("#arrivalDate").val();
+	// document.getElementById("arrive_time").innerHTML = $("#arriveeTime").val();
+	// document.getElementById("depart_date").innerHTML = $("#departureDate").val();
+	// document.getElementById("depart_time").innerHTML = $("#departTime").val();
+	// console.log($("input[name='service_type']:checked").val());
+	// $('.setServiceType').innerHTML = $("input[name='service_type']:checked").val();
+	console.log();
+	$('.sdate').html( $("#arrivalDate").val());
+	$('.stime').html( $("#arriveeTime").val());
+	$('.edate').html( $("#departureDate").val());
+	$('.etime').html($("#departTime").val());
+	$('.setServiceType').html($("input[name='service_type']:checked").val());
+	//total price 
+	$price = $("input[name='service']:checked").val();
+	if($price){
+		$price = $price.split('-')[1];
+		$('.total-price').html('€'+$price);
+	}
+
+}
+
+
 /* Page 1 button css starts here */
 
 $("#page1Next-btn").click(function(){
+	setSelectedValues();
   $("#page2").show();
   $("#index,#page1,#page3").hide();
 });
@@ -130,6 +175,7 @@ $("#page1Prev-btn").click(function(){
 /* Page 2 button css starts here */
 
 $("#page2Next-btn").click(function(){
+	setSelectedValues();
   $("#page3").show();
   $("#index,#page1,#page2").hide();
 });
