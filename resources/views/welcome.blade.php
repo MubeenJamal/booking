@@ -138,16 +138,16 @@
 										<div class="col-sm-3 col-3">
 									      <div class="arrive arri">
 									        <label> ARRIVE </label>
-									        <div class="sdate">03/03</div>
-									        <div class="stime">5:00</div>
+									        <div class="sdate" id="arrive_date">03/03</div>
+									        <div class="stime" id="arrive_time">5:00</div>
 									      </div>
 										</div>
 
 										<div class="col-sm-3 col-3">
 									      <div class="departure arri">
 									        <label> DEPART </label>
-									        <div class="sdate">03/18</div>
-									        <div class="stime">5:00</div>
+									        <div class="sdate" id="depart_date">03/18</div>
+									        <div class="stime" id= "depart_time">5:00</div>
 									      </div>
 										</div>
 
@@ -400,9 +400,9 @@
 										<div class="col-sm-6 col-8">
 											  <div class="custom-control custom-radio">
 
-											    <input type="radio" class="custom-control-input" id="customRadio.{{$k}}" name="service" value="{{$fuel->service_name}}">
+											    <input type="radio" class="custom-control-input" id="customRadio1.{{$k}}" name="service" value="{{$fuel->service_name}}">
 
-											    <label class="custom-control-label" for="customRadio.{{$k}}">{{$fuel->service_name}}</label>
+											    <label class="custom-control-label" for="customRadio1.{{$k}}">{{$fuel->service_name}}</label>
 											  </div>
 										</div>
 
@@ -463,9 +463,9 @@
 										<div class="col-sm-6 col-8">
 											  <div class="custom-control custom-radio">
 
-											    <input type="radio" class="custom-control-input" id="customRadio.{{$k}}" name="service" value="{{$mechanic->service_name}}">
+											    <input type="radio" class="custom-control-input" id="customRadio2.{{$k}}" name="service" value="{{$mechanic->service_name}}">
 
-											    <label class="custom-control-label" for="customRadio.{{$k}}">{{$mechanic->service_name}}</label>
+											    <label class="custom-control-label" for="customRadio2.{{$k}}">{{$mechanic->service_name}}</label>
 											  </div>
 										</div>
 
@@ -620,7 +620,7 @@
 										<div class="col-sm-6 col-8">
 											  <div class="custom-control custom-radio">
 
-											    <input type="radio" class="custom-control-input" id="customRadio" name="example" value="customEx">
+											    <!--<input type="radio" class="custom-control-input" id="customRadio" name="" value="customEx">-->
 
 											    <label class="custom-control-label" for="customRadio">Changement pneu</label>
 											  </div>
@@ -636,7 +636,7 @@
 											
 											  <div class="custom-control custom-radio">
 
-											    <input type="radio" class="custom-control-input" id="customRadio1" name="example" value="customEx">
+											    <!--<input type="radio" class="custom-control-input" id="customRadio1" name="" value="customEx">-->
 
 											    <label class="custom-control-label" for="customRadio1">Vidange</label>
 											  </div>
@@ -720,7 +720,7 @@
     </body>
 </html>
 
-<!-- <script type="text/javascript">
+ <script type="text/javascript">
 	
 	$.ajaxSetup({
     headers: {
@@ -729,30 +729,43 @@
 	});
 
 	$(document).ready(function(){
-		$('#submit_date').on('click', function(e) {
+// 		$('#submit_date').on('click', function(e) {
+// 	       e.preventDefault(); 
+// 	       var start_date = $('#start_date').val();
+// 	       var start_time = $('#arriveeTime').val();
+// 	       var end_date = $('#end_date').val();
+// 	       var end_time = $('#departTime').val();
+// 	       $.ajax({
+
+// 	           type: "POST",
+// 	           url: 'cars',
+// 	           data: {start_date:start_date, start_time:start_time, end_date:end_date, end_time:end_time},
+// 	           success: function( msg ) {
+
+// 	           	msg = JSON.parse(msg)
+// 	           	// console.log(msg);
+// 	           	console.log(msg.car_types);
+// 	           	// console.log(car_types);
+// 	           	// var html = '<section>'+msg.car_types+'</section>';
+// 	           	document.getElementsByTagName('main')[0].innerHTML = msg.car_types;
+// 	           	// $('.car_type').html(msg.car_types);
+// 	               // $(document.body).prepend(html);
+// 	           }
+// 	       });
+// 	   });
+
+	$('#index-btn').on('click', function(e) {
 	       e.preventDefault(); 
 	       var start_date = $('#start_date').val();
 	       var start_time = $('#arriveeTime').val();
 	       var end_date = $('#end_date').val();
 	       var end_time = $('#departTime').val();
-	       $.ajax({
-
-	           type: "POST",
-	           url: 'cars',
-	           data: {start_date:start_date, start_time:start_time, end_date:end_date, end_time:end_time},
-	           success: function( msg ) {
-
-	           	msg = JSON.parse(msg)
-	           	// console.log(msg);
-	           	console.log(msg.car_types);
-	           	// console.log(car_types);
-	           	// var html = '<section>'+msg.car_types+'</section>';
-	           	document.getElementsByTagName('main')[0].innerHTML = msg.car_types;
-	           	// $('.car_type').html(msg.car_types);
-	               // $(document.body).prepend(html);
-	           }
-	       });
+	       document.getElementById("arrive_date").innerHTML = start_date;
+	       document.getElementById("arrive_time").innerHTML = start_time;
+	       document.getElementById("depart_date").innerHTML = end_date;
+	       document.getElementById("depart_time").innerHTML = end_time;
+	       //alert(start_date);
 	   });
-	});
+});
 	
-</script> -->
+</script> 

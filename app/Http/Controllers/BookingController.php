@@ -13,6 +13,7 @@ class BookingController extends Controller
 
     public function create_booking_details(Request $request)
     {
+        // dd($request->input());
     	$data = $request->except(['_token']);
     	$ins = Booking::insert($data);
 		if($ins)
