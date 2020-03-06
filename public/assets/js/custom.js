@@ -67,7 +67,26 @@ function SmoothScroll(target, speed, smooth) {
 	}()
 }
 
-$(function () { $("#arrivalDate,#departureDate").datepicker({ minDate: 0 }) });
+// $(function () { $("#arrivalDate,#departureDate").datepicker({ minDate: 0 }) });
+$(function () {
+    $("#arrivalDate, #expiryDate").datepicker({
+        dateFormat: 'dd/mm/yy',
+        changeMonth: true,
+        yearRange: new Date().getFullYear().toString() + ':' + new Date().getFullYear().toString(),
+        onClose: function (selectedDate) {
+            $("#departureDate").datepicker("option", "minDate", selectedDate);
+        }
+    });
+    $("#departureDate").datepicker({
+        dateFormat: 'dd/mm/yy',
+        changeMonth: true,
+        yearRange: new Date().getFullYear().toString() + ':' + new Date().getFullYear().toString(),
+        onClose: function (selectedDate) {
+            $("#arrivalDate").datepicker("option", "maxDate", selectedDate);
+        }
+    });
+});
+
 
 /* Page 2 Grey Circle show hide boxes starts here*/
 
@@ -93,27 +112,23 @@ $(".img3").click(function(){
 
 /* Index button css starts here */
 
-$("#page1,#page2,#page3,#arrivalError,#departError").hide();
+$("#page1, #page2, #page3, #page4, #arrivalError, #departError, #essenceError").hide();
 $("#index").show();
 
 $("#index-btn").click(function(){
 
 if($("#arrivalDate").val() == "") {
 	$("#arrivalError").show();
-	//alert("103");
 }
 if($("#departureDate").val() == ""){
 	$("#departError").show();
-	//alert("107");
 }
 if($("#arrivalDate").val() != "") {
 	$("#arrivalError").hide();
-	//alert("111");
 }
 
 if($("#departureDate").val() != ""){
 	$("#departError").hide();
-	//alert("115");
 }
 if($("#departureDate").val() != "" && $("#arrivalDate").val() != ""){
 	setSelectedValues();
@@ -126,6 +141,8 @@ if($("#departureDate").val() != "" && $("#arrivalDate").val() != ""){
 }
 
 });
+
+
 
 /* Index button css ends here */
 
@@ -174,10 +191,23 @@ $("#page1Prev-btn").click(function(){
 
 /* Page 2 button css starts here */
 
+// $("#page2Next-btn").click(function(){
+// 	setSelectedValues();
+//   $("#page3").show();
+//   $("#index,#page1,#page2").hide();
+// });
+
 $("#page2Next-btn").click(function(){
-	setSelectedValues();
-  $("#page3").show();
-  $("#index,#page1,#page2").hide();
+
+    if($('input:radio[name=service]').is(':not(:checked)')){
+     $("#essenceError").show();
+    }
+
+    if($('input:radio[name=service]').is(':checked')){
+      setSelectedValues();
+      $("#page3").show();
+      $("#index,#page1,#page2").hide();
+    }
 });
 
 $("#page2Prev-btn").click(function(){
@@ -189,9 +219,46 @@ $("#page2Prev-btn").click(function(){
 
 /* Page 3 button css starts here */
 
+$("#page3Next-btn").click(function(){
+  $("#page4").show();
+  $("#index,#page1,#page2,#page3").hide();
+});
+
 $("#page3Prev-btn").click(function(){
+  $("#essenceError").hide();
   $("#page2").show();
   $("#index,#page1,#page3").hide();
 });
 
 /* Page 3 button css ends here */
+
+/* Page 4 button css starts here */
+
+$("#page4Prev-btn").click(function(){
+  $("#page3").show();
+  $("#index,#page1,#page2,#page4").hide();
+});
+
+/* Page 4 button css ends here */
+
+
+/*Credit Card Form Validation start here*/
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+/*Credit card form validation ends here*/

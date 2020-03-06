@@ -16,8 +16,8 @@
 	    <link rel="stylesheet" href="{{ asset('public/assets/css/normalize.css') }}">
 	    <link rel="stylesheet" href="{{ asset('public/assets/css/style.css') }}">
 	    <link rel="stylesheet" href="{{ asset('public/assets/css/responsive.css') }}">
-
-        <link href="{{ asset('public/assets/css/datepicker.css') }}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('public/assets/css/jquery-ui.min.css') }}">
+        <!--<link href="{{ asset('public/assets/css/datepicker.css') }}" rel="stylesheet" type="text/css" />-->
 
     </head>
     <body onload="init()" class="bg-img">
@@ -156,6 +156,7 @@
 										<div class="col-sm-3 col-3">
 									      <div class="services arri">
 									        <label> SERVICE </label>
+									        <label><b>Navette gratuite(0€))</b></label>
 									        <div class="service setServiceType">--</div>
 									        <div class=""> &nbsp; </div>
 									      </div>
@@ -332,7 +333,7 @@
 
 			            <div class="row">
 
-                    		<div class="col-sm-12 col-12">
+                    		<div class="col-sm-8 offset-sm-2 col-12">
 								<div class="page2-radio">
 
 									<div class="row">
@@ -346,32 +347,34 @@
 											
 										</div>
 										<div class="col-sm-6 col-4">
-											<p>
-												<!-- <small>1</small> -->
-												<b>{{$wash->price}}</b> €
-											</p>
+										    <div class="revision-cost">
+    											<h5>
+    												<b>{{$wash->price}}</b> €
+    											</h5>
+											</div>
 										</div>
 										<?php $k++; ?>
 										@endforeach
 									</div>
+									<label id="essenceError">Should be Checked</label>
 									
 								</div>
 							</div>
 
 			            </div>
 
-			            <div class="row">
-			            	<div class="col-sm-6 p-0">
-			            		<div class="black-bg">
-									<p>Le cout de la prestation (<span>10E</span>) <br> est <span>paye maintenant</span></p>
-			            		</div>
-			            	</div>
-			            	<div class="col-sm-6 p-0">
-			            		<div class="black-bg">
-			            			<p>Grace a la <span>facture</span> du lein de carburant<br> vous reglez <span>a votre retour</span></p>
-			            		</div>
-			            	</div>
-			            </div>
+			      <!--      <div class="row">-->
+			      <!--      	<div class="col-sm-6 p-0">-->
+			      <!--      		<div class="black-bg">-->
+									<!--<p>Le cout de la prestation (<span>1000E</span>) <br> est <span>paye maintenant</span></p>-->
+			      <!--      		</div>-->
+			      <!--      	</div>-->
+			      <!--      	<div class="col-sm-6 p-0">-->
+			      <!--      		<div class="black-bg">-->
+			      <!--      			<p>Grace a la <span>facture</span> du lein de carburant<br> vous reglez <span>a votre retour</span></p>-->
+			      <!--      		</div>-->
+			      <!--      	</div>-->
+			      <!--      </div>-->
 
 			            <div class="row">
 			            	<div class="col-sm-6 p-0">
@@ -394,7 +397,7 @@
 
 			            <div class="row">
 
-                    		<div class="col-sm-12 col-12">
+                    		<div class="col-sm-8 offset-sm-2 col-12">
 								<div class="page2-radio">
 
 									<div class="row">
@@ -409,10 +412,11 @@
 										</div>
 
 										<div class="col-sm-6 col-4">
-											<p>
-												<!-- <small>1</small> -->
-												<b>{{$fuel->price}}</b> €
-											</p>
+										    <div class="revision-cost">
+    											<h5>
+    												<b>{{$fuel->price}}</b> €
+    											</h5>
+											</div>
 										</div>
 										<?php $k++; ?>
 										@endforeach
@@ -457,7 +461,7 @@
 
 			            <div class="row">
 
-                    		<div class="col-sm-12 col-12">
+                    		<div class="col-sm-8 offset-sm-2 col-12">
 								<div class="page2-radio">
 
 									<div class="row">
@@ -472,10 +476,9 @@
 										</div>
 
 										<div class="col-sm-6 col-4">
-											<p>
-												<!-- <small>1</small> -->
-												<b>{{$mechanic->price}}</b> €
-											</p>
+										    <div class="revision-cost">
+											    <h5><b>{{$mechanic->price}}</b> €</h5>
+											</div>
 										</div>
 										<?php $k++; ?>
 										@endforeach
@@ -615,39 +618,44 @@
 
 			            <div class="row">
 
-                    		<div class="col-sm-12 col-12">
+                    		<div class="col-sm-8 offset-sm-2 col-12">
 								<div class="page3-radio">
 
 									<div class="row">
 										<div class="col-sm-6 col-8">
-											  <div class="custom-control custom-radio">
-
-											    <!--<input type="radio" class="custom-control-input" id="customRadio" name="" value="customEx">-->
-
-											    <label class="custom-control-label" for="customRadio">Changement pneu</label>
-											  </div>
+										    <div class="revision-text">
+										        <h5>Changement pneu</h5>    
+										    </div>
+											  <!--<div class="custom-control custom-radio">-->
+											  <!--  <input type="radio" class="custom-control-input" id="customRadio" name="" value="customEx">-->
+											  <!--  <label class="custom-control-label" for="customRadio">Changement pneu</label>-->
+											  <!--</div>-->
 										</div>
 
 										<div class="col-sm-6 col-4">
-											<p>20 €</p>
+										    <div class="revision-cost">
+											    <h5>20 €</h5>
+											</div>
 										</div>
 									</div>
 
 									<div class="row">
 										<div class="col-sm-6 col-8">
-											
-											  <div class="custom-control custom-radio">
-
-											    <!--<input type="radio" class="custom-control-input" id="customRadio1" name="" value="customEx">-->
-
-											    <label class="custom-control-label" for="customRadio1">Vidange</label>
-											  </div>
+											<div class="revision-text">
+										        <h5>Vidange</h5>    
+										    </div>
+											  <!--<div class="custom-control custom-radio">-->
+											  <!--  <input type="radio" class="custom-control-input" id="customRadio1" name="" value="customEx">-->
+											  <!--  <label class="custom-control-label" for="customRadio1">Vidange</label>-->
+											  <!--</div>-->
 
 											</form>
 										</div>
 
 										<div class="col-sm-6 col-4">
-											<p>20 €</p>
+										    <div class="revision-cost">
+											    <h5>20 €</h5>
+											</div>
 										</div>
 									</div>
 									
@@ -703,12 +711,186 @@
 
 		        	<div class="page1-btn">
 		        		<a href="javascript:void(0);" class="custom-btn2" id="page3Prev-btn">Passer a la derniere etape</a>
-						<button class="custom-btn">SUIVANT</button>
+						<a href="javascript:void(0);" class="custom-btn" id="page3Next-btn">SUIVANT</a>
 					</div>
 		        </div>
 		    </section>
 		    <!-- Page 3 Ends -->
 			</form>
+			
+			<!-- Page 4 Starts -->
+		    <section id="page4">
+				<div class="arrival-time">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-10 offset-sm-1">
+
+								<div class="row">
+									
+									<div class="col-sm-3 col-3">
+								      <div class="arrive arri">
+								        <label> ARRIVE </label>
+								        <div class="sdate">03/03</div>
+								        <div class="stime">5:00</div>
+								      </div>
+									</div>
+
+									<div class="col-sm-3 col-3">
+								      <div class="departure arri">
+								        <label> DEPART </label>
+								        <div class="sdate">03/18</div>
+								        <div class="stime">5:00</div>
+								      </div>
+									</div>
+
+									<div class="col-sm-3 col-3">
+								      <div class="services arri">
+								        <label> SERVICE </label>
+								        <div class="service">Navette PARKME (0€)</div>
+								        <div class=""> &nbsp; </div>
+								      </div>
+									</div>
+
+									<div class="col-sm-3 col-3">
+								      <div class="departure arri">
+								        <label> TOTAL </label>
+								        <div class="total-price"> € 0.00 </div>
+								        <div class=""> &nbsp; </div>
+								      </div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+			    	</div>
+				</div>
+
+				<div class="container">
+		    		<div class="row">
+		                <div class="col-sm-12 col-12">
+		                    <div class="page4-header">
+		                        <h3>paiement</h3>
+		                    </div>
+		                </div>
+		            </div>
+
+		            <form action="/" class="needs-validation" novalidate>
+
+			            <div class="row">
+			            	<div class="col-sm-6 offset-sm-3">
+					        	<div class="page4">
+					        		<div class="row mb-3">
+				        		  		<div class="col">
+				        		  			<div class="page4-header">
+				        		  				<h4>Coordonnees</h4>
+				        		  			</div>
+				        		  		</div>
+				        		  	</div>
+
+								    <div class="row mb-3">
+
+								      <div class="col">
+								        <input type="text" class="form-control form-control-lg form-check-input" id="name" placeholder="Nom" name="name" required />
+								        <div class="valid-feedback">Valid.</div>
+	    								<div class="invalid-feedback">Please fill out this field.</div>
+								      </div>
+
+								      <div class="col">
+								        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de telephone" name="number" required />
+								        <div class="valid-feedback">Valid.</div>
+	    								<div class="invalid-feedback">Please fill out this field.</div>
+								      </div>
+								    </div>
+
+								    <div class="row mb-3">
+								      <div class="col">
+								        <input type="email" class="form-control form-control-lg form-check-input" placeholder="E-mail" name="number" required />
+								        <div class="valid-feedback">Valid.</div>
+	    									<div class="invalid-feedback">Please fill out this field.</div>
+								      </div>
+								    </div>
+
+								    <div class="row mb-3">
+									    <div class="col">
+									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de personne (Navette)" name="number" required />
+									        <div class="valid-feedback">Valid.</div>
+	    									<div class="invalid-feedback">Please fill out this field.</div>
+									    </div>
+								    </div>
+
+									<div class="row mb-3">
+				        		  		<div class="col">
+				        		  			<div class="page4-header">
+				        		  				<h4>Paiement</h4>
+				        		  				<p>Toutes les transactions sent securisees of cryptees.</p>
+				        		  			</div>
+				        		  		</div>
+				        		  	</div>
+
+				        		  	<div class="credit-card">
+
+					        		  	<div class="row mb-3">
+					        		  		<div class="col">
+					        		  			<div class="page4-header">
+					        		  				<h4>Carte de credit</h4>
+					        		  			</div>
+					        		  		</div>
+					        		  		<div class="col text-right">
+					        		  			<img src="{{ asset('public/assets/images/social-icon.jpg')}}" class="img-fluid" alt="img" />
+					        		  		</div>
+					        		  	</div>
+
+					        		  	<div class="row mb-3">
+
+									      <div class="col">
+									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de Carte" name="number" required />
+									        <div class="valid-feedback">Valid.</div>
+	    									<div class="invalid-feedback">Please fill out this field.</div>
+									      </div>
+
+									    </div>
+
+									    <div class="row mb-3">
+
+									      <div class="col">
+									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero sur ta Carte" name="cardnumber" required />
+									        <div class="valid-feedback">Valid.</div>
+	    									<div class="invalid-feedback">Please fill out this field.</div>
+									      </div>
+
+									    </div>
+
+									    <div class="row mb-3">
+
+									      <div class="col">
+									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Date d'expiration (MM/AA)" name="expiry" id="expiryDate" required />
+									        <div class="valid-feedback">Valid.</div>
+	    									<div class="invalid-feedback">Please fill out this field.</div>
+									      </div>
+
+									      <div class="col">
+									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Code de securitees" name="securities"  required />
+									        <div class="valid-feedback">Valid.</div>
+	    									<div class="invalid-feedback">Please fill out this field.</div>
+									      </div>
+
+									    </div>
+
+								    </div>
+
+					        	</div>
+				        	</div>
+			        	</div>
+
+			        	<div class="page1-btn">
+			        		<a href="javascript:void(0);" class="custom-btn2" id="page4Prev-btn">Passer a la derniere etape</a>
+							<button type="submit" class="custom-btn">Valider</button>
+						</div>
+
+					</form>
+		        </div>
+		    </section>
+		    <!-- Page 4 Ends -->
 		</main>
 
 	    <!-- JavaSrcipts -->
@@ -716,8 +898,8 @@
 	    <script src="{{ asset('public/assets/js/jquery.min.js')}}"></script>
 		<script src="{{ asset('public/assets/js/bootstrap.min.js')}}"></script>
 		<script src="{{ asset('public/assets/js/custom.js')}}"></script>
-
-		<script src="{{ asset('public/assets/js/bootstrap-datepicker.js')}}"></script>
+        <script src="{{ asset('public/assets/js/jquery-ui.min.js')}}"></script>
+		<!--<script src="{{ asset('public/assets/js/bootstrap-datepicker.js')}}"></script>-->
 
     </body>
 </html>
