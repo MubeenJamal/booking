@@ -31,10 +31,10 @@ class PayPalController extends Controller
 
         $provider = new ExpressCheckout;
   
-        $response = $provider->setExpressCheckout($data);
+        // $response = $provider->setExpressCheckout($data);
   
-        // $response = $provider->setExpressCheckout($data, true);
-    dd($response);
+        $response = $provider->setExpressCheckout($data, true);
+        dd($response);
         return redirect($response['paypal_link']);
     }
    
@@ -55,6 +55,7 @@ class PayPalController extends Controller
      */
     public function success(Request $request)
     {
+        $provider = new ExpressCheckout;
         $response = $provider->getExpressCheckoutDetails($request->token);
   
         if (in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING'])) {
