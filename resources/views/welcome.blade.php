@@ -580,7 +580,7 @@
 										<div class="col-sm-3 col-3">
 									      <div class="services arri">
 									        <label> SERVICE </label>
-											<label><b>Navette gratuite(0€))</b></label>
+											<label><b>Navette gratuite(0€)</b></label>
 									        <div class="service setServiceType">--</div>
 									        <div class=""> &nbsp; </div>
 									      </div>
@@ -738,7 +738,7 @@
 									<div class="col-sm-3 col-3">
 								      <div class="services arri">
 								        <label> SERVICE </label>
-								        <label><b>Navette gratuite(0€))</b></label>
+								        <label><b>Navette gratuite(0€)</b></label>
 								        <div class="service setServiceType"> &nbsp; </div>
 								      </div>
 									</div>

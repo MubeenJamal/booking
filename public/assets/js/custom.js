@@ -226,6 +226,7 @@ $("#page2Next-btn").click(function(){
     if($('input:radio[name=service]').is(':checked') && $('input:radio[name=service_type]').is(':checked')){
       setSelectedValues();
       $("#page3").show();
+      console.log($('.setServiceType').text($("input[name='service_type']:checked").val()));
       $("#index,#page1,#page2").hide();
     }
 });
