@@ -218,7 +218,12 @@ $("#page2Next-btn").click(function(){
      $("#essenceError").show();
     }
 
-    if($('input:radio[name=service]').is(':checked')){
+    if($('input:radio[name=service_type]').is(':not(:checked)')){
+      $("#essenceError").html('Service type is not selected');
+      $("#essenceError").show();
+     }
+
+    if($('input:radio[name=service]').is(':checked') && $('input:radio[name=service_type]').is(':checked')){
       setSelectedValues();
       $("#page3").show();
       $("#index,#page1,#page2").hide();
