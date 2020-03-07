@@ -2,6 +2,12 @@
 
 /*Mobiles Devices*/
   @media (max-width: 575px) {
+    .section4-centeredHeading {
+      font-size: 2rem;
+    }
+    .text {
+      font-size: 0.9rem;
+    }
     .sdate {
         font-size: 16px;
     }

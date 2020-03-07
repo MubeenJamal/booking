@@ -18,8 +18,8 @@ class BookingController extends Controller
         $data['price'] = explode('-',$request->service)[1];
     	$ins = Booking::insert($data);
 		if($ins)
-			echo "Insert";
+			return redirect()->back()->with('message', 'your appointment is completed!');
 		else
-			echo "not inserted";
+			return redirect()->back()->with('failed_message', 'Sorry your appointment is not completed!');
     }
 }

@@ -9,7 +9,8 @@
   		<meta name="description" content="">
   		<meta name="keywords" content="">
   		<meta name="author" content="ParkMe">
-
+  		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('public/assets/css/bootstrap.min.css') }}">
 	    <link rel="stylesheet" href="{{ asset('public/assets/fonts/fontawesome/css/all.css') }}">
 	    <link href="{{ asset('public/assets/fonts/fontawesome/css/css.css') }}" rel="stylesheet">
@@ -17,6 +18,8 @@
 	    <link rel="stylesheet" href="{{ asset('public/assets/css/style.css') }}">
 	    <link rel="stylesheet" href="{{ asset('public/assets/css/responsive.css') }}">
         <link rel="stylesheet" href="{{ asset('public/assets/css/jquery-ui.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('public/assets/css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('public/assets/css/owl.theme.default.min.css') }}">
         <!--<link href="{{ asset('public/assets/css/datepicker.css') }}" rel="stylesheet" type="text/css" />-->
 
     </head>
@@ -41,14 +44,31 @@
 				</div>  
 			</div>
 		</nav>
+		
+		<div class="row">
+            <div class="col-sm-12 col-12">
+                <div class="section1-header">
+                    @if(session()->has('message'))
+			    		<div class="alert alert-success" style="background-color:'#fcc916'">
+			        {{ session()->get('message') }}
+			    		</div>
+					@endif
+					@if(session()->has('failed_message'))
+			    		<div class="alert alert-danger" style="background-color:'#fcc916'">
+			        {{ session()->get('failed_message') }}
+			    		</div>
+					@endif
+                </div>
+            </div>
+        </div>
 
 		<main>
 			<form method="post" class="needs-validation" action="{{route('create_booking_details')}}" novalidate>
 			{{csrf_field()}}
 		    <!-- Index.html page -->
 		    <section id="index">
-		    	<div class="container">
-		        	<div class="section1">
+	        	<div class="section1">
+	        	    <div class="container">
 			            <div class="row">
 			                <div class="col-sm-12 col-12">
 			                    <div class="section1-header">
@@ -122,6 +142,173 @@
 							</div>
 
 			            </div>
+		            </div>
+	        	</div>
+		        
+		        
+		        <div class="section3">
+		        	<div class="container">
+		        		<div class="row">
+		        			<div class="col-sm-6 col-12">
+		        				<div class="section3-left">
+		        					<img src="{{ asset('public/assets/images/section3-img.png') }}" class="img-fluid" alt="img" />
+		        				</div>
+		        			</div>
+		        			<div class="col-sm-6 col-12">
+		        				<div class="section3-right">
+		        					<h3>NAVETTE GRATUITE</h3>
+		        					<p>Départ et arrivée en 2 minutes.</p>
+		        					<a href="#" class="section3-btn">Je réserve</a>
+		        				</div>
+		        			</div>
+		        		</div>
+	        		</div>
+		        </div>
+
+		        <div class="section4">
+	        		<div class="row">
+	        			<div class="col-sm-12 col-12">
+	        				<div class="section4-main">
+	        					<h1 class="section4-centeredHeading">NOS SERVICES</h1>
+		        				<div class="section4-box section4-img1">
+		        					<img src="{{ asset('public/assets/images/section4-img1.png') }}" class="image" alt="img" />
+		        					  <div class="overlay">
+									    <div class="text">LAVAGE</div>
+									  </div>
+		        				</div>
+		        				<div class="section4-box section4-img2">
+		        					<img src="{{ asset('public/assets/images/section4-img2.png') }}" class="image" alt="img" />
+		        					  <div class="overlay">
+									    <div class="text">ESSENCE</div>
+									  </div>
+		        				</div>
+		        				<div class="section4-box section4-img3">
+		        					<img src="{{ asset('public/assets/images/section4-img3.png') }}" class="image" alt="img" />
+		        					<div class="overlay">
+									    <div class="text">RÉVISION</div>
+									</div>
+		        				</div>
+		        				<div class="section4-box section4-img4">
+		        					<img src="{{ asset('public/assets/images/section4-img4.png') }}" class="image" alt="img" />
+		        					  <div class="overlay">
+									    <div class="text">NAVETTE</div>
+									  </div>
+		        				</div>
+	        				</div>
+	        			</div>
+	        		</div>
+		        </div>
+
+		        <div class="section5">
+		        	<div class="container">
+		        		<div class="row">
+		        			<div class="col-sm-12">
+		        				<div class="section5-heading">
+		        					<h3>NOS PARTENAIRES</h3>
+		        				</div>
+		        			</div>
+		        		</div>
+		        		<div class="row">
+		        			<div class="col-sm-12 col-12">
+		        				<div class="owl-carousel owl-theme">
+								    <div class="item">
+								    	<img src="{{ asset('public/assets/images/allianz.png') }}" class="img-fluid" alt="img" />
+								    </div>
+								    <div class="item">
+								    	<img src="{{ asset('public/assets/images/armond-1.png') }}" class="img-fluid" alt="img" />
+								    </div>
+								    <div class="item">
+								    	<img src="{{ asset('public/assets/images/blag.png') }}" class="img-fluid" alt="img" />
+								    </div>
+								    <div class="item">
+								    	<img src="{{ asset('public/assets/images/armond-1.png') }}" class="img-fluid" alt="img" />
+								    </div>
+								    <div class="item">
+								    	<img src="{{ asset('public/assets/images/blag.png') }}" class="img-fluid" alt="img" />
+								    </div>
+								</div> 
+		        			</div>
+		        		</div>
+		        	</div>
+		        </div>
+
+		        <div class="section6">
+		        	<div class="container">
+		        		<div class="row">
+		        			<div class="col-sm-3 col-12 border-right">
+		        				<div class="section6-box section6-box1">
+		        					<img src="{{ asset('public/assets/images/section6-img1.png')}}" class="img-fluid" alt="img" />
+		        					<p>2 MIN AEROPORT</p>
+		        				</div> 
+		        			</div>
+		        			<div class="col-sm-3 col-12 border-right">
+		        				<div class="section6-box section6-box2">
+		        					<img src="{{ asset('public/assets/images/section6-img2.png') }}" class="img-fluid" alt="img" />
+		        					<p>ASSISTANCE <br>TÉLÉPHONE <br>24H/24 7J/7</p>
+		        				</div>
+		        			</div>
+		        			<div class="col-sm-3 col-12 border-right">
+		        				<div class="section6-box section6-box3">
+		        					<img src="{{ asset('public/assets/images/section6-img3.png') }}" class="img-fluid" alt="img" />
+		        					<p>32 RUE RAYMOND <br>GRIMAUD <br>31700 BLAGNAC</p>
+		        				</div>
+		        			</div>
+		        			<div class="col-sm-3 col-12">
+		        				<div class="section6-box section6-box4">
+		        					<img src="{{ asset('public/assets/images/section6-img4.png') }}" class="img-fluid" alt="img" />
+		        					<p>NAVATE GRATUITE</p>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div>
+		        </div>
+
+		        <div class="section7">
+		        	<div class="container">
+		        		<div class="row">
+		        			<div class="col-sm-2 col-12">
+		        				<div class="section7-box section7-box1">
+		        					<img src="{{ asset('public/assets/images/call-icon.png') }}" class="img-fluid" alt="img" />
+		        					<p>ASSISTANCE</p>
+		        					<p>0778682047</p>
+		        					<p>parkmemat@gmail.com</p>
+		        				</div> 
+		        			</div>
+		        			<div class="col-sm-3 col-12">
+		        				<div class="section7-box section7-box2">
+		        					<h3>Reserve a spot</h3>
+		        					<p>Lorem ipsum dolor sit amet, consectetur</p>
+		        				</div>
+		        			</div>
+		        			<div class="col-sm-2 col-12">
+		        				<div class="section7-box section7-box3">
+		        					<img src="{{ asset('public/assets/images/footer-logo.png') }}" class="img-fluid" alt="img" />
+		        				</div>
+		        			</div>
+		        			<div class="col-sm-3 col-12">
+		        				<div class="section7-box section7-box4">
+		        					<h3>Reserve a spot</h3>
+		        					<p>Lorem ipsum dolor sit amet, consectetur</p>
+		        				</div>
+		        			</div>
+		        			<div class="col-sm-2 col-12">
+		        				<div class="section7-box section7-box5">
+		        					<img src="{{ asset('public/assets/images/fb-icon.png') }}" class="img-fluid" alt="img" />
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div>
+		        </div>
+
+		        <div class="footerSection">
+		        	<div class="container">
+		        		<div class="row">
+		        			<div class="col">
+		        				<div class="footerText">
+		        					<p>&copy; Copyright 2020 Park Me - All Rights Reserved</p>
+		        				</div>
+		        			</div>
+		        		</div>
 		        	</div>
 		        </div>
 		    </section>
@@ -809,65 +996,65 @@
 									    </div>
 								    </div>
 
-									<div class="row mb-3">
-				        		  		<div class="col">
-				        		  			<div class="page4-header">
-				        		  				<h4>Paiement</h4>
-				        		  				<p>Toutes les transactions sent securisees of cryptees.</p>
-				        		  			</div>
-				        		  		</div>
-				        		  	</div>
+									<!--<div class="row mb-3">-->
+				     <!--   		  		<div class="col">-->
+				     <!--   		  			<div class="page4-header">-->
+				     <!--   		  				<h4>Paiement</h4>-->
+				     <!--   		  				<p>Toutes les transactions sent securisees of cryptees.</p>-->
+				     <!--   		  			</div>-->
+				     <!--   		  		</div>-->
+				     <!--   		  	</div>-->
 
-				        		  	<div class="credit-card">
+				     <!--   		  	<div class="credit-card">-->
 
-					        		  	<div class="row mb-3">
-					        		  		<div class="col">
-					        		  			<div class="page4-header">
-					        		  				<h4>Carte de credit</h4>
-					        		  			</div>
-					        		  		</div>
-					        		  		<div class="col text-right">
-					        		  			<img src="{{ asset('public/assets/images/social-icon.jpg')}}" class="img-fluid" alt="img" />
-					        		  		</div>
-					        		  	</div>
+					    <!--    		  	<div class="row mb-3">-->
+					    <!--    		  		<div class="col">-->
+					    <!--    		  			<div class="page4-header">-->
+					    <!--    		  				<h4>Carte de credit</h4>-->
+					    <!--    		  			</div>-->
+					    <!--    		  		</div>-->
+					    <!--    		  		<div class="col text-right">-->
+					    <!--    		  			<img src="{{ asset('public/assets/images/social-icon.jpg')}}" class="img-fluid" alt="img" />-->
+					    <!--    		  		</div>-->
+					    <!--    		  	</div>-->
 
-					        		  	<div class="row mb-3">
+					    <!--    		  	<div class="row mb-3">-->
 
-									      <div class="col">
-									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de Carte" name="card_holder" required />
-									        <div class="valid-feedback">Valid.</div>
-	    									<div class="invalid-feedback">Please fill out this field.</div>
-									      </div>
+									<!--      <div class="col">-->
+									<!--        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de Carte" name="card_holder" required />-->
+									<!--        <div class="valid-feedback">Valid.</div>-->
+	    				<!--					<div class="invalid-feedback">Please fill out this field.</div>-->
+									<!--      </div>-->
 
-									    </div>
+									<!--    </div>-->
 
-									    <div class="row mb-3">
+									<!--    <div class="row mb-3">-->
 
-									      <div class="col">
-									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero sur ta Carte" name="card_number" required />
-									        <div class="valid-feedback">Valid.</div>
-	    									<div class="invalid-feedback">Please fill out this field.</div>
-									      </div>
+									<!--      <div class="col">-->
+									<!--        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero sur ta Carte" name="card_number" required />-->
+									<!--        <div class="valid-feedback">Valid.</div>-->
+	    				<!--					<div class="invalid-feedback">Please fill out this field.</div>-->
+									<!--      </div>-->
 
-									    </div>
+									<!--    </div>-->
 
-									    <div class="row mb-3">
+									<!--    <div class="row mb-3">-->
 
-									      <div class="col">
-									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Date d'expiration (MM/AA)" name="expiry" id="expiryDate" required />
-									        <div class="valid-feedback">Valid.</div>
-	    									<div class="invalid-feedback">Please fill out this field.</div>
-									      </div>
+									<!--      <div class="col">-->
+									<!--        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Date d'expiration (MM/AA)" name="expiry" id="expiryDate" required />-->
+									<!--        <div class="valid-feedback">Valid.</div>-->
+	    				<!--					<div class="invalid-feedback">Please fill out this field.</div>-->
+									<!--      </div>-->
 
-									      <div class="col">
-									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Code de securitees" name="csv"  required />
-									        <div class="valid-feedback">Valid.</div>
-	    									<div class="invalid-feedback">Please fill out this field.</div>
-									      </div>
+									<!--      <div class="col">-->
+									<!--        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Code de securitees" name="csv"  required />-->
+									<!--        <div class="valid-feedback">Valid.</div>-->
+	    				<!--					<div class="invalid-feedback">Please fill out this field.</div>-->
+									<!--      </div>-->
 
-									    </div>
+									<!--    </div>-->
 
-								    </div>
+								 <!--   </div>-->
 
 					        	</div>
 				        	</div>
@@ -888,9 +1075,10 @@
 	    <!-- JavaSrcipts -->
 
 	    <script src="{{ asset('public/assets/js/jquery.min.js')}}"></script>
+	    <script src="{{ asset('public/assets/js/jquery-ui.min.js')}}"></script>
+        <script src="{{ asset('public/assets/js/owl.carousel.min.js') }}"></script>
 		<script src="{{ asset('public/assets/js/bootstrap.min.js')}}"></script>
 		<script src="{{ asset('public/assets/js/custom.js')}}"></script>
-        <script src="{{ asset('public/assets/js/jquery-ui.min.js')}}"></script>
 		<!--<script src="{{ asset('public/assets/js/bootstrap-datepicker.js')}}"></script>-->
 
     </body>

@@ -3,11 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-sm-12 col-12">
             <div class="card">
                 <div class="card-header">Booking Details</div>
 
-                <div class="card-body">
+                <div class="card-body"width="400">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -25,6 +25,11 @@
                         <th scope="col">Car Type</th>
                         <th scope="col">Service</th>
                         <th scope="col">Service Type</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Seats</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,6 +44,11 @@
                             <td>{{$v['car_type']}}</td>
                             <td>{{$v['service']}}</td>
                             <td>{{$v['service_type']}}</td>
+                            <td>{{$v['price']}}</td>
+                            <td>{{$v['name']}}</td>
+                            <td>{{$v['email']}}</td>
+                            <td>{{$v['phone']}}</td>
+                            <td>{{$v['no_of_seat']}}</td>
                             </tr>
                         @endforeach
                     @else

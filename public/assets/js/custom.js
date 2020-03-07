@@ -283,3 +283,26 @@ $("#page4Prev-btn").click(function(){
   }, false);
 })();
 /*Credit card form validation ends here*/
+
+/*Owl COursel start here*/
+$(document).ready(function () {
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+ 	dotsEach: true,
+ 	nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+});
+
+/*Owl Coursel ends here*/

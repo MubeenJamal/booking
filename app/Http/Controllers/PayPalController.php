@@ -34,7 +34,7 @@ class PayPalController extends Controller
         // $response = $provider->setExpressCheckout($data);
   
         $response = $provider->setExpressCheckout($data, true);
-        dd($response);
+        zdd($response);
         return redirect($response['paypal_link']);
     }
    
