@@ -43,7 +43,7 @@
 		</nav>
 
 		<main>
-			<form method="post" action="{{route('create_booking_details')}}">
+			<form method="post" class="needs-validation" action="{{route('create_booking_details')}}" novalidate>
 			{{csrf_field()}}
 		    <!-- Index.html page -->
 		    <section id="index">
@@ -294,6 +294,7 @@
 									<div class="col-sm-3 col-3">
 								      <div class="services arri">
 								        <label> SERVICE </label>
+										<label><b>Navette gratuite(0€)</b></label>
 								        <div class="service setServiceType">--</div>
 								        <div class=""> &nbsp; </div>
 								      </div>
@@ -579,6 +580,7 @@
 										<div class="col-sm-3 col-3">
 									      <div class="services arri">
 									        <label> SERVICE </label>
+											<label><b>Navette gratuite(0€)</b></label>
 									        <div class="service setServiceType">--</div>
 									        <div class=""> &nbsp; </div>
 									      </div>
@@ -641,15 +643,6 @@
 
 									<div class="row">
 										<div class="col-sm-6 col-8">
-											<!-- <div class="revision-text">
-										        <h5>Vidange</h5>    
-										    </div> -->
-											  <!--<div class="custom-control custom-radio">-->
-											  <!--  <input type="radio" class="custom-control-input" id="customRadio1" name="" value="customEx">-->
-											  <!--  <label class="custom-control-label" for="customRadio1">Vidange</label>-->
-											  <!--</div>-->
-
-											</form>
 										</div>
 
 										<div class="col-sm-6 col-4">
@@ -716,7 +709,6 @@
 		        </div>
 		    </section>
 		    <!-- Page 3 Ends -->
-			</form>
 			
 			<!-- Page 4 Starts -->
 		    <section id="page4">
@@ -746,8 +738,8 @@
 									<div class="col-sm-3 col-3">
 								      <div class="services arri">
 								        <label> SERVICE </label>
-								        <div class="service">Navette PARKME (0€)</div>
-								        <div class=""> &nbsp; </div>
+								        <label><b>Navette gratuite(0€)</b></label>
+								        <div class="service setServiceType"> &nbsp; </div>
 								      </div>
 									</div>
 
@@ -774,7 +766,6 @@
 		                </div>
 		            </div>
 
-		            <form action="/" class="needs-validation" novalidate>
 
 			            <div class="row">
 			            	<div class="col-sm-6 offset-sm-3">
@@ -796,7 +787,7 @@
 								      </div>
 
 								      <div class="col">
-								        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de telephone" name="number" required />
+								        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de telephone" name="phone" required />
 								        <div class="valid-feedback">Valid.</div>
 	    								<div class="invalid-feedback">Please fill out this field.</div>
 								      </div>
@@ -804,7 +795,7 @@
 
 								    <div class="row mb-3">
 								      <div class="col">
-								        <input type="email" class="form-control form-control-lg form-check-input" placeholder="E-mail" name="number" required />
+								        <input type="email" class="form-control form-control-lg form-check-input" placeholder="E-mail" name="email" required />
 								        <div class="valid-feedback">Valid.</div>
 	    									<div class="invalid-feedback">Please fill out this field.</div>
 								      </div>
@@ -812,7 +803,7 @@
 
 								    <div class="row mb-3">
 									    <div class="col">
-									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de personne (Navette)" name="number" required />
+									        <input type="number" class="form-control form-control-lg form-check-input" placeholder="Numero de personne (Navette)" name="no_of_seats" required />
 									        <div class="valid-feedback">Valid.</div>
 	    									<div class="invalid-feedback">Please fill out this field.</div>
 									    </div>
@@ -843,7 +834,7 @@
 					        		  	<div class="row mb-3">
 
 									      <div class="col">
-									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de Carte" name="number" required />
+									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de Carte" name="card_holder" required />
 									        <div class="valid-feedback">Valid.</div>
 	    									<div class="invalid-feedback">Please fill out this field.</div>
 									      </div>
@@ -853,7 +844,7 @@
 									    <div class="row mb-3">
 
 									      <div class="col">
-									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero sur ta Carte" name="cardnumber" required />
+									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero sur ta Carte" name="card_number" required />
 									        <div class="valid-feedback">Valid.</div>
 	    									<div class="invalid-feedback">Please fill out this field.</div>
 									      </div>
@@ -869,7 +860,7 @@
 									      </div>
 
 									      <div class="col">
-									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Code de securitees" name="securities"  required />
+									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Code de securitees" name="csv"  required />
 									        <div class="valid-feedback">Valid.</div>
 	    									<div class="invalid-feedback">Please fill out this field.</div>
 									      </div>
@@ -887,10 +878,11 @@
 							<button type="submit" class="custom-btn">Valider</button>
 						</div>
 
-					</form>
+					
 		        </div>
 		    </section>
 		    <!-- Page 4 Ends -->
+			</form>
 		</main>
 
 	    <!-- JavaSrcipts -->

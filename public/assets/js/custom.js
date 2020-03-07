@@ -179,6 +179,10 @@ function setSelectedValues(){
 
 }
 
+// Change on Service radio button
+$('input[type=radio][name=service]').change(function() {
+  setSelectedValues();
+});
 
 /* Page 1 button css starts here */
 
@@ -214,7 +218,12 @@ $("#page2Next-btn").click(function(){
      $("#essenceError").show();
     }
 
-    if($('input:radio[name=service]').is(':checked')){
+    if($('input:radio[name=service_type]').is(':not(:checked)')){
+      $("#essenceError").html('Service type is not selected');
+      $("#essenceError").show();
+     }
+
+    if($('input:radio[name=service]').is(':checked') && $('input:radio[name=service_type]').is(':checked')){
       setSelectedValues();
       $("#page3").show();
       console.log($('.setServiceType').text($("input[name='service_type']:checked").val()));
