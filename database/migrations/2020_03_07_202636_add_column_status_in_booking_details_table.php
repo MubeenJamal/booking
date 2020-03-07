@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddPriceColumntoBookingDetailsTable extends Migration
+class AddColumnStatusInBookingDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddPriceColumntoBookingDetailsTable extends Migration
     public function up()
     {
         Schema::table('booking_details', function (Blueprint $table) {
-            //$table->string('price')->after('service_type');
+            $table->string('status')->after('no_of_seats')->default(1)->comment('1=pending,2=completed,3=failed');
         });
     }
 
@@ -26,7 +26,7 @@ class AddPriceColumntoBookingDetailsTable extends Migration
     public function down()
     {
         Schema::table('booking_details', function (Blueprint $table) {
-            $table->string('price');
+            //
         });
     }
 }

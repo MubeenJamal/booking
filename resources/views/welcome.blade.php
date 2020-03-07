@@ -63,7 +63,7 @@
         </div>
 
 		<main>
-			<form method="post" class="needs-validation" action="{{route('create_booking_details')}}" novalidate>
+			<form method="post" class="needs-validation" action="{{route('paypal_payment')}}" novalidate>
 			{{csrf_field()}}
 		    <!-- Index.html page -->
 		    <section id="index">
