@@ -179,6 +179,10 @@ function setSelectedValues(){
 
 }
 
+// Change on Service radio button
+$('input[type=radio][name=service]').change(function() {
+  setSelectedValues();
+});
 
 /* Page 1 button css starts here */
 
