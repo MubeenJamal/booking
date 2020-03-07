@@ -13,7 +13,7 @@ class BookingController extends Controller
 
     public function create_booking_details(Request $request)
     {
-        // dd($request->input());
+        dd($request->input());
         $data = $request->except(['_token']);
         $data['service'] = explode('-',$request->service)[0];
         $data['price'] = explode('-',$request->service)[1];

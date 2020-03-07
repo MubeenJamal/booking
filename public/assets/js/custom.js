@@ -162,8 +162,19 @@ function setSelectedValues(){
 	//total price 
 	$price = $("input[name='service']:checked").val();
 	if($price){
+    console.log($price);
+    // console.log($price.split('-')[-1]);
+    console.log($price.split('-')[0]);
+    // console.log($price.split('-')[1]);
+    // console.log($price.split(' ')[1]);
+    // console.log($price.split(' ')[0]);
+    $('.final_sevice').html($price.split('-')[0]);
 		$price = $price.split('-')[1];
 		$('.total-price').html('€'+$price);
+
+    
+    $('.final_sevice_price').html('€'+$price);
+
 	}
 
 }

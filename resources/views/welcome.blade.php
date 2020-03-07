@@ -624,7 +624,7 @@
 									<div class="row">
 										<div class="col-sm-6 col-8">
 										    <div class="revision-text">
-										        <h5>Changement pneu</h5>    
+										        <h5 class="final_sevice">Changement pneu</h5>    
 										    </div>
 											  <!--<div class="custom-control custom-radio">-->
 											  <!--  <input type="radio" class="custom-control-input" id="customRadio" name="" value="customEx">-->
@@ -634,16 +634,16 @@
 
 										<div class="col-sm-6 col-4">
 										    <div class="revision-cost">
-											    <h5>20 €</h5>
+											    <h5 class="final_sevice_price">20 €</h5>
 											</div>
 										</div>
 									</div>
 
 									<div class="row">
 										<div class="col-sm-6 col-8">
-											<div class="revision-text">
+											<!-- <div class="revision-text">
 										        <h5>Vidange</h5>    
-										    </div>
+										    </div> -->
 											  <!--<div class="custom-control custom-radio">-->
 											  <!--  <input type="radio" class="custom-control-input" id="customRadio1" name="" value="customEx">-->
 											  <!--  <label class="custom-control-label" for="customRadio1">Vidange</label>-->
@@ -653,9 +653,9 @@
 										</div>
 
 										<div class="col-sm-6 col-4">
-										    <div class="revision-cost">
+										    <!-- <div class="revision-cost">
 											    <h5>20 €</h5>
-											</div>
+											</div> -->
 										</div>
 									</div>
 									
