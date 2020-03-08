@@ -2,6 +2,19 @@
 
 /*Mobiles Devices*/
   @media (max-width: 575px) {
+    .section3-right h3 {
+        font-size: 1.7rem;
+    }
+     .section2-box2-text {
+        margin-bottom: 20px;
+    }
+    .section2-box{
+         display: none;
+    }
+    #ui-datepicker-div{
+        width: 100% !important;
+        left: 0 !important;
+    }
     .section4-centeredHeading {
       font-size: 2rem;
     }

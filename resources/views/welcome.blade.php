@@ -20,15 +20,18 @@
         <link rel="stylesheet" href="{{ asset('public/assets/css/jquery-ui.min.css') }}">
         <link rel="stylesheet" href="{{ asset('public/assets/css/owl.carousel.min.css') }}">
         <link rel="stylesheet" href="{{ asset('public/assets/css/owl.theme.default.min.css') }}">
-        <!--<link href="{{ asset('public/assets/css/datepicker.css') }}" rel="stylesheet" type="text/css" />-->
+        <link rel="stylesheet" href="{{ asset('public/assets/css/aos.css') }}">
+        
+        <!-- JavaSrcipts -->
+        <script src="{{ asset('public/assets/js/jquery.min.js')}}"></script>
 
     </head>
-    <body onload="init()" class="bg-img">
+    <body class="bg-img">
 
 		<!-- Navbar -->
 		<nav class="navbar navbar-expand-sm custom-navbar">
 			<div class="container">
-			    <a class="navbar-brand" href="index.html">
+			    <a class="navbar-brand" href="/">
 					<img src="{{ asset('public/assets/images/logo.svg')}}" style="width: 15%;" class="img-fluid" alt="img" />
 				</a>
 			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -68,7 +71,7 @@
 		    <!-- Index.html page -->
 		    <section id="index">
 	        	<div class="section1">
-	        	    <div class="container">
+	        	    <div class="container" data-aos="fade-up" data-aos-duration="1000">
 			            <div class="row">
 			                <div class="col-sm-12 col-12">
 			                    <div class="section1-header">
@@ -85,7 +88,7 @@
 									<div class="form-group">
 			                        	<label>arrivee</label>
 										<div class="date">
-										    <input class="form-control form-control-lg" type="text" placeholder="Select Date" name="start_date" id="arrivalDate" />
+										    <input class="form-control form-control-lg" type="text" placeholder="Select Date" name="start_date" id="arrivalDate" readonly />
 										    <span class="input-group-addon">
 										    	<i class="fa fa-calendar-alt"></i>
 										    </span>
@@ -100,10 +103,43 @@
 									<div class="form-group">
 									  <label class="invisible" for="arriveeTime">arrivee</label>
 									  <select class="form-control form-control-lg" id="arriveeTime" name="start_time">
-									    <option>5:00</option>
-									    <option>5:15</option>
-									    <option>5:30</option>
-									    <option>5:45</option>
+									    <option>5:00 AM</option>
+									    <option>5:30 AM</option>
+									    <option>6:00 AM</option>
+									    <option>6:30 AM</option>
+									    <option>7:00 AM</option>
+									    <option>7:30 AM</option>
+									    <option>8:00 AM</option>
+									    <option>8:30 AM</option>
+									    <option>9:00 AM</option>
+									    <option>9:30 AM</option>
+									    <option>10:00 AM</option>
+									    <option>10:30 AM</option>
+									    <option>11:00 AM</option>
+									    <option>11:30 AM</option>
+									    <option>12:00 PM</option>
+									    <option>12:30 PM</option>
+									    <option>13:00 PM</option>
+									    <option>13:30 PM</option>
+									    <option>14:00 PM</option>
+									    <option>14:30 PM</option>
+									    <option>15:00 PM</option>
+									    <option>15:30 PM</option>
+									    <option>16:00 PM</option>
+									    <option>16:30 PM</option>
+									    <option>17:00 PM</option>
+									    <option>17:30 PM</option>
+									    <option>18:00 PM</option>
+									    <option>18:30 PM</option>
+									    <option>19:00 PM</option>
+									    <option>19:30 PM</option>
+									    <option>20:00 PM</option>
+									    <option>20:30 PM</option>
+									    <option>21:00 PM</option>
+									    <option>21:30 PM</option>
+									    <option>22:00 PM</option>
+									    <option>22:30 PM</option>
+									    <option>23:00 PM</option>
 									  </select>
 									</div>
 								</div>
@@ -114,7 +150,7 @@
 									<div class="form-group">
 			                        	<label>depart</label>
 										<div class="date">
-										    <input class="form-control form-control-lg" type="text" placeholder="Select Date" name="end_date" id="departureDate" />
+										    <input class="form-control form-control-lg" type="text" placeholder="Select Date" name="end_date" id="departureDate" readonly />
 										    <span class="input-group-addon">
 										    	<i class="fa fa-calendar-alt"></i>
 										    </span>
@@ -129,10 +165,43 @@
 									<div class="form-group">
 									  <label class="invisible" for="departTime">depart</label>
 									  <select class="form-control custom-select-lg" id="departTime" name="end_time">
-									    <option>5:00</option>
-									    <option>5:15</option>
-									    <option>5:30</option>
-									    <option>5:45</option>
+									    <option>5:00 AM</option>
+									    <option>5:30 AM</option>
+									    <option>6:00 AM</option>
+									    <option>6:30 AM</option>
+									    <option>7:00 AM</option>
+									    <option>7:30 AM</option>
+									    <option>8:00 AM</option>
+									    <option>8:30 AM</option>
+									    <option>9:00 AM</option>
+									    <option>9:30 AM</option>
+									    <option>10:00 AM</option>
+									    <option>10:30 AM</option>
+									    <option>11:00 AM</option>
+									    <option>11:30 AM</option>
+									    <option>12:00 PM</option>
+									    <option>12:30 PM</option>
+									    <option>13:00 PM</option>
+									    <option>13:30 PM</option>
+									    <option>14:00 PM</option>
+									    <option>14:30 PM</option>
+									    <option>15:00 PM</option>
+									    <option>15:30 PM</option>
+									    <option>16:00 PM</option>
+									    <option>16:30 PM</option>
+									    <option>17:00 PM</option>
+									    <option>17:30 PM</option>
+									    <option>18:00 PM</option>
+									    <option>18:30 PM</option>
+									    <option>19:00 PM</option>
+									    <option>19:30 PM</option>
+									    <option>20:00 PM</option>
+									    <option>20:30 PM</option>
+									    <option>21:00 PM</option>
+									    <option>21:30 PM</option>
+									    <option>22:00 PM</option>
+									    <option>22:30 PM</option>
+									    <option>23:00 PM</option>
 									  </select>
 									</div>
 									<div class="form-group text-right mt-4">
@@ -145,17 +214,86 @@
 		            </div>
 	        	</div>
 		        
+		        <div class="section2">
+		        	<div class="container">
+		        		<div class="row">
+		        			<div class="col-sm-12 col-12">
+		        				<div class="section2-main">
+		        					<h1>PARK ME <span>EN 5 ÉTAPES</span></h1>
+
+		        					<div class="section2-master">
+		        						<div class="section2-box1">
+			        						<div class="section2-box1-img" data-aos="flip-left" data-aos-duration="1000">
+				        						<img src="{{ asset('public/assets/images/section2-img1.png') }}" class="img-fluid" alt="img" />
+				        					</div>
+			        						<div class="section2-box1-img" data-aos="flip-left" data-aos-duration="1000">
+			        							<img src="{{ asset('public/assets/images/section2-img2.png') }}" class="img-fluid" alt="img" />
+			        						</div>
+			        						<div class="section2-box1-img" data-aos="flip-left" data-aos-duration="1000">
+			        							<img src="{{ asset('public/assets/images/section2-img3.png') }}" class="img-fluid" alt="img" />
+			        						</div>
+			        						<div class="section2-box1-img" data-aos="flip-left" data-aos-duration="1000">
+			        							<img src="{{ asset('public/assets/images/section2-img4.png') }}" class="img-fluid" alt="img" />
+			        						</div>
+			        						<div class="section2-box1-img" data-aos="flip-left" data-aos-duration="1000">
+			        							<img src="{{ asset('public/assets/images/section2-img5.png') }}" class="img-fluid" alt="img" />
+			        						</div>
+			        					</div>
+			        					<div class="section2-box">
+			        						<div class="line line1">
+				        						<p>1</p>
+				        					</div>
+			        						<div class="line line2">
+			        							<p>2</p>
+			        						</div>
+			        						<div class="line line3">
+			        							<p>3</p>
+			        						</div>
+			        						<div class="line line4">
+			        							<p>4</p>
+			        						</div>
+			        						<div class="line line5">
+			        							<p>5</p>
+			        						</div>
+			        					</div>
+			        					<div class="section2-box2">
+			        						<div class="section2-box2-text">
+				        						<p>RÉSERVE EN LIGNE</p>
+				        					</div>
+			        						<div class="section2-box2-text">
+			        							<p>GARER VOTRE VOITURE</p>
+			        						</div>
+			        						<div class="section2-box2-text">
+			        							<p>TRANSPORTÉ VERS <br>AEROPORT</p>
+			        							<small>NAVETTE PARKME</small>
+			        						</div>
+			        						<div class="section2-box2-text">
+			        							<p>PENDANT MON VOYAGE</p>
+			        							<small>LAVAGE | ESSENCE</small>
+			        						</div>
+			        						<div class="section2-box2-text">
+			        							<p>RETOUR J'APPELLE <br>NAVETTE</p>
+			        						</div>
+			        					</div>
+			        					
+		        					</div>
+		        				</div>
+		        			</div>
+		        		</div>
+	        		</div>
+		        </div>
+
 		        
 		        <div class="section3">
 		        	<div class="container">
 		        		<div class="row">
 		        			<div class="col-sm-6 col-12">
-		        				<div class="section3-left">
+		        				<div class="section3-left" data-aos="fade-right" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section3-img.png') }}" class="img-fluid" alt="img" />
 		        				</div>
 		        			</div>
 		        			<div class="col-sm-6 col-12">
-		        				<div class="section3-right">
+		        				<div class="section3-right" data-aos="fade-left" data-aos-duration="1000">
 		        					<h3>NAVETTE GRATUITE</h3>
 		        					<p>Départ et arrivée en 2 minutes.</p>
 		        					<a href="#" class="section3-btn">Je réserve</a>
@@ -168,7 +306,7 @@
 		        <div class="section4">
 	        		<div class="row">
 	        			<div class="col-sm-12 col-12">
-	        				<div class="section4-main">
+	        				<div class="section4-main" data-aos="fade-up" data-aos-duration="1000">
 	        					<h1 class="section4-centeredHeading">NOS SERVICES</h1>
 		        				<div class="section4-box section4-img1">
 		        					<img src="{{ asset('public/assets/images/section4-img1.png') }}" class="image" alt="img" />
@@ -203,14 +341,14 @@
 		        	<div class="container">
 		        		<div class="row">
 		        			<div class="col-sm-12">
-		        				<div class="section5-heading">
+		        				<div class="section5-heading" data-aos="fade-up" data-aos-duration="1000">
 		        					<h3>NOS PARTENAIRES</h3>
 		        				</div>
 		        			</div>
 		        		</div>
 		        		<div class="row">
 		        			<div class="col-sm-12 col-12">
-		        				<div class="owl-carousel owl-theme">
+		        				<div class="owl-carousel owl-theme" data-aos="fade-up" data-aos-duration="1000">
 								    <div class="item">
 								    	<img src="{{ asset('public/assets/images/allianz.png') }}" class="img-fluid" alt="img" />
 								    </div>
@@ -236,25 +374,25 @@
 		        	<div class="container">
 		        		<div class="row">
 		        			<div class="col-sm-3 col-12 border-right">
-		        				<div class="section6-box section6-box1">
+		        				<div class="section6-box section6-box1" data-aos="flip-left" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section6-img1.png')}}" class="img-fluid" alt="img" />
 		        					<p>2 MIN AEROPORT</p>
 		        				</div> 
 		        			</div>
 		        			<div class="col-sm-3 col-12 border-right">
-		        				<div class="section6-box section6-box2">
+		        				<div class="section6-box section6-box2" data-aos="flip-left" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section6-img2.png') }}" class="img-fluid" alt="img" />
 		        					<p>ASSISTANCE <br>TÉLÉPHONE <br>24H/24 7J/7</p>
 		        				</div>
 		        			</div>
 		        			<div class="col-sm-3 col-12 border-right">
-		        				<div class="section6-box section6-box3">
+		        				<div class="section6-box section6-box3" data-aos="flip-left" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section6-img3.png') }}" class="img-fluid" alt="img" />
 		        					<p>32 RUE RAYMOND <br>GRIMAUD <br>31700 BLAGNAC</p>
 		        				</div>
 		        			</div>
 		        			<div class="col-sm-3 col-12">
-		        				<div class="section6-box section6-box4">
+		        				<div class="section6-box section6-box4" data-aos="flip-left" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section6-img4.png') }}" class="img-fluid" alt="img" />
 		        					<p>NAVATE GRATUITE</p>
 		        				</div>
@@ -264,7 +402,7 @@
 		        </div>
 
 		        <div class="section7">
-		        	<div class="container">
+		        	<div class="container" data-aos="fade-up" data-aos-duration="1000">
 		        		<div class="row">
 		        			<div class="col-sm-2 col-12">
 		        				<div class="section7-box section7-box1">
@@ -411,39 +549,39 @@
 								</div> -->
 				            </div>
 
-				            <div class="row">
-				            	<div class="col-sm-6 p-0">
-				            		<div class="blue-border1"></div>
-				            	</div>
-				            	<div class="col-sm-6 p-0">
-				            		<div class="blue-border2"></div>
-				            	</div>
-				            </div>
+				            <!--<div class="row">-->
+				            <!--	<div class="col-sm-6 p-0">-->
+				            <!--		<div class="blue-border1"></div>-->
+				            <!--	</div>-->
+				            <!--	<div class="col-sm-6 p-0">-->
+				            <!--		<div class="blue-border2"></div>-->
+				            <!--	</div>-->
+				            <!--</div>-->
 			        	</div>
 
-			        	<div class="row">
-							<div class="col-sm-6 offset-sm-3">
-								<div class="row">
-									@foreach($services as $service)
-									<div class="col-sm-4 col-4">
-										<div class="footer-icon">
-											<img src="{{ asset('public/assets/images/'.$service->icon)}}" class="img-fluid" alt="img" />
-										</div>
-									</div>
-									@endforeach
-									<!-- <div class="col-sm-4 col-4">
-										<div class="footer-icon">
-											<img src="{{ asset('public/assets/images/img2.png')}}" class="img-fluid" alt="img" />
-										</div>
-									</div>
-									<div class="col-sm-4 col-4">
-										<div class="footer-icon">
-											<img src="{{ asset('public/assets/images/img3.png')}}" class="img-fluid" alt="img" />
-										</div>
-									</div> -->
-								</div>
-							</div>
-			        	</div>
+			    <!--    	<div class="row">-->
+							<!--<div class="col-sm-6 offset-sm-3">-->
+							<!--	<div class="row">-->
+							<!--		@foreach($services as $service)-->
+							<!--		<div class="col-sm-4 col-4">-->
+							<!--			<div class="footer-icon">-->
+							<!--				<img src="{{ asset('public/assets/images/'.$service->icon)}}" class="img-fluid" alt="img" />-->
+							<!--			</div>-->
+							<!--		</div>-->
+							<!--		@endforeach-->
+							<!--		 <div class="col-sm-4 col-4">-->
+							<!--			<div class="footer-icon">-->
+							<!--				<img src="{{ asset('public/assets/images/img2.png')}}" class="img-fluid" alt="img" />-->
+							<!--			</div>-->
+							<!--		</div>-->
+							<!--		<div class="col-sm-4 col-4">-->
+							<!--			<div class="footer-icon">-->
+							<!--				<img src="{{ asset('public/assets/images/img3.png')}}" class="img-fluid" alt="img" />-->
+							<!--			</div>-->
+							<!--		</div>-->
+							<!--	</div>-->
+							<!--</div>-->
+			    <!--    	</div>-->
 
 			        	<div class="page1-btn">
 			        		<a href="javascript:void(0);" class="custom-btn2" id="page1Prev-btn">Passer a la derniere etape</a>
@@ -564,14 +702,14 @@
 			      <!--      	</div>-->
 			      <!--      </div>-->
 
-			            <div class="row">
-			            	<div class="col-sm-6 p-0">
-			            		<div class="blue-border1"></div>
-			            	</div>
-			            	<div class="col-sm-6 p-0">
-			            		<div class="blue-border2"></div>
-			            	</div>
-			            </div>
+			            <!--<div class="row">-->
+			            <!--	<div class="col-sm-6 p-0">-->
+			            <!--		<div class="blue-border1"></div>-->
+			            <!--	</div>-->
+			            <!--	<div class="col-sm-6 p-0">-->
+			            <!--		<div class="blue-border2"></div>-->
+			            <!--	</div>-->
+			            <!--</div>-->
 		        	</div>
 
 		        	<div class="page2 box2">
@@ -628,14 +766,14 @@
 			            	</div>
 			            </div>
 
-			            <div class="row">
-			            	<div class="col-sm-6 p-0">
-			            		<div class="blue-border1"></div>
-			            	</div>
-			            	<div class="col-sm-6 p-0">
-			            		<div class="blue-border2"></div>
-			            	</div>
-			            </div>
+			            <!--<div class="row">-->
+			            <!--	<div class="col-sm-6 p-0">-->
+			            <!--		<div class="blue-border1"></div>-->
+			            <!--	</div>-->
+			            <!--	<div class="col-sm-6 p-0">-->
+			            <!--		<div class="blue-border2"></div>-->
+			            <!--	</div>-->
+			            <!--</div>-->
 		        	</div>
 
 		        	<div class="page2 box3">
@@ -690,14 +828,14 @@
 			            	</div>
 			            </div>
 
-			            <div class="row">
-			            	<div class="col-sm-6 p-0">
-			            		<div class="blue-border1"></div>
-			            	</div>
-			            	<div class="col-sm-6 p-0">
-			            		<div class="blue-border2"></div>
-			            	</div>
-			            </div>
+			            <!--<div class="row">-->
+			            <!--	<div class="col-sm-6 p-0">-->
+			            <!--		<div class="blue-border1"></div>-->
+			            <!--	</div>-->
+			            <!--	<div class="col-sm-6 p-0">-->
+			            <!--		<div class="blue-border2"></div>-->
+			            <!--	</div>-->
+			            <!--</div>-->
 		        	</div>
 
 		        	<div class="row">
@@ -857,17 +995,17 @@
 			            	</div>
 			            </div>
 
-			            <div class="row">
-			            	<div class="col-sm-6 p-0">
-			            		<div class="blue-border1"></div>
-			            	</div>
-			            	<div class="col-sm-6 p-0">
-			            		<div class="blue-border2"></div>
-			            	</div>
-			            </div>
+			            <!--<div class="row">-->
+			            <!--	<div class="col-sm-6 p-0">-->
+			            <!--		<div class="blue-border1"></div>-->
+			            <!--	</div>-->
+			            <!--	<div class="col-sm-6 p-0">-->
+			            <!--		<div class="blue-border2"></div>-->
+			            <!--	</div>-->
+			            <!--</div>-->
 		        	</div>
 
-		        	<div class="row">
+		        	<!--<div class="row">
 						<div class="col-sm-6 offset-sm-3">
 							<div class="row">
 								<div class="col-sm-4 col-4">
@@ -887,7 +1025,7 @@
 								</div>
 							</div>
 						</div>
-		        	</div>
+		        	</div>-->
 
 		        	<div class="page1-btn">
 		        		<a href="javascript:void(0);" class="custom-btn2" id="page3Prev-btn">Passer a la derniere etape</a>
@@ -996,65 +1134,65 @@
 									    </div>
 								    </div>
 
-									<!--<div class="row mb-3">-->
-				     <!--   		  		<div class="col">-->
-				     <!--   		  			<div class="page4-header">-->
-				     <!--   		  				<h4>Paiement</h4>-->
-				     <!--   		  				<p>Toutes les transactions sent securisees of cryptees.</p>-->
-				     <!--   		  			</div>-->
-				     <!--   		  		</div>-->
-				     <!--   		  	</div>-->
+									<div class="row mb-3">
+				        		  		<div class="col">
+				        		  			<div class="page4-header">
+				        		  				<h4>Paiement</h4>
+				        		  				<p>Toutes les transactions sent securisees of cryptees.</p>
+				        		  			</div>
+				        		  		</div>
+				        		  	</div>
 
-				     <!--   		  	<div class="credit-card">-->
+				        		  	<div class="credit-card">
 
-					    <!--    		  	<div class="row mb-3">-->
-					    <!--    		  		<div class="col">-->
-					    <!--    		  			<div class="page4-header">-->
-					    <!--    		  				<h4>Carte de credit</h4>-->
-					    <!--    		  			</div>-->
-					    <!--    		  		</div>-->
-					    <!--    		  		<div class="col text-right">-->
-					    <!--    		  			<img src="{{ asset('public/assets/images/social-icon.jpg')}}" class="img-fluid" alt="img" />-->
-					    <!--    		  		</div>-->
-					    <!--    		  	</div>-->
+					        		  	<div class="row mb-3">
+					        		  		<div class="col">
+					        		  			<div class="page4-header">
+					        		  				<h4>Carte de credit</h4>
+					        		  			</div>
+					        		  		</div>
+					        		  		<div class="col text-right">
+					        		  			<img src="{{ asset('public/assets/images/social-icon.jpg')}}" class="img-fluid" alt="img" />
+					        		  		</div>
+					        		  	</div>
 
-					    <!--    		  	<div class="row mb-3">-->
+					        		  	<div class="row mb-3">
 
-									<!--      <div class="col">-->
-									<!--        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de Carte" name="card_holder" required />-->
-									<!--        <div class="valid-feedback">Valid.</div>-->
-	    				<!--					<div class="invalid-feedback">Please fill out this field.</div>-->
-									<!--      </div>-->
+									      <div class="col">
+									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de Carte" name="card_holder" required />
+									        <div class="valid-feedback">Valid.</div>
+	    									<div class="invalid-feedback">Please fill out this field.</div>
+									      </div>
 
-									<!--    </div>-->
+									    </div>
 
-									<!--    <div class="row mb-3">-->
+									    <div class="row mb-3">
 
-									<!--      <div class="col">-->
-									<!--        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero sur ta Carte" name="card_number" required />-->
-									<!--        <div class="valid-feedback">Valid.</div>-->
-	    				<!--					<div class="invalid-feedback">Please fill out this field.</div>-->
-									<!--      </div>-->
+									      <div class="col">
+									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero sur ta Carte" name="card_number" required />
+									        <div class="valid-feedback">Valid.</div>
+	    									<div class="invalid-feedback">Please fill out this field.</div>
+									      </div>
 
-									<!--    </div>-->
+									    </div>
 
-									<!--    <div class="row mb-3">-->
+									    <div class="row mb-3">
 
-									<!--      <div class="col">-->
-									<!--        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Date d'expiration (MM/AA)" name="expiry" id="expiryDate" required />-->
-									<!--        <div class="valid-feedback">Valid.</div>-->
-	    				<!--					<div class="invalid-feedback">Please fill out this field.</div>-->
-									<!--      </div>-->
+									      <div class="col">
+									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Date d'expiration (MM/AA)" name="expiry" id="expiryDate" required />
+									        <div class="valid-feedback">Valid.</div>
+	    									<div class="invalid-feedback">Please fill out this field.</div>
+									      </div>
 
-									<!--      <div class="col">-->
-									<!--        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Code de securitees" name="csv"  required />-->
-									<!--        <div class="valid-feedback">Valid.</div>-->
-	    				<!--					<div class="invalid-feedback">Please fill out this field.</div>-->
-									<!--      </div>-->
+									      <div class="col">
+									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Code de securitees" name="csv"  required />
+									        <div class="valid-feedback">Valid.</div>
+	    									<div class="invalid-feedback">Please fill out this field.</div>
+									      </div>
 
-									<!--    </div>-->
+									    </div>
 
-								 <!--   </div>-->
+								    </div>
 
 					        	</div>
 				        	</div>
@@ -1072,14 +1210,14 @@
 			</form>
 		</main>
 
-	    <!-- JavaSrcipts -->
-
-	    <script src="{{ asset('public/assets/js/jquery.min.js')}}"></script>
-	    <script src="{{ asset('public/assets/js/jquery-ui.min.js')}}"></script>
+        <script src="{{ asset('public/assets/js/jquery-ui.min.js')}}"></script>
         <script src="{{ asset('public/assets/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/aos.js')}}"></script>
 		<script src="{{ asset('public/assets/js/bootstrap.min.js')}}"></script>
 		<script src="{{ asset('public/assets/js/custom.js')}}"></script>
-		<!--<script src="{{ asset('public/assets/js/bootstrap-datepicker.js')}}"></script>-->
-
+		
+        <script type="text/javascript">
+	    	AOS.init({disable: 'mobile'});
+	    </script>
     </body>
 </html>

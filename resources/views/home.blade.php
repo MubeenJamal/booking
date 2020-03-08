@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Booking Details</div>
 
-                <div class="card-body"width="400">
+                <div class="card-body table-responsive">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
