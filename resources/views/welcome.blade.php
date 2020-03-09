@@ -535,7 +535,7 @@
 	                    		<div class="col-sm-4 col-12">
 									<div class="page1-car">
 										<label>
-											<input type="radio" name="car_type" value="{{$car_type->car_type}}" checked />
+											<input type="radio" name="car_type" value="{{$car_type->car_type}}" />
 											<img src="{{ asset('public/assets/images/'.$car_type->icon)}}" class="img-fluid" alt="img" />
 										</label>
 									</div>
@@ -560,14 +560,14 @@
 								</div> -->
 				            </div>
 
-				            <!--<div class="row">-->
-				            <!--	<div class="col-sm-6 p-0">-->
-				            <!--		<div class="blue-border1"></div>-->
-				            <!--	</div>-->
-				            <!--	<div class="col-sm-6 p-0">-->
-				            <!--		<div class="blue-border2"></div>-->
-				            <!--	</div>-->
-				            <!--</div>-->
+				            <div class="row">
+				            	<div class="col-sm-6 p-0">
+				            		<div class="blue-border1"></div>
+				            	</div>
+				            	<div class="col-sm-6 p-0">
+				            		<div class="blue-border2"></div>
+				            	</div>
+				            </div>
 			        	</div>
 
 			    <!--    	<div class="row">-->
@@ -713,14 +713,14 @@
 			      <!--      	</div>-->
 			      <!--      </div>-->
 
-			            <!--<div class="row">-->
-			            <!--	<div class="col-sm-6 p-0">-->
-			            <!--		<div class="blue-border1"></div>-->
-			            <!--	</div>-->
-			            <!--	<div class="col-sm-6 p-0">-->
-			            <!--		<div class="blue-border2"></div>-->
-			            <!--	</div>-->
-			            <!--</div>-->
+			            <div class="row">
+			            	<div class="col-sm-6 p-0">
+			            		<div class="blue-border1"></div>
+			            	</div>
+			            	<div class="col-sm-6 p-0">
+			            		<div class="blue-border2"></div>
+			            	</div>
+			            </div>
 		        	</div>
 
 		        	<div class="page2 box2">
@@ -777,14 +777,14 @@
 			            	</div>
 			            </div>
 
-			            <!--<div class="row">-->
-			            <!--	<div class="col-sm-6 p-0">-->
-			            <!--		<div class="blue-border1"></div>-->
-			            <!--	</div>-->
-			            <!--	<div class="col-sm-6 p-0">-->
-			            <!--		<div class="blue-border2"></div>-->
-			            <!--	</div>-->
-			            <!--</div>-->
+			            <div class="row">
+			            	<div class="col-sm-6 p-0">
+			            		<div class="blue-border1"></div>
+			            	</div>
+			            	<div class="col-sm-6 p-0">
+			            		<div class="blue-border2"></div>
+			            	</div>
+			            </div>
 		        	</div>
 
 		        	<div class="page2 box3">
@@ -839,14 +839,14 @@
 			            	</div>
 			            </div>
 
-			            <!--<div class="row">-->
-			            <!--	<div class="col-sm-6 p-0">-->
-			            <!--		<div class="blue-border1"></div>-->
-			            <!--	</div>-->
-			            <!--	<div class="col-sm-6 p-0">-->
-			            <!--		<div class="blue-border2"></div>-->
-			            <!--	</div>-->
-			            <!--</div>-->
+			            <div class="row">
+			            	<div class="col-sm-6 p-0">
+			            		<div class="blue-border1"></div>
+			            	</div>
+			            	<div class="col-sm-6 p-0">
+			            		<div class="blue-border2"></div>
+			            	</div>
+			            </div>
 		        	</div>
 
 		        	<div class="row">
@@ -1006,14 +1006,14 @@
 			            	</div>
 			            </div>
 
-			            <!--<div class="row">-->
-			            <!--	<div class="col-sm-6 p-0">-->
-			            <!--		<div class="blue-border1"></div>-->
-			            <!--	</div>-->
-			            <!--	<div class="col-sm-6 p-0">-->
-			            <!--		<div class="blue-border2"></div>-->
-			            <!--	</div>-->
-			            <!--</div>-->
+			            <div class="row">
+			            	<div class="col-sm-6 p-0">
+			            		<div class="blue-border1"></div>
+			            	</div>
+			            	<div class="col-sm-6 p-0">
+			            		<div class="blue-border2"></div>
+			            	</div>
+			            </div>
 		        	</div>
 
 		        	<!--<div class="row">

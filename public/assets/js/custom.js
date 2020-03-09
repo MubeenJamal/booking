@@ -57,16 +57,6 @@ if($("#departureDate").val() != "" && $("#arrivalDate").val() != ""){
 /* Index button css ends here */
 
 function setSelectedValues(){
-	// document.getElementById("arrive_date").innerHTML = $("#arrivalDate").val();
-	// document.getElementById("arrive_time").innerHTML = $("#arriveeTime").val();
-	// document.getElementById("depart_date").innerHTML = $("#departureDate").val();
-	// document.getElementById("depart_time").innerHTML = $("#departTime").val();
-	// console.log($("input[name='service_type']:checked").val());
-	// $('.setServiceType').innerHTML = $("input[name='service_type']:checked").val();
-	
-	
-	var startTime = $('.sdate').html( $("#arrivalDate").val());
-	console.log(startTime);
 	
 	$('.sdate').html( $("#arrivalDate").val());
 	$('.stime').html( $("#arriveeTime").val());
@@ -250,6 +240,15 @@ $(function () {
     $("#arrivalDate, #expiryDate").datepicker({
         dateFormat: 'dd/mm/yy',
         changeMonth: true,
+        currentText: 'Aujourd\'hui',
+		monthNames: ['Janvier','Fevrier','Mars','Avril','Mai','Juin',
+		'Juillet','Aout','Septembre','Octobre','Novembre','Decembre'],
+		monthNamesShort: ['Jan','Fev','Mar','Avr','Mai','Jun',
+		'Jul','Aou','Sep','Oct','Nov','Dec'],
+		dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+		dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
+		dayNamesMin: ['Di','Lu','Ma','Me','Je','Ve','Sa'],
+		weekHeader: 'Sm',
         yearRange: new Date().getFullYear().toString() + ':' + new Date().getFullYear().toString(),
         onClose: function (selectedDate) {
             $("#departureDate").datepicker("option", "minDate", selectedDate);
@@ -258,6 +257,15 @@ $(function () {
     $("#departureDate").datepicker({
         dateFormat: 'dd/mm/yy',
         changeMonth: true,
+        currentText: 'Aujourd\'hui',
+		monthNames: ['Janvier','Fevrier','Mars','Avril','Mai','Juin',
+		'Juillet','Aout','Septembre','Octobre','Novembre','Decembre'],
+		monthNamesShort: ['Jan','Fev','Mar','Avr','Mai','Jun',
+		'Jul','Aou','Sep','Oct','Nov','Dec'],
+		dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+		dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
+		dayNamesMin: ['Di','Lu','Ma','Me','Je','Ve','Sa'],
+		weekHeader: 'Sm',
         yearRange: new Date().getFullYear().toString() + ':' + new Date().getFullYear().toString(),
         onClose: function (selectedDate) {
             $("#arrivalDate").datepicker("option", "maxDate", selectedDate);
