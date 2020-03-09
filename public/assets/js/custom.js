@@ -63,7 +63,11 @@ function setSelectedValues(){
 	// document.getElementById("depart_time").innerHTML = $("#departTime").val();
 	// console.log($("input[name='service_type']:checked").val());
 	// $('.setServiceType').innerHTML = $("input[name='service_type']:checked").val();
-	console.log();
+	
+	
+	var startTime = $('.sdate').html( $("#arrivalDate").val());
+	console.log(startTime);
+	
 	$('.sdate').html( $("#arrivalDate").val());
 	$('.stime').html( $("#arriveeTime").val());
 	$('.edate').html( $("#departureDate").val());
@@ -304,3 +308,27 @@ $('.owl-carousel').owlCarousel({
 });
 
 /*Owl Coursel ends here*/
+
+/*Preloader Jquery starts here*/
+    $(window).load(function() { // makes sure the whole site is loaded
+    	$("#status").fadeOut(); // will first fade out the loading animation
+    	$("#preloader").delay(1000).fadeOut("slow"); // will fade out the white DIV that covers the website.
+    })
+/*Preloader ends here*/   
+
+/*Telephone number validation*/
+
+$(function($){
+	
+	var input = $('#telephoneNumber')
+		input.mobilePhoneNumber({allowPhoneWithoutPrefix:'+1'});// U.S.
+		input.bind('country.mobilePhoneNumber',function(e, country) {
+		$('.country').text(country ||'')
+	})
+});
+$('input.phone-num').val();//=> '+1 (415) 123-5554'
+$('input.phone-num').mobilePhoneNumber('validate');//=> true
+$('input.phone-num').val();//=> '+43'
+$('input.phone-num').mobilePhoneNumber('validate');//=> false
+
+/*Telephone number validation ends here*/

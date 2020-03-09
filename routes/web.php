@@ -35,7 +35,8 @@ Route::get('booking_form','BookingController@booking_from')->name('booking_form'
 Route::post('paypal_payment','BookingController@paypalPayment')->name('paypal_payment');
 Route::get('payment/success', 'BookingController@success')->name('payment.success');
 Route::get('thankyou', function(){
-	echo "<h1>Thank you so much for booking</h1>";
+    return redirect()->back()->with('message', 'your appointment is completed!');
+// 	echo "<h1>Thank you so much for booking</h1>";
 })->name('payment.thankyou');
 
 Route::get('paypal', function () {

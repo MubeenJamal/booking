@@ -2,6 +2,14 @@
 
 /*Mobiles Devices*/
   @media (max-width: 575px) {
+      
+  
+      .stime{
+       font-size:12px;   
+      }
+     .section1-form {
+        padding: 0 5px;
+    }
     .section3-right h3 {
         font-size: 1.7rem;
     }
@@ -23,6 +31,7 @@
     }
     .sdate {
         font-size: 16px;
+        /*color: #1f1f1f;*/
     }
     .edate {
         font-size: 16px;

@@ -53,11 +53,13 @@ class BookingController extends Controller
             $booking = Booking::find($response['INVNUM']);
             $booking->status = 2;
             $booking->save();
-            $url = route('payment.thankyou');
-            return redirect($url);
+            // $url = route('payment.thankyou');
+            // return redirect($url);
+            return redirect()->back()->with('message', "Merci d'avoir réservé!");
+
         }
-  
-        dd('Something is wrong.');
+        return redirect()->back()->with('failed_message', "Désolé votre réservation n'est pas terminée!");
+        // dd('Something is wrong.');
     }
 
     public function create_booking_details(Request $request)

@@ -1,5 +1,33 @@
 /* Other CSS starts here*/
 
+.section1-form{
+    padding: 0 15px;
+}
+
+#preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fefefe;
+    z-index: 99;
+    height: 100%;
+
+}
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(../gif/ajax-loader.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+}
+
 body{
   overflow-x: hidden;
   font-family: "Open Sans", Sans-serif;
@@ -7,7 +35,7 @@ body{
 
 .section1{
   padding: 30px 60px;
-  background-color: #333;
+  background-color: #1a1e27;
   margin: 0 60px;
 }
 
@@ -34,7 +62,7 @@ body{
   width: 100%;
   font-size: 20px;
   text-align: left;
-  color: #ffd520;
+  color: #fbd220;
   text-transform: uppercase;
   margin: 0;
 }
@@ -79,9 +107,9 @@ body{
 .page1-header h3{
   color: #1f1f1f;
   text-align: center;
-  font-size: 2.6666666666667rem;
+  font-size: 2.67rem;
   padding-bottom: 20px;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   margin:0;
 }
@@ -227,7 +255,7 @@ body{
   text-align: center;
   font-size: 2.6666666666667rem;
   padding-bottom: 20px;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   margin:0;
 }
@@ -281,7 +309,7 @@ body{
   text-align: center;
   font-size: 2.6666666666667rem;
   padding-bottom: 20px;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   margin:0;
 }
@@ -400,7 +428,7 @@ background-color: #f0f0f0;
   text-align: center;
   font-size: 2.6666666666667rem;
   padding-bottom: 20px;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   margin:0;
 }
@@ -940,7 +968,7 @@ background-color: #f0f0f0;
 
 /* BUTTON CSS starts here*/
 .custom-btn {
-  background: #ffd520;
+  background: #fbd220;
   color: #1f1f1f;
   font-size: 17px;
   padding: 7px 40px;

@@ -9,7 +9,7 @@
   		<meta name="description" content="">
   		<meta name="keywords" content="">
   		<meta name="author" content="ParkMe">
-  		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+  		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('public/assets/css/bootstrap.min.css') }}">
 	    <link rel="stylesheet" href="{{ asset('public/assets/fonts/fontawesome/css/all.css') }}">
@@ -23,9 +23,20 @@
         <link rel="stylesheet" href="{{ asset('public/assets/css/aos.css') }}">
         
         <!-- JavaSrcipts -->
-        <script src="{{ asset('public/assets/js/jquery.min.js')}}"></script>
-
+        <!--<script src="{{ asset('public/assets/js/jquery.min.js')}}"></script>-->
+        <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+    $(window).load(function() { // makes sure the whole site is loaded
+    	$("#status").fadeOut(); // will first fade out the loading animation
+    	$("#preloader").delay(1000).fadeOut("slow"); // will fade out the white DIV that covers the website.
+    })
+    </script>
     </head>
+    
+    <div id="preloader">
+      <div id="status">&nbsp;</div>
+    </div>
+    
     <body class="bg-img">
 
 		<!-- Navbar -->
@@ -75,18 +86,18 @@
 			            <div class="row">
 			                <div class="col-sm-12 col-12">
 			                    <div class="section1-header">
-			                        <h3>reserver votre place de parking</h3>
-			                        <p>a I'aeroport Toulouse Blagnac</p>
+			                        <h3>RÉSERVER VOTRE PLACE DE PARKING</h3>
+			                        <p>à l' Aéroport Toulouse Blagnac</p>
 			                    </div>
 			                </div>
 			            </div>
 
 			            <div class="row">
 
-                    		<div class="col-sm-3 col-12">
+                    		<div class="col-sm-3 col-6 p-0">
 								<div class="section1-form">
 									<div class="form-group">
-			                        	<label>arrivee</label>
+			                        	<label>ARRIVÉE</label>
 										<div class="date">
 										    <input class="form-control form-control-lg" type="text" placeholder="Select Date" name="start_date" id="arrivalDate" readonly />
 										    <span class="input-group-addon">
@@ -98,57 +109,57 @@
 								</div>
 							</div>
 
-							<div class="col-sm-3 col-12">
+							<div class="col-sm-3 col-6 p-0">
 								<div class="section1-form">
 									<div class="form-group">
-									  <label class="invisible" for="arriveeTime">arrivee</label>
+									  <label class="invisible" for="arriveeTime">ARRIVÉE</label>
 									  <select class="form-control form-control-lg" id="arriveeTime" name="start_time">
-									    <option>5:00 AM</option>
-									    <option>5:30 AM</option>
-									    <option>6:00 AM</option>
-									    <option>6:30 AM</option>
-									    <option>7:00 AM</option>
-									    <option>7:30 AM</option>
-									    <option>8:00 AM</option>
-									    <option>8:30 AM</option>
-									    <option>9:00 AM</option>
-									    <option>9:30 AM</option>
-									    <option>10:00 AM</option>
-									    <option>10:30 AM</option>
-									    <option>11:00 AM</option>
-									    <option>11:30 AM</option>
-									    <option>12:00 PM</option>
-									    <option>12:30 PM</option>
-									    <option>13:00 PM</option>
-									    <option>13:30 PM</option>
-									    <option>14:00 PM</option>
-									    <option>14:30 PM</option>
-									    <option>15:00 PM</option>
-									    <option>15:30 PM</option>
-									    <option>16:00 PM</option>
-									    <option>16:30 PM</option>
-									    <option>17:00 PM</option>
-									    <option>17:30 PM</option>
-									    <option>18:00 PM</option>
-									    <option>18:30 PM</option>
-									    <option>19:00 PM</option>
-									    <option>19:30 PM</option>
-									    <option>20:00 PM</option>
-									    <option>20:30 PM</option>
-									    <option>21:00 PM</option>
-									    <option>21:30 PM</option>
-									    <option>22:00 PM</option>
-									    <option>22:30 PM</option>
-									    <option>23:00 PM</option>
+									    <option>5 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>5 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>6 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>6 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>7 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>7 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>8 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>8 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>9 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>9 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>10 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>10 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>11 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>11 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>12 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>12 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>13 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>13 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>14 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>14 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>15 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>15 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>16 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>16 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>17 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>17 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>18 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>18 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>19 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>19 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>20 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>20 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>21 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>21 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>22 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>22 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>23 &nbsp&nbsp:&nbsp&nbsp 00 </option>
 									  </select>
 									</div>
 								</div>
 							</div>
 
-							<div class="col-sm-3 col-12">
+							<div class="col-sm-3 col-6 p-0">
 								<div class="section1-form">
 									<div class="form-group">
-			                        	<label>depart</label>
+			                        	<label>DÉPART</label>
 										<div class="date">
 										    <input class="form-control form-control-lg" type="text" placeholder="Select Date" name="end_date" id="departureDate" readonly />
 										    <span class="input-group-addon">
@@ -160,48 +171,48 @@
 								</div>
 							</div>
 
-							<div class="col-sm-3 col-12">
+							<div class="col-sm-3 col-6 p-0">
 								<div class="section1-form">
 									<div class="form-group">
-									  <label class="invisible" for="departTime">depart</label>
+									  <label class="invisible" for="departTime">DÉPART</label>
 									  <select class="form-control custom-select-lg" id="departTime" name="end_time">
-									    <option>5:00 AM</option>
-									    <option>5:30 AM</option>
-									    <option>6:00 AM</option>
-									    <option>6:30 AM</option>
-									    <option>7:00 AM</option>
-									    <option>7:30 AM</option>
-									    <option>8:00 AM</option>
-									    <option>8:30 AM</option>
-									    <option>9:00 AM</option>
-									    <option>9:30 AM</option>
-									    <option>10:00 AM</option>
-									    <option>10:30 AM</option>
-									    <option>11:00 AM</option>
-									    <option>11:30 AM</option>
-									    <option>12:00 PM</option>
-									    <option>12:30 PM</option>
-									    <option>13:00 PM</option>
-									    <option>13:30 PM</option>
-									    <option>14:00 PM</option>
-									    <option>14:30 PM</option>
-									    <option>15:00 PM</option>
-									    <option>15:30 PM</option>
-									    <option>16:00 PM</option>
-									    <option>16:30 PM</option>
-									    <option>17:00 PM</option>
-									    <option>17:30 PM</option>
-									    <option>18:00 PM</option>
-									    <option>18:30 PM</option>
-									    <option>19:00 PM</option>
-									    <option>19:30 PM</option>
-									    <option>20:00 PM</option>
-									    <option>20:30 PM</option>
-									    <option>21:00 PM</option>
-									    <option>21:30 PM</option>
-									    <option>22:00 PM</option>
-									    <option>22:30 PM</option>
-									    <option>23:00 PM</option>
+									    <option>5 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>5 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>6 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>6 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>7 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>7 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>8 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>8 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>9 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>9 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>10 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>10 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>11 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>11 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>12 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>12 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>13 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>13 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>14 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>14 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>15 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>15 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>16 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>16 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>17 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>17 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>18 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>18 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>19 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>19 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>20 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>20 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>21 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>21 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>22 &nbsp&nbsp:&nbsp&nbsp 00 </option>
+									    <option>22 &nbsp&nbsp:&nbsp&nbsp 30 </option>
+									    <option>23 &nbsp&nbsp:&nbsp&nbsp 00 </option>
 									  </select>
 									</div>
 									<div class="form-group text-right mt-4">
@@ -464,7 +475,7 @@
 										
 										<div class="col-sm-3 col-3">
 									      <div class="arrive arri">
-									        <label> ARRIVE </label>
+									        <label> ARRIVÉE </label>
 									        <div class="sdate">03/03</div>
 									        <div class="stime">5:00</div>
 									      </div>
@@ -472,7 +483,7 @@
 
 										<div class="col-sm-3 col-3">
 									      <div class="departure arri">
-									        <label> DEPART </label>
+									        <label> DÉPART </label>
 									        <div class="edate">03/18</div>
 									        <div class="etime">5:00</div>
 									      </div>
@@ -602,7 +613,7 @@
 									
 									<div class="col-sm-3 col-3">
 								      <div class="arrive arri">
-								        <label> ARRIVE </label>
+								        <label> ARRIVÉE </label>
 								        <div class="sdate">03/03</div>
 								        <div class="stime">5:00</div>
 								      </div>
@@ -610,7 +621,7 @@
 
 									<div class="col-sm-3 col-3">
 								      <div class="departure arri">
-								        <label> DEPART </label>
+								        <label> DÉPART </label>
 								        <div class="sdate">03/18</div>
 								        <div class="stime">5:00</div>
 								      </div>
@@ -888,7 +899,7 @@
 									
 								<div class="col-sm-3 col-3">
 									      <div class="arrive arri">
-									        <label> ARRIVE </label>
+									        <label> ARRIVÉE </label>
 									        <div class="sdate">03/03</div>
 									        <div class="stime">5:00</div>
 									      </div>
@@ -896,7 +907,7 @@
 
 										<div class="col-sm-3 col-3">
 									      <div class="departure arri">
-									        <label> DEPART </label>
+									        <label> DÉPART </label>
 									        <div class="edate">03/18</div>
 									        <div class="etime">5:00</div>
 									      </div>
@@ -1046,7 +1057,7 @@
 									
 									<div class="col-sm-3 col-3">
 								      <div class="arrive arri">
-								        <label> ARRIVE </label>
+								        <label> ARRIVÉE </label>
 								        <div class="sdate">03/03</div>
 								        <div class="stime">5:00</div>
 								      </div>
@@ -1054,7 +1065,7 @@
 
 									<div class="col-sm-3 col-3">
 								      <div class="departure arri">
-								        <label> DEPART </label>
+								        <label> DÉPART </label>
 								        <div class="sdate">03/18</div>
 								        <div class="stime">5:00</div>
 								      </div>
@@ -1108,13 +1119,13 @@
 								      <div class="col">
 								        <input type="text" class="form-control form-control-lg form-check-input" id="name" placeholder="Nom" name="name" required />
 								        <div class="valid-feedback">Valid.</div>
-	    								<div class="invalid-feedback">Please fill out this field.</div>
+	    								<div class="invalid-feedback">Name Required.</div>
 								      </div>
 
 								      <div class="col">
-								        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de telephone" name="phone" required />
+								        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de telephone" id="telephoneNumber" name="phone" required />
 								        <div class="valid-feedback">Valid.</div>
-	    								<div class="invalid-feedback">Please fill out this field.</div>
+	    								<div class="invalid-feedback">Telephone Number Required.</div>
 								      </div>
 								    </div>
 
@@ -1122,77 +1133,88 @@
 								      <div class="col">
 								        <input type="email" class="form-control form-control-lg form-check-input" placeholder="E-mail" name="email" required />
 								        <div class="valid-feedback">Valid.</div>
-	    									<div class="invalid-feedback">Please fill out this field.</div>
+	    									<div class="invalid-feedback">Email is Empty or Invalid.</div>
 								      </div>
 								    </div>
 
 								    <div class="row mb-3">
 									    <div class="col">
-									        <input type="number" class="form-control form-control-lg form-check-input" placeholder="Numero de personne (Navette)" name="no_of_seats" required />
+									        <!--<input type="number" class="form-control form-control-lg form-check-input" placeholder="Numero de personne (Navette)" name="no_of_seats" required />-->
+									        <select class="form-control custom-select-lg" name="no_of_seats" required>
+									            <option value="" disabled selected>Numero de personne (Navette)</option>
+        									    <option value="1">1</option>
+        									    <option value="2">2</option>
+        									    <option value="3">3</option>
+        									    <option value="4">4</option>
+        									    <option value="5">5</option>
+        									    <option value="6">6</option>
+        									    <option value="7">7</option>
+        									    <option value="8">8</option>
+        									</select>
 									        <div class="valid-feedback">Valid.</div>
-	    									<div class="invalid-feedback">Please fill out this field.</div>
+	    									<div class="invalid-feedback">Seat Number Required.</div>
 									    </div>
 								    </div>
 
-									<div class="row mb-3">
-				        		  		<div class="col">
-				        		  			<div class="page4-header">
-				        		  				<h4>Paiement</h4>
-				        		  				<p>Toutes les transactions sent securisees of cryptees.</p>
-				        		  			</div>
-				        		  		</div>
-				        		  	</div>
+									<!--<div class="row mb-3">-->
+				     <!--   		  		<div class="col">-->
+				     <!--   		  			<div class="page4-header">-->
+				     <!--   		  				<h4>Paiement</h4>-->
+				     <!--   		  				<p>Toutes les transactions sent securisees of cryptees.</p>-->
+				     <!--   		  			</div>-->
+				     <!--   		  		</div>-->
+				     <!--   		  	</div>-->
 
-				        		  	<div class="credit-card">
+				     <!--   		  	<div class="credit-card">-->
 
-					        		  	<div class="row mb-3">
-					        		  		<div class="col">
-					        		  			<div class="page4-header">
-					        		  				<h4>Carte de credit</h4>
-					        		  			</div>
-					        		  		</div>
-					        		  		<div class="col text-right">
-					        		  			<img src="{{ asset('public/assets/images/social-icon.jpg')}}" class="img-fluid" alt="img" />
-					        		  		</div>
-					        		  	</div>
+					    <!--    		  	<div class="row mb-3">-->
+					    <!--    		  		<div class="col">-->
+					    <!--    		  			<div class="page4-header">-->
+					    <!--    		  				<h4>Carte de credit</h4>-->
+					    <!--    		  			</div>-->
+					    <!--    		  		</div>-->
+					    <!--    		  		<div class="col text-right">-->
+					    <!--    		  			<img src="{{ asset('public/assets/images/social-icon.jpg')}}" class="img-fluid" alt="img" />-->
+					    <!--    		  		</div>-->
+					    <!--    		  	</div>-->
 
-					        		  	<div class="row mb-3">
+					    <!--    		  	<div class="row mb-3">-->
 
-									      <div class="col">
-									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de Carte" name="card_holder" required />
-									        <div class="valid-feedback">Valid.</div>
-	    									<div class="invalid-feedback">Please fill out this field.</div>
-									      </div>
+									<!--      <div class="col">-->
+									<!--        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de Carte" name="card_holder" required />-->
+									<!--        <div class="valid-feedback">Valid.</div>-->
+	    				<!--					<div class="invalid-feedback">Please fill out this field.</div>-->
+									<!--      </div>-->
 
-									    </div>
+									<!--    </div>-->
 
-									    <div class="row mb-3">
+									<!--    <div class="row mb-3">-->
 
-									      <div class="col">
-									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero sur ta Carte" name="card_number" required />
-									        <div class="valid-feedback">Valid.</div>
-	    									<div class="invalid-feedback">Please fill out this field.</div>
-									      </div>
+									<!--      <div class="col">-->
+									<!--        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero sur ta Carte" name="card_number" required />-->
+									<!--        <div class="valid-feedback">Valid.</div>-->
+	    				<!--					<div class="invalid-feedback">Please fill out this field.</div>-->
+									<!--      </div>-->
 
-									    </div>
+									<!--    </div>-->
 
-									    <div class="row mb-3">
+									<!--    <div class="row mb-3">-->
 
-									      <div class="col">
-									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Date d'expiration (MM/AA)" name="expiry" id="expiryDate" required />
-									        <div class="valid-feedback">Valid.</div>
-	    									<div class="invalid-feedback">Please fill out this field.</div>
-									      </div>
+									<!--      <div class="col">-->
+									<!--        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Date d'expiration (MM/AA)" name="expiry" id="expiryDate" required />-->
+									<!--        <div class="valid-feedback">Valid.</div>-->
+	    				<!--					<div class="invalid-feedback">Please fill out this field.</div>-->
+									<!--      </div>-->
 
-									      <div class="col">
-									        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Code de securitees" name="csv"  required />
-									        <div class="valid-feedback">Valid.</div>
-	    									<div class="invalid-feedback">Please fill out this field.</div>
-									      </div>
+									<!--      <div class="col">-->
+									<!--        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Code de securitees" name="csv"  required />-->
+									<!--        <div class="valid-feedback">Valid.</div>-->
+	    				<!--					<div class="invalid-feedback">Please fill out this field.</div>-->
+									<!--      </div>-->
 
-									    </div>
+									<!--    </div>-->
 
-								    </div>
+								 <!--   </div>-->
 
 					        	</div>
 				        	</div>
@@ -1209,12 +1231,15 @@
 		    <!-- Page 4 Ends -->
 			</form>
 		</main>
-
+		
+		<script src="{{ asset('public/assets/js/aos.js')}}"></script>
+		<script src="{{ asset('public/assets/js/jquery.caret.js') }}"></script>
+		<script src="{{ asset('public/assets/js/jquery.mobilePhoneNumber.js') }}"></script>
+		<script src="{{ asset('public/assets/js/custom.js')}}"></script>
         <script src="{{ asset('public/assets/js/jquery-ui.min.js')}}"></script>
         <script src="{{ asset('public/assets/js/owl.carousel.min.js') }}"></script>
-        <script src="{{ asset('public/assets/js/aos.js')}}"></script>
 		<script src="{{ asset('public/assets/js/bootstrap.min.js')}}"></script>
-		<script src="{{ asset('public/assets/js/custom.js')}}"></script>
+        <script src="{{ asset('public/assets/js/custom.js')}}"></script>
 		
         <script type="text/javascript">
 	    	AOS.init({disable: 'mobile'});
