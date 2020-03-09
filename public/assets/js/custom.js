@@ -147,32 +147,23 @@ if($("#departureDate").val() != "" && $("#arrivalDate").val() != ""){
 /* Index button css ends here */
 
 function setSelectedValues(){
-	// document.getElementById("arrive_date").innerHTML = $("#arrivalDate").val();
-	// document.getElementById("arrive_time").innerHTML = $("#arriveeTime").val();
-	// document.getElementById("depart_date").innerHTML = $("#departureDate").val();
-	// document.getElementById("depart_time").innerHTML = $("#departTime").val();
-	// console.log($("input[name='service_type']:checked").val());
-	// $('.setServiceType').innerHTML = $("input[name='service_type']:checked").val();
-	console.log();
 	$('.sdate').html( $("#arrivalDate").val());
 	$('.stime').html( $("#arriveeTime").val());
 	$('.edate').html( $("#departureDate").val());
 	$('.etime').html($("#departTime").val());
-	$('.setServiceType').html($("input[name='service_type']:checked").val());
+  $('.setServiceType').html($("input[name='service_type']:checked").val());
+  //For Parking Charges
+  $start = $('#arrivalDate').datepicker('getDate');
+  $end   = $('#departureDate').datepicker('getDate');
+  $days   = ($end - $start)/1000/60/60/24;
+  $parkCharges = 3 * $days;
 	//total price 
 	$price = $("input[name='service']:checked").val();
 	if($price){
-    console.log($price);
-    // console.log($price.split('-')[-1]);
-    console.log($price.split('-')[0]);
-    // console.log($price.split('-')[1]);
-    // console.log($price.split(' ')[1]);
-    // console.log($price.split(' ')[0]);
     $('.final_sevice').html($price.split('-')[0]);
-		$price = $price.split('-')[1];
+    $price = $price.split('-')[1];
+    $price = Number($price)+Number($parkCharges);
 		$('.total-price').html('€'+$price);
-
-    
     $('.final_sevice_price').html('€'+$price);
 
 	}
