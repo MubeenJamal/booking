@@ -622,8 +622,8 @@
 									<div class="col-sm-3 col-3">
 								      <div class="departure arri">
 								        <label> DÉPART </label>
-								        <div class="sdate">03/18</div>
-								        <div class="stime">5:00</div>
+								        <div class="edate">03/18</div>
+								        <div class="etime">5:00</div>
 								      </div>
 									</div>
 
