@@ -147,9 +147,13 @@ if($("#departureDate").val() != "" && $("#arrivalDate").val() != ""){
 /* Index button css ends here */
 
 function setSelectedValues(){
-	$('.sdate').html( $("#arrivalDate").val());
+  $sDateArr = $("#arrivalDate").val().split('/');
+  $sDateArr = $sDateArr[0]+"/"+$sDateArr[1];
+  $eDateArr = $("#departureDate").val().split('/');
+  $eDateArr = $eDateArr[0]+"/"+$eDateArr[1];
+	$('.sdate').html( $sDateArr);
 	$('.stime').html( $("#arriveeTime").val());
-	$('.edate').html( $("#departureDate").val());
+	$('.edate').html( $eDateArr);
 	$('.etime').html($("#departTime").val());
   $('.setServiceType').html($("input[name='service_type']:checked").val());
   //For Parking Charges
