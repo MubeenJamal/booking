@@ -1,3 +1,4 @@
+
 function init(){
 	new SmoothScroll(document,120,12)
 }
@@ -72,6 +73,15 @@ $(function () {
     $("#arrivalDate, #expiryDate").datepicker({
         dateFormat: 'dd/mm/yy',
         changeMonth: true,
+        currentText: 'Aujourd\'hui',
+		monthNames: ['Janvier','Fevrier','Mars','Avril','Mai','Juin',
+		'Juillet','Aout','Septembre','Octobre','Novembre','Decembre'],
+		monthNamesShort: ['Jan','Fev','Mar','Avr','Mai','Jun',
+		'Jul','Aou','Sep','Oct','Nov','Dec'],
+		dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+		dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
+		dayNamesMin: ['Di','Lu','Ma','Me','Je','Ve','Sa'],
+		weekHeader: 'Sm',
         yearRange: new Date().getFullYear().toString() + ':' + new Date().getFullYear().toString(),
         onClose: function (selectedDate) {
             $("#departureDate").datepicker("option", "minDate", selectedDate);
@@ -80,6 +90,15 @@ $(function () {
     $("#departureDate").datepicker({
         dateFormat: 'dd/mm/yy',
         changeMonth: true,
+        currentText: 'Aujourd\'hui',
+		monthNames: ['Janvier','Fevrier','Mars','Avril','Mai','Juin',
+		'Juillet','Aout','Septembre','Octobre','Novembre','Decembre'],
+		monthNamesShort: ['Jan','Fev','Mar','Avr','Mai','Jun',
+		'Jul','Aou','Sep','Oct','Nov','Dec'],
+		dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+		dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
+		dayNamesMin: ['Di','Lu','Ma','Me','Je','Ve','Sa'],
+		weekHeader: 'Sm',
         yearRange: new Date().getFullYear().toString() + ':' + new Date().getFullYear().toString(),
         onClose: function (selectedDate) {
             $("#arrivalDate").datepicker("option", "maxDate", selectedDate);
@@ -87,26 +106,53 @@ $(function () {
     });
 });
 
+/* Page 1 down car hanading starts */
+
+$("#downCar, #servicesWithUpCar, .box1,.box2,.box3").hide();
+$(".page1Car").click(function(){
+  $("#upCar").hide();
+  $("#downCar").show();
+  $("#servicesWithUpCar").show();
+
+});
+
+$(".serviceImg1").click(function(){
+  $(".box2,.box3,#servicesWithUpCar").hide();
+  $(".box1").show();
+});
+
+$(".serviceImg2").click(function(){
+  $(".box1, .box3,#servicesWithUpCar").hide();
+  $(".box2").show();
+});
+
+$(".serviceImg3").click(function(){
+  $(".box1,.box2,#servicesWithUpCar").hide();
+  $(".box3").show();
+});
+
+
+/* Page 1 down car handling ends*/
 
 /* Page 2 Grey Circle show hide boxes starts here*/
 
-$(".box2,.box3").hide();
-$(".box1").show();
+// $(".box2,.box3").hide();
+// $(".box1").show();
 
-$(".img1").click(function(){
-  $(".box1").show();
-  $(".box2,.box3").hide();
-});
+// $(".img1").click(function(){
+//   $(".box1").show();
+//   $(".box2,.box3").hide();
+// });
 
-$(".img2").click(function(){
-  $(".box2").show();
-  $(".box1,.box3").hide();
-});
+// $(".img2").click(function(){
+//   $(".box2").show();
+//   $(".box1,.box3").hide();
+// });
 
-$(".img3").click(function(){
-  $(".box3").show();
-  $(".box1,.box2").hide();
-});
+// $(".img3").click(function(){
+//   $(".box3").show();
+//   $(".box1,.box2").hide();
+// });
 
 /* Page 2 Grey Circle show hide boxes ends here*/
 
@@ -151,16 +197,24 @@ function setSelectedValues(){
   $sDateArr = $sDateArr[0]+"/"+$sDateArr[1];
   $eDateArr = $("#departureDate").val().split('/');
   $eDateArr = $eDateArr[0]+"/"+$eDateArr[1];
+  
+  $arrive_time = $("#arriveeTime").val();
+  $arrive_time = $arrive_time.replace(":","h");
+  $arrive_time = $arrive_time.replace(/\s/g, '');
+
+  $depart_time = $("#departTime").val();
+  $depart_time = $depart_time.replace(":","h");
+  $depart_time = $depart_time.replace(/\s/g, '')
 	$('.sdate').html( $sDateArr);
-	$('.stime').html( $("#arriveeTime").val());
+	$('.stime').html( $arrive_time);
 	$('.edate').html( $eDateArr);
-	$('.etime').html($("#departTime").val());
+	$('.etime').html($depart_time);
   $('.setServiceType').html($("input[name='service_type']:checked").val());
   //For Parking Charges
   $start = $('#arrivalDate').datepicker('getDate');
   $end   = $('#departureDate').datepicker('getDate');
   $days   = ($end - $start)/1000/60/60/24;
-  $parkCharges = 3 * $days;
+  $parkCharges = 12 + (3 * $days);
 	//total price 
 	$price = $("input[name='service']:checked").val();
 	if($price){

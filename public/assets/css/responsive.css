@@ -3,11 +3,42 @@
 /*Mobiles Devices*/
   @media (max-width: 575px) {
       
-  
-      .stime{
-       font-size:12px;   
-      }
-     .section1-form {
+    #arrivalDate::placeholder,
+    #departureDate::placeholder{
+        font-size: 12px;
+    }
+    
+    #arrivalDate,
+    #departureDate{
+        padding-bottom: 15px;
+    }
+    
+    .input:-moz-placeholder, :-moz-placeholder, 
+    .input:-moz-placeholder, textarea:-moz-placeholder
+    { 
+        padding-top: 10px; 
+        
+    }
+    
+    .input::-webkit-input-placeholder, ::-webkit-input-placeholder,
+    .textarea::-webkit-input-placeholder
+    { 
+        padding-top: 9px; 
+        
+    }
+    
+    .section1-form select{
+      color: #9a9a9a;
+      height: calc(2.5em + 1rem + 2px);
+      font-weight: 600;
+        font-size: 12px;
+    }
+    
+    
+    .stime{
+      font-size:12px;   
+    }
+    .section1-form {
         padding: 0 5px;
     }
     .section3-right h3 {
@@ -40,10 +71,26 @@
       margin: 0;
       padding-left: 15px;
       padding-right: 15px;
+      padding: 9px 11px;
     }
+    
+    .section1-form label{
+      width: 100%;
+      font-size: 20px;
+      text-align: left;
+      color: #fbd220;
+      text-transform: uppercase;
+      margin: 0;
+      margin-left: 33px;
+    }
+    
     .section1-header h3 {
       font-size: 28px;
-      line-height: 1.5;
+      line-height: 1;
+      padding-bottom: 0px;
+    }
+    .section1-header p {
+      margin-bottom:0.3em
     }
     .navbar-toggler .fa-bars{
       color: #fff;
@@ -71,8 +118,10 @@
       margin:0;
     }
     .custom-btn {
+      /*text-align: center;*/
+      /*padding: 5px 15px;*/
       text-align: center;
-      padding: 5px 15px;
+    padding: 13px 49px;
     }
     .custom-btn2 {
       text-align: center;

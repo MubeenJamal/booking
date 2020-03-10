@@ -4,6 +4,25 @@
     padding: 0 15px;
 }
 
+#servicesWithUpCar{
+    margin: 15px 0;
+}
+
+.page1-border {
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  background-color: #41bae9;
+}
+
+.page2-back p {
+    text-align: left;
+    color: #1f1f1f;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
 #preloader {
     position: absolute;
     top: 0;
@@ -34,8 +53,8 @@ body{
 }
 
 .section1{
-  padding: 30px 60px;
-  background-color: #1a1e27;
+  padding: 7px 60px;
+  background-color: #121315;
   margin: 0 60px;
 }
 
@@ -43,7 +62,7 @@ body{
   color: #fff;
   text-align: center;
   font-size: 2.6666666666667rem;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   font-weight: 700;
   text-transform: uppercase;
   margin:0;
@@ -51,11 +70,12 @@ body{
 
 .section1-header p{
   color: #fff;
-  margin-bottom: 1.75em;
+  /*margin-bottom: 1.75em;*/
   text-align: center;
   font-size: 100%;
   font-style: inherit;
   font-weight: inherit;
+  margin-bottom:0.3em
 }
 
 .section1-form label{
@@ -65,6 +85,7 @@ body{
   color: #fbd220;
   text-transform: uppercase;
   margin: 0;
+  margin-left: 33px;
 }
 
 .date{
@@ -93,6 +114,9 @@ body{
 
 .section1-form select{
   color: #9a9a9a;
+  height: calc(2.5em + 1rem + 2px);
+    font-weight: 600;
+    font-size: 12px;
 }
 
 .page1{
@@ -102,6 +126,13 @@ body{
   -moz-box-shadow: -5px -5px 5px #b5b5b7;
   -webkit-box-shadow: -5px -5px 5px #b5b5b7;
   box-shadow: -5px -5px 5px #b5b5b7;
+}
+
+.page1-border{
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  background-color: #41bae9;
 }
 
 .page1-header h3{
@@ -212,13 +243,14 @@ body{
 }
 
 .blue-border1{
-  border: 4px solid #41bae9;
+  background-color: #41bae9;
   width: 100%;
 }
 
 .blue-border2{
-  border: 4px solid #b3e3ec;
+  background-color: #b3e3ec;
   width: 100%;
+  height: 100%;
 }
 
 .black-bg{
@@ -239,11 +271,11 @@ body{
 
 .page2{
   background-color: #fff;
-  margin: 0 60px;
+  /*margin: 0 60px;*/
   padding: 15px 15px 0 15px;
-  -moz-box-shadow: -5px -5px 5px #b5b5b7;
-  -webkit-box-shadow: -5px -5px 5px #b5b5b7;
-  box-shadow: -5px -5px 5px #b5b5b7;
+  /*-moz-box-shadow: -5px -5px 5px #b5b5b7;*/
+  /*-webkit-box-shadow: -5px -5px 5px #b5b5b7;*/
+  /*box-shadow: -5px -5px 5px #b5b5b7;*/
 }
 
 .page2-radio{
@@ -414,7 +446,7 @@ body{
 }
 
 .page4{
-background-color: #f0f0f0;
+  background-color: #f0f0f0;
   padding: 25px 45px;
   -moz-box-shadow: -5px -5px 5px #b5b5b7;
   -webkit-box-shadow: -5px -5px 5px #b5b5b7;
@@ -968,12 +1000,19 @@ background-color: #f0f0f0;
 
 /* BUTTON CSS starts here*/
 .custom-btn {
+  /*background: #fbd220;*/
+  /*color: #1f1f1f;*/
+  /*font-size: 17px;*/
+  /*padding: 7px 40px;*/
+  /*font-weight: 600;*/
+  /*border-radius: 2px;*/
+  
   background: #fbd220;
-  color: #1f1f1f;
-  font-size: 17px;
-  padding: 7px 40px;
-  font-weight: 600;
-  border-radius: 2px;
+    color: #1f1f1f;
+    font-size: 26.5px;
+    padding: 7px 40px;
+    font-weight: 700;
+    border-radius: 2px;
 }
 
 .custom-btn:hover {
