@@ -126,6 +126,11 @@ $(".serviceImg1").click(function(){
   $(".box1").show();
 });
 
+$(".page2-back-service").click(function(){
+  $(".box2,.box3,.box1").hide();
+  $("#servicesWithUpCar").show();
+});
+
 $(".serviceImg2").click(function(){
   $(".box1, .box3,#servicesWithUpCar").hide();
   $(".box2").show();

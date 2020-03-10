@@ -551,7 +551,7 @@
         						<div class="row">
         						    <div class="col-sm-1 col-12">
         			                    <div class="page2-back text-left">
-										<a href="javascript:void(0);" id="back-to-service">Back</a>
+										<p class="page2-back-service">Back</p>
         			                    </div>
         			                </div>
         			                <div class="col-sm-11 col-12">
@@ -607,7 +607,7 @@
     						<div class="row">
     						    <div class="col-sm-1 col-12">
     			                    <div class="page2-back text-left">
-    			                        <p>Back</p>
+    			                        <p class="page2-back-service">Back</p>
     			                    </div>
     			                </div>
     			                <div class="col-sm-11 col-12">
@@ -676,7 +676,7 @@
         						<div class="row">
         						    <div class="col-sm-1 col-12">
         			                    <div class="page2-back text-left">
-        			                        <p>Back</p>
+        			                        <p class="page2-back-service">Back</p>
         			                    </div>
         			                </div>
         			                <div class="col-sm-11 col-12">
