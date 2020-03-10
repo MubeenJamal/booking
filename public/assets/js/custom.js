@@ -199,11 +199,11 @@ function setSelectedValues(){
   $eDateArr = $eDateArr[0]+"/"+$eDateArr[1];
   
   $arrive_time = $("#arriveeTime").val();
-  $arrive_time = $arrive_time.replace(":","h");
+  $arrive_time = $arrive_time.replace(" ","h");
   $arrive_time = $arrive_time.replace(/\s/g, '');
 
   $depart_time = $("#departTime").val();
-  $depart_time = $depart_time.replace(":","h");
+  $depart_time = $depart_time.replace(" ","h");
   $depart_time = $depart_time.replace(/\s/g, '')
 	$('.sdate').html( $sDateArr);
 	$('.stime').html( $arrive_time);
