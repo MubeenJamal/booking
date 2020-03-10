@@ -109,11 +109,16 @@ $(function () {
 /* Page 1 down car hanading starts */
 
 $("#downCar, #servicesWithUpCar, .box1,.box2,.box3").hide();
-$(".page1Car").click(function(){
+
+$('input[type=radio][name=car_type]').change(function() {
   $("#upCar").hide();
   $("#downCar").show();
   $("#servicesWithUpCar").show();
-
+  var SelectdValue = $("input[name=car_type]:checked").val();
+  console.log(SelectdValue);
+  // $("input[type=radio][name=cat_type][value=" + val + "]").attr('checked', 'checked');
+  $('input[name=cat_type][value="' + SelectdValue + '"]').prop('checked', true);
+  $('input[name=cat_type]').prop('disabled', true);
 });
 
 $(".serviceImg1").click(function(){

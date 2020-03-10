@@ -551,7 +551,7 @@
         						<div class="row">
         						    <div class="col-sm-1 col-12">
         			                    <div class="page2-back text-left">
-        			                        <p>Back</p>
+										<a href="javascript:void(0);" id="back-to-service">Back</a>
         			                    </div>
         			                </div>
         			                <div class="col-sm-11 col-12">
@@ -782,7 +782,7 @@
 							       <div class="col-sm-4 col-12">
 									<div class="page1-car">
 										<label>
-											<input type="radio" name="cat_type" value="big" />
+											<input type="radio" name="cat_type" value="small" />
 											<img src="{{ asset('public/assets/images/car1.png')}}" class="img-fluid" alt="img" />
 										</label>
 									</div>
@@ -791,7 +791,7 @@
 								<div class="col-sm-4 col-12">
 									<div class="page1-car">
 										<label>
-											<input type="radio" name="cat_type" value="meduim" />
+											<input type="radio" name="cat_type" value="medium" />
 											<img src="{{ asset('public/assets/images/car2.png')}}" class="img-fluid" alt="img" />
 										</label>
 									</div>
@@ -800,7 +800,7 @@
 								<div class="col-sm-4 col-12">
 									<div class="page1-car">
 										<label>
-											<input type="radio" name="cat_type" value="small" />
+											<input type="radio" name="cat_type" value="large" />
 											<img src="{{ asset('public/assets/images/car3.png')}}" class="img-fluid" alt="img" />
 										</label>
 									</div>
