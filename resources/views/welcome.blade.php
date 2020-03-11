@@ -25,17 +25,17 @@
         <!-- JavaSrcipts -->
         <!--<script src="{{ asset('public/assets/js/jquery.min.js')}}"></script>-->
         <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script>
-    $(window).load(function() { // makes sure the whole site is loaded
-    	$("#status").fadeOut(); // will first fade out the loading animation
-    	$("#preloader").delay(1000).fadeOut("slow"); // will fade out the white DIV that covers the website.
-    })
+     <script>
+    // $(window).load(function() { // makes sure the whole site is loaded
+    // 	$("#status").fadeOut(); // will first fade out the loading animation
+    // 	$("#preloader").delay(1000).fadeOut("slow"); // will fade out the white DIV that covers the website.
+    // })
     </script>
     </head>
     
-    <div id="preloader">
-      <div id="status">&nbsp;</div>
-    </div>
+    <!--<div id="preloader">-->
+    <!--  <div id="status">&nbsp;</div>-->
+    <!--</div>-->
     
     <body class="bg-img">
 
@@ -223,7 +223,7 @@
 
 			            </div>
 			            <div class="form-group text-right mt-2">
-							<a href="javascript:void(0);" class="custom-btn" id="index-btn"><b>Je reserve ></b></a>
+							<a href="javascript:void(0);" class="index-btn" id="index-btn"><b>Je reserve ></b></a>
 						</div>
 		            </div>
 	        	</div>
@@ -476,7 +476,7 @@
 
 									<div class="row">
 										
-										<div class="col-sm-3 col-3">
+										<div class="col-sm-2 col-3">
 									      <div class="arrive arri">
 									        <label> ARRIVÉE </label>
 									        <div class="sdate">03/03</div>
@@ -484,7 +484,7 @@
 									      </div>
 										</div>
 
-										<div class="col-sm-3 col-3">
+										<div class="col-sm-2 col-3">
 									      <div class="departure arri">
 									        <label> DÉPART </label>
 									        <div class="edate">03/18</div>
@@ -492,12 +492,12 @@
 									      </div>
 										</div>
 
-										<div class="col-sm-3 col-3">
+										<div class="col-sm-5 col-3">
 									      <div class="services arri">
 									        <label> SERVICE </label>
-									        <label><b>Navette gratuite(0€)</b></label>
+									        <p>Navette gratuite(0€)</p>
 									        <div class="service setServiceType">--</div>
-									        <div class=""> &nbsp; </div>
+									        <!--<div class=""> &nbsp; </div>-->
 									      </div>
 										</div>
 
@@ -505,7 +505,7 @@
 									      <div class="departure arri">
 									        <label> TOTAL </label>
 									        <div class="total-price"> € 0.00 </div>
-									        <div class=""> &nbsp; </div>
+									        <!--<div class=""> &nbsp; </div>-->
 									      </div>
 										</div>
 
@@ -535,7 +535,7 @@
 
 				            <div class="row" id="upCar">
 								@foreach($car_types as $car_type)
-	                    		<div class="col-sm-4 col-12">
+	                    		<div class="col-sm-4 col-4">
 									<div class="page1-car">
 										<label>
 											<input type="radio" name="car_type" value="{{$car_type->car_type}}" />
@@ -551,7 +551,7 @@
         						<div class="row">
         						    <div class="col-sm-1 col-12">
         			                    <div class="page2-back text-left">
-										<p class="page2-back-service">Back</p>
+										<p class="page2-back-service"><u>&larr;retour</u></p>
         			                    </div>
         			                </div>
         			                <div class="col-sm-11 col-12">
@@ -607,7 +607,7 @@
     						<div class="row">
     						    <div class="col-sm-1 col-12">
     			                    <div class="page2-back text-left">
-    			                        <p class="page2-back-service">Back</p>
+    			                        <p class="page2-back-service"><u>&larr;retour</u></p>
     			                    </div>
     			                </div>
     			                <div class="col-sm-11 col-12">
@@ -676,7 +676,7 @@
         						<div class="row">
         						    <div class="col-sm-1 col-12">
         			                    <div class="page2-back text-left">
-        			                        <p class="page2-back-service">Back</p>
+        			                        <p class="page2-back-service"><u>&larr;retour</u></p>
         			                    </div>
         			                </div>
         			                <div class="col-sm-11 col-12">
@@ -743,34 +743,42 @@
 								<div class="col-sm-4 col-4">
 									<div class="footer-icon">
 										<label>
-											<input type="radio" name="service_type" value="washing" onChange="setSelectedValues()"/>
+											<input type="radio" name="service_type" value="Lavage" onChange="setSelectedValues()"/>
 											<img src="{{ asset('public/assets/images/img1.png')}}" class="img-fluid img1 serviceImg1" alt="img" />
+											<p>Lavage</p>
 										</label>
 									</div>
 								</div>
 								<div class="col-sm-4 col-4">
 									<div class="footer-icon">
 										<label>
-											<input type="radio" name="service_type" value="gasoline" onChange="setSelectedValues()"/>
-										<img src="{{ asset('public/assets/images/img2.png')}}" class="img-fluid img2 serviceImg2" alt="img" />
+											<input type="radio" name="service_type" value="Essence" onChange="setSelectedValues()"/>
+										    <img src="{{ asset('public/assets/images/img2.png')}}" class="img-fluid img2 serviceImg2" alt="img" />
+										    <p>Essence</p>
 										</label>
 									</div>
 								</div>
 								<div class="col-sm-4 col-4">
 									<div class="footer-icon">
 										<label>
-											<input type="radio" name="service_type" value="maintenance" onChange="setSelectedValues()"/>
+											<input type="radio" name="service_type" value="Entretien" onChange="setSelectedValues()"/>
 											<img src="{{ asset('public/assets/images/img3.png')}}" class="img-fluid img3 serviceImg3" alt="img" />
+											<p>Entretien</p>
 										</label>
 									</div>
 								</div>
 							</div>
 
-				            <div class="row">
-				            	<div class="col-sm-6 p-0">
+                            <div class="row" >
+				            	<div class="col-sm-12 p-0" id="full-blue">
+				            		<div class="blue-border1 page1-border">2/2</div>
+				            	</div>
+				            </div>
+				            <div class="row" id="half-blue">
+				            	<div class="col-sm-6 col-6 p-0">
 				            		<div class="blue-border1 page1-border">1/2</div>
 				            	</div>
-				            	<div class="col-sm-6 p-0">
+				            	<div class="col-sm-6 col-6 p-0">
 				            		<div class="blue-border2"></div>
 				            	</div>
 				            </div>
@@ -779,7 +787,7 @@
                         <div class="row" id="downCar">
 						    <div class="col-sm-6 offset-sm-3">
 							    <div class="row">
-							       <div class="col-sm-4 col-12">
+							       <div class="col-sm-4 col-4">
 									<div class="page1-car">
 										<label>
 											<input type="radio" name="cat_type" value="small" />
@@ -788,7 +796,7 @@
 									</div>
 								</div>
 
-								<div class="col-sm-4 col-12">
+								<div class="col-sm-4 col-4">
 									<div class="page1-car">
 										<label>
 											<input type="radio" name="cat_type" value="medium" />
@@ -797,7 +805,7 @@
 									</div>
 								</div>
 								
-								<div class="col-sm-4 col-12">
+								<div class="col-sm-4 col-4">
 									<div class="page1-car">
 										<label>
 											<input type="radio" name="cat_type" value="large" />
@@ -835,7 +843,8 @@
 
 			        	<div class="page1-btn">
 			        		<a href="javascript:void(0);" class="custom-btn2" id="page1Prev-btn">Passer a la derniere etape</a>
-							<a href="javascript:void(0);" class="custom-btn" id="page1Next-btn">SUIVANT</a>
+							<!--<a href="javascript:void(0);" class="custom-btn" id="page1Next-btn">SUIVANT</a>-->
+							<a href="javascript:void(0);" class="custom-btn" id="page3Next-btn">SUIVANT</a>
 						</div>
 			        </div>
 		    </section>
@@ -1136,7 +1145,7 @@
 
 								<div class="row">
 									
-								<div class="col-sm-3 col-3">
+								<div class="col-sm-2 col-3">
 									      <div class="arrive arri">
 									        <label> ARRIVÉE </label>
 									        <div class="sdate">03/03</div>
@@ -1144,7 +1153,7 @@
 									      </div>
 										</div>
 
-										<div class="col-sm-3 col-3">
+										<div class="col-sm-2 col-3">
 									      <div class="departure arri">
 									        <label> DÉPART </label>
 									        <div class="edate">03/18</div>
@@ -1152,20 +1161,20 @@
 									      </div>
 										</div>
 
-										<div class="col-sm-3 col-3">
+										<div class="col-sm-5 col-3">
 									      <div class="services arri">
 									        <label> SERVICE </label>
-											<label><b>Navette gratuite(0€)</b></label>
+											<p>Navette gratuite(0€)</p>
 									        <div class="service setServiceType">--</div>
-									        <div class=""> &nbsp; </div>
+									        <!--<div class=""> &nbsp; </div>-->
 									      </div>
 										</div>
 
 										<div class="col-sm-3 col-3">
 									      <div class="departure arri">
 									        <label> TOTAL </label>
-									        <div class="total-price"> € 0.00 </div>
-									        <div class=""> &nbsp; </div>
+									        <div class="total-price" id="total-price1"> € 0.00 </div>
+									        <!--<div class=""> &nbsp; </div>-->
 									      </div>
 										</div>
 
@@ -1294,7 +1303,7 @@
 
 								<div class="row">
 									
-									<div class="col-sm-3 col-3">
+									<div class="col-sm-2 col-3">
 								      <div class="arrive arri">
 								        <label> ARRIVÉE </label>
 								        <div class="sdate">03/03</div>
@@ -1302,7 +1311,7 @@
 								      </div>
 									</div>
 
-									<div class="col-sm-3 col-3">
+									<div class="col-sm-2 col-3">
 								      <div class="departure arri">
 								        <label> DÉPART </label>
 								        <div class="sdate">03/18</div>
@@ -1310,10 +1319,10 @@
 								      </div>
 									</div>
 
-									<div class="col-sm-3 col-3">
+									<div class="col-sm-5 col-3">
 								      <div class="services arri">
 								        <label> SERVICE </label>
-								        <label><b>Navette gratuite(0€)</b></label>
+								        <p>Navette gratuite(0€)</p>
 								        <div class="service setServiceType"> &nbsp; </div>
 								      </div>
 									</div>
@@ -1322,7 +1331,7 @@
 								      <div class="departure arri">
 								        <label> TOTAL </label>
 								        <div class="total-price"> € 0.00 </div>
-								        <div class=""> &nbsp; </div>
+								        <!--<div class=""> &nbsp; </div>-->
 								      </div>
 									</div>
 
@@ -1461,6 +1470,8 @@
 
 			        	<div class="page1-btn">
 			        		<a href="javascript:void(0);" class="custom-btn2" id="page4Prev-btn">Passer a la derniere etape</a>
+			        		<!--<a href="javascript:void(0);" class="custom-btn2" id="page3Prev-btn">Passer a la derniere etape</a>-->
+			        		<!--<a href="javascript:void(0);" class="custom-btn2" id="page3Prev-btn">Passer a la derniere etape</a>-->
 							<button type="submit" class="custom-btn">Valider</button>
 						</div>
 

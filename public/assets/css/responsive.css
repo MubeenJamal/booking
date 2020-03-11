@@ -3,6 +3,18 @@
 /*Mobiles Devices*/
   @media (max-width: 575px) {
       
+    .services.arri p{
+        font-size: 15px;
+        color: #1f1f1f;
+        margin-bottom: 5px;
+    }
+      
+    .arrive.arri label, .services.arri label, .departure.arri label {
+        margin-top: 10px;
+        color: #a28104;
+    }
+
+
     #arrivalDate::placeholder,
     #departureDate::placeholder{
         font-size: 12px;
@@ -35,7 +47,7 @@
     }
     
     
-    .stime{
+    .stime, .etime{
       font-size:12px;   
     }
     .section1-form {
@@ -63,15 +75,16 @@
     
     
     .sdate {
-        /*font-size: 16px;*/
-        /*color: #1f1f1f;*/
-        font-size: 27px;
-        color: #3a3a3a;
+        font-size: 20px;
+        color: #1f1f1f;
+        /*font-size: 25px;*/
+        /*color: #3a3a3a;*/
     }
     .edate {
         /*font-size: 16px;*/
-        font-size: 25px;
-        color: #3a3a3a;
+        font-size: 20px;
+        color: #1f1f1f;
+        /*color: #3a3a3a;*/
     }
     .section1 {
       margin: 0;
@@ -124,10 +137,12 @@
       margin:0;
     }
     .custom-btn {
-      /*text-align: center;*/
-      /*padding: 5px 15px;*/
       text-align: center;
-    padding: 13px 49px;
+      padding: 5px 15px;
+    }
+    .index-btn {
+      text-align: center;
+      padding: 13px 49px;
     }
     .custom-btn2 {
       text-align: center;
@@ -145,7 +160,8 @@
       margin:0;
     }
     .total-price {
-      font-size: 18px;
+      color: #a28104;
+      font-size: 20px;
     }
     .page1 {
       background-color: #fff;

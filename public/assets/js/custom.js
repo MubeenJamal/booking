@@ -108,9 +108,11 @@ $(function () {
 
 /* Page 1 down car hanading starts */
 
-$("#downCar, #servicesWithUpCar, .box1,.box2,.box3").hide();
+$("#downCar, #servicesWithUpCar, .box1, .box2, .box3, #full-blue").hide();
 
 $('input[type=radio][name=car_type]').change(function() {
+  $("#full-blue").show();
+  $("#half-blue").hide();
   $("#upCar").hide();
   $("#downCar").show();
   $("#servicesWithUpCar").show();
@@ -132,12 +134,12 @@ $(".page2-back-service").click(function(){
 });
 
 $(".serviceImg2").click(function(){
-  $(".box1, .box3,#servicesWithUpCar").hide();
+  $(".box1, .box3, #servicesWithUpCar").hide();
   $(".box2").show();
 });
 
 $(".serviceImg3").click(function(){
-  $(".box1,.box2,#servicesWithUpCar").hide();
+  $(".box1,.box2, #servicesWithUpCar").hide();
   $(".box3").show();
 });
 
@@ -195,7 +197,23 @@ if($("#departureDate").val() != "" && $("#arrivalDate").val() != ""){
   $(".navbar").addClass("inner-custom-navbar");
   $(".navbar").removeClass("custom-navbar");
 }
-
+    $start = $('#arrivalDate').datepicker('getDate');
+    $end   = $('#departureDate').datepicker('getDate');
+    $days   = ($end - $start)/1000/60/60/24;
+    $parkCharges = 12 + (3 * $days);
+    console.log($start)
+    console.log($end)
+    console.log($days)
+    
+    if($days == 0)
+    {
+        $('.total-price').html('€'+ 0.00);
+    }
+    else
+    {
+        $('.total-price').html('€'+$parkCharges);
+    }
+    
 });
 
 
@@ -219,17 +237,28 @@ function setSelectedValues(){
 	$('.stime').html( $arrive_time);
 	$('.edate').html( $eDateArr);
 	$('.etime').html($depart_time);
-  $('.setServiceType').html($("input[name='service_type']:checked").val());
+	
+//   $('.setServiceType').html($("input[name='service_type']:checked").val());
   //For Parking Charges
-  $start = $('#arrivalDate').datepicker('getDate');
-  $end   = $('#departureDate').datepicker('getDate');
-  $days   = ($end - $start)/1000/60/60/24;
-  $parkCharges = 12 + (3 * $days);
-	//total price 
+     $start = $('#arrivalDate').datepicker('getDate');
+     $end   = $('#departureDate').datepicker('getDate');
+     $days   = ($end - $start)/1000/60/60/24;
+     if($days == 0)
+     {
+         $parkCharges = 0;
+     }
+     else
+     {
+         $parkCharges = 12 + (3 * $days);
+     }
 	$price = $("input[name='service']:checked").val();
 	if($price){
     $('.final_sevice').html($price.split('-')[0]);
+    $('.setServiceType').html($price.split('-')[0]);
     $price = $price.split('-')[1];
+    // $price = Number($price)+Number($parkCharges);
+    // $total_value = $("#total-price1").val();
+    // console.log($total_value);
     $price = Number($price)+Number($parkCharges);
 		$('.total-price').html('€'+$price);
     $('.final_sevice_price').html('€'+$price);
@@ -247,8 +276,8 @@ $('input[type=radio][name=service]').change(function() {
 
 $("#page1Next-btn").click(function(){
 	setSelectedValues();
-  $("#page2").show();
-  $("#index,#page1,#page3").hide();
+  $("#page3").show();
+  $("#index,#page1,#page2").hide();
 });
 
 $("#page1Prev-btn").click(function(){
@@ -305,9 +334,12 @@ $("#page3Next-btn").click(function(){
 });
 
 $("#page3Prev-btn").click(function(){
+//   $("#essenceError").hide();
+//   $("#page2").show();
+//   $("#index,#page1,#page3").hide();
   $("#essenceError").hide();
-  $("#page2").show();
-  $("#index,#page1,#page3").hide();
+  $("#page1").show();
+  $("#index,#page2,#page3").hide();
 });
 
 /* Page 3 button css ends here */
@@ -315,8 +347,8 @@ $("#page3Prev-btn").click(function(){
 /* Page 4 button css starts here */
 
 $("#page4Prev-btn").click(function(){
-  $("#page3").show();
-  $("#index,#page1,#page2,#page4").hide();
+  $("#page1").show();
+  $("#index,#page3,#page2,#page4").hide();
 });
 
 /* Page 4 button css ends here */
