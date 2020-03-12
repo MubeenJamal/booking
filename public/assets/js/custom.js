@@ -123,6 +123,11 @@ $('input[type=radio][name=car_type]').change(function() {
   $('input[name=cat_type]').prop('disabled', false);
 });
 
+$('input[type=radio][name=cat_type]').change(function() {
+  var SelectdValue = $("input[name=cat_type]:checked").val();
+  $('input[name=car_type][value="' + SelectdValue + '"]').prop('checked', true);
+});
+
 $(".serviceImg1").click(function(){
   $(".box2,.box3,#servicesWithUpCar").hide();
   $(".box1").show();
@@ -262,6 +267,7 @@ function setSelectedValues(){
     $price = Number($price)+Number($parkCharges);
 		$('.total-price').html($price + '€');
     $('.final_sevice_price').html($price + '€');
+    $('#total_amt').val($price);
 
 	}
 
@@ -269,6 +275,14 @@ function setSelectedValues(){
 
 // Change on Service radio button
 $('input[type=radio][name=service]').change(function() {
+  setSelectedValues();
+});
+
+$('#clearCheck').click(function() {
+
+  $("input:radio[name=service]").each(function(i) {
+    this.checked = false;
+  });
   setSelectedValues();
 });
 
