@@ -854,7 +854,7 @@
 			    <!--    	</div>-->
 
 			        	<div class="page1-btn">
-			        		<a href="javascript:void(0);" class="custom-btn2" id="page1Prev-btn">Passer a la derniere etape</a>
+			        		<a href="javascript:void(0);" class="custom-btn2" id="page1Prev-btn">retour</a>
 							<!--<a href="javascript:void(0);" class="custom-btn" id="page1Next-btn">SUIVANT</a>-->
 							<a href="javascript:void(0);" class="custom-btn" id="page3Next-btn">SUIVANT</a>
 						</div>
@@ -1299,7 +1299,7 @@
 		        	</div>-->
 
 		        	<div class="page1-btn">
-		        		<a href="javascript:void(0);" class="custom-btn2" id="page3Prev-btn">Passer a la derniere etape</a>
+		        		<a href="javascript:void(0);" class="custom-btn2" id="page3Prev-btn">retour</a>
 						<a href="javascript:void(0);" class="custom-btn" id="page3Next-btn">SUIVANT</a>
 					</div>
 		        </div>
@@ -1481,7 +1481,7 @@
 			        	</div>
 
 			        	<div class="page1-btn">
-			        		<a href="javascript:void(0);" class="custom-btn2" id="page4Prev-btn">Passer a la derniere etape</a>
+			        		<a href="javascript:void(0);" class="custom-btn2" id="page4Prev-btn">retour</a>
 			        		<!--<a href="javascript:void(0);" class="custom-btn2" id="page3Prev-btn">Passer a la derniere etape</a>-->
 			        		<!--<a href="javascript:void(0);" class="custom-btn2" id="page3Prev-btn">Passer a la derniere etape</a>-->
 							<button type="submit" class="custom-btn">Valider</button>
