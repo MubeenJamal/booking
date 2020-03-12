@@ -79,6 +79,7 @@
 		<main>
 			<form method="post" class="needs-validation" action="{{route('paypal_payment')}}" novalidate>
 			{{csrf_field()}}
+			<input type="hidden" id="total_amt" name="total" value="0" />
 		    <!-- Index.html page -->
 		    <section id="index">
 	        	<div class="section1">
@@ -558,6 +559,7 @@
         						    <div class="col-sm-1 col-12">
         			                    <div class="page2-back text-left">
 										<p class="page2-back-service"><u>&larr;retour</u></p>
+										<!-- <p id="clearCheck"><u>Clear</u></p> -->
         			                    </div>
         			                </div>
         			                <div class="col-sm-11 col-12">
@@ -613,7 +615,8 @@
     						<div class="row">
     						    <div class="col-sm-1 col-12">
     			                    <div class="page2-back text-left">
-    			                        <p class="page2-back-service"><u>&larr;retour</u></p>
+										<p class="page2-back-service"><u>&larr;retour</u></p>
+										<!-- <p id="clearCheck"><u>Clear</u></p> -->
     			                    </div>
     			                </div>
     			                <div class="col-sm-11 col-12">
@@ -682,7 +685,8 @@
         						<div class="row">
         						    <div class="col-sm-1 col-12">
         			                    <div class="page2-back text-left">
-        			                        <p class="page2-back-service"><u>&larr;retour</u></p>
+											<p class="page2-back-service"><u>&larr;retour</u></p>
+											<!-- <p id="clearCheck"><u>Clear</u></p> -->
         			                    </div>
         			                </div>
         			                <div class="col-sm-11 col-12">
@@ -1501,7 +1505,6 @@
         <script src="{{ asset('public/assets/js/jquery-ui.min.js')}}"></script>
         <script src="{{ asset('public/assets/js/owl.carousel.min.js') }}"></script>
 		<script src="{{ asset('public/assets/js/bootstrap.min.js')}}"></script>
-        <script src="{{ asset('public/assets/js/custom.js')}}"></script>
 		
         <script type="text/javascript">
 	    	AOS.init({disable: 'mobile'});

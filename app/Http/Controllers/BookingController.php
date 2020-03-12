@@ -15,7 +15,8 @@ class BookingController extends Controller
     {
         $booking_data = $request->except(['_token','card_holder','card_number','csv','expiry']);
         $booking_data['service'] = explode('-',$request->service)[0];
-        $booking_data['price'] = explode('-',$request->service)[1];
+        // $booking_data['price'] = explode('-',$request->service)[1];
+        $booking_data['price'] = $request->total;
         $ins = Booking::create($booking_data);
         $data = [];
         $data['items'] = [
