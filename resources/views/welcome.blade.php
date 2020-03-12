@@ -564,7 +564,7 @@
         			                </div>
         			                <div class="col-sm-11 col-12">
         			                    <div class="page2-header">
-        			                        <p>essence 1</p>
+        			                        <p>LAVAGE</p>
         			                    </div>
         			                </div>
         			            </div>
@@ -620,7 +620,7 @@
     			                </div>
     			                <div class="col-sm-11 col-12">
     			                    <div class="page2-header">
-    			                        <p>essence 2</p>
+    			                        <p>ESSENCE</p>
     			                    </div>
     			                </div>
     			            </div>
@@ -690,7 +690,7 @@
         			                </div>
         			                <div class="col-sm-11 col-12">
         			                    <div class="page2-header">
-        			                        <p>essence 3</p>
+        			                        <p>RÉVISION</p>
         			                    </div>
         			                </div>
         			            </div>
