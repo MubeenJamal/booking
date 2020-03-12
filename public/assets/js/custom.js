@@ -108,11 +108,11 @@ $(function () {
 
 /* Page 1 down car hanading starts */
 
-$("#downCar, #servicesWithUpCar, .box1, .box2, .box3, #full-blue").hide();
+$("#downCar, #servicesWithUpCar, .box1, .box2, .box3, #full-blue, #downCarTitle, #serviceHeader").hide();
 
 $('input[type=radio][name=car_type]').change(function() {
-  $("#full-blue").show();
-  $("#half-blue").hide();
+  $("#full-blue, #downCarTitle, #serviceHeader").show();
+  $("#half-blue, #carHeader").hide();
   $("#upCar").hide();
   $("#downCar").show();
   $("#servicesWithUpCar").show();
@@ -120,7 +120,7 @@ $('input[type=radio][name=car_type]').change(function() {
   console.log(SelectdValue);
   // $("input[type=radio][name=cat_type][value=" + val + "]").attr('checked', 'checked');
   $('input[name=cat_type][value="' + SelectdValue + '"]').prop('checked', true);
-  $('input[name=cat_type]').prop('disabled', true);
+  $('input[name=cat_type]').prop('disabled', false);
 });
 
 $(".serviceImg1").click(function(){
@@ -191,7 +191,7 @@ if($("#departureDate").val() != ""){
 if($("#departureDate").val() != "" && $("#arrivalDate").val() != ""){
 	setSelectedValues();
   $("#page1").show();
-  $("#page2,#page3,#index").hide();
+  $("#page2, #page3, #index").hide();
   $("body").addClass("inner-bg");
   $("body").removeClass("bg-img");
   $(".navbar").addClass("inner-custom-navbar");
@@ -207,11 +207,11 @@ if($("#departureDate").val() != "" && $("#arrivalDate").val() != ""){
     
     if($days == 0)
     {
-        $('.total-price').html('€'+ 0.00);
+        $('.total-price').html(0.00 + '€');
     }
     else
     {
-        $('.total-price').html('€'+$parkCharges);
+        $('.total-price').html($parkCharges + '€');
     }
     
 });
@@ -260,8 +260,8 @@ function setSelectedValues(){
     // $total_value = $("#total-price1").val();
     // console.log($total_value);
     $price = Number($price)+Number($parkCharges);
-		$('.total-price').html('€'+$price);
-    $('.final_sevice_price').html('€'+$price);
+		$('.total-price').html($price + '€');
+    $('.final_sevice_price').html($price + '€');
 
 	}
 

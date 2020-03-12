@@ -2,9 +2,14 @@
 
 /*Mobiles Devices*/
   @media (max-width: 575px) {
-      
+     .footer-icon p {
+        font-size: 14px;
+    }
+    .services.arri .service {
+        font-size: 12px;
+    }
     .services.arri p{
-        font-size: 15px;
+        font-size: 12px;
         color: #1f1f1f;
         margin-bottom: 5px;
     }
@@ -12,6 +17,7 @@
     .arrive.arri label, .services.arri label, .departure.arri label {
         margin-top: 10px;
         color: #a28104;
+        font-size: 13px;
     }
 
 
@@ -75,14 +81,14 @@
     
     
     .sdate {
-        font-size: 20px;
+        font-size: 16px;
         color: #1f1f1f;
         /*font-size: 25px;*/
         /*color: #3a3a3a;*/
     }
     .edate {
         /*font-size: 16px;*/
-        font-size: 20px;
+        font-size: 16px;
         color: #1f1f1f;
         /*color: #3a3a3a;*/
     }
@@ -160,8 +166,8 @@
       margin:0;
     }
     .total-price {
-      color: #a28104;
-      font-size: 20px;
+      color: #000000;
+      font-size: 16px;
     }
     .page1 {
       background-color: #fff;

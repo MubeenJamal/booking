@@ -476,7 +476,7 @@
 
 									<div class="row">
 										
-										<div class="col-sm-2 col-3">
+										<div class="col-sm-2 col-2">
 									      <div class="arrive arri">
 									        <label> ARRIVÉE </label>
 									        <div class="sdate">03/03</div>
@@ -484,7 +484,7 @@
 									      </div>
 										</div>
 
-										<div class="col-sm-2 col-3">
+										<div class="col-sm-2 col-2">
 									      <div class="departure arri">
 									        <label> DÉPART </label>
 									        <div class="edate">03/18</div>
@@ -492,7 +492,7 @@
 									      </div>
 										</div>
 
-										<div class="col-sm-5 col-3">
+										<div class="col-sm-5 col-5 p-0">
 									      <div class="services arri">
 									        <label> SERVICE </label>
 									        <p>Navette gratuite(0€)</p>
@@ -504,7 +504,7 @@
 										<div class="col-sm-3 col-3">
 									      <div class="departure arri">
 									        <label> TOTAL </label>
-									        <div class="total-price"> € 0.00 </div>
+									        <div class="total-price"> 0.00 € </div>
 									        <!--<div class=""> &nbsp; </div>-->
 									      </div>
 										</div>
@@ -526,9 +526,15 @@
 
 			        	<div class="page1">
 							<div class="row">
-				                <div class="col-sm-12 col-12">
+				                <div class="col-sm-12 col-12" id="serviceHeader">
 				                    <div class="page1-header">
-				                        <p>CLIQUER SUR TAILLE DU VECICULE</p>
+				                        <p>SÉLECTIONNER UN SERVICE</p>
+				                        <p>PENDANT VOTRE VOYAGE...</p>
+				                    </div>
+				                </div>
+				                <div class="col-sm-12 col-12" id="carHeader">
+				                    <div class="page1-header" >
+				                        <p>cliquer sur taille du vecicule</p>
 				                    </div>
 				                </div>
 				            </div>
@@ -783,7 +789,13 @@
 				            	</div>
 				            </div>
 			        	</div>
-
+                        <div class="row" id="downCarTitle">
+			            	<div class="col-sm-12 col-12">
+			            		<div class="downCarText">
+			            		    <p>taille vehicule</p>
+			            		</div>
+			            	</div>
+			            </div>  
                         <div class="row" id="downCar">
 						    <div class="col-sm-6 offset-sm-3">
 							    <div class="row">
@@ -1145,7 +1157,7 @@
 
 								<div class="row">
 									
-								<div class="col-sm-2 col-3">
+								        <div class="col-sm-2 col-2">
 									      <div class="arrive arri">
 									        <label> ARRIVÉE </label>
 									        <div class="sdate">03/03</div>
@@ -1153,7 +1165,7 @@
 									      </div>
 										</div>
 
-										<div class="col-sm-2 col-3">
+										<div class="col-sm-2 col-2">
 									      <div class="departure arri">
 									        <label> DÉPART </label>
 									        <div class="edate">03/18</div>
@@ -1161,7 +1173,7 @@
 									      </div>
 										</div>
 
-										<div class="col-sm-5 col-3">
+										<div class="col-sm-5 col-5 p-0">
 									      <div class="services arri">
 									        <label> SERVICE </label>
 											<p>Navette gratuite(0€)</p>
@@ -1173,7 +1185,7 @@
 										<div class="col-sm-3 col-3">
 									      <div class="departure arri">
 									        <label> TOTAL </label>
-									        <div class="total-price" id="total-price1"> € 0.00 </div>
+									        <div class="total-price" id="total-price1"> 0.00 € </div>
 									        <!--<div class=""> &nbsp; </div>-->
 									      </div>
 										</div>
@@ -1303,7 +1315,7 @@
 
 								<div class="row">
 									
-									<div class="col-sm-2 col-3">
+									<div class="col-sm-2 col-2">
 								      <div class="arrive arri">
 								        <label> ARRIVÉE </label>
 								        <div class="sdate">03/03</div>
@@ -1311,7 +1323,7 @@
 								      </div>
 									</div>
 
-									<div class="col-sm-2 col-3">
+									<div class="col-sm-2 col-2">
 								      <div class="departure arri">
 								        <label> DÉPART </label>
 								        <div class="sdate">03/18</div>
@@ -1319,7 +1331,7 @@
 								      </div>
 									</div>
 
-									<div class="col-sm-5 col-3">
+									<div class="col-sm-5 col-5 p-0">
 								      <div class="services arri">
 								        <label> SERVICE </label>
 								        <p>Navette gratuite(0€)</p>
@@ -1330,7 +1342,7 @@
 									<div class="col-sm-3 col-3">
 								      <div class="departure arri">
 								        <label> TOTAL </label>
-								        <div class="total-price"> € 0.00 </div>
+								        <div class="total-price"> 0.00 € </div>
 								        <!--<div class=""> &nbsp; </div>-->
 								      </div>
 									</div>
