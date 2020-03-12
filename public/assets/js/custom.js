@@ -343,8 +343,15 @@ $("#page2Prev-btn").click(function(){
 /* Page 3 button css starts here */
 
 $("#page3Next-btn").click(function(){
+    
+if($('input:radio[name=service]').is(':checked') && $('input:radio[name=service_type]').is(':checked')){
+    
   $("#page4").show();
   $("#index,#page1,#page2,#page3").hide();
+}else{
+    
+    $("#essenceError").show("slow");
+}
 });
 
 $("#page3Prev-btn").click(function(){
@@ -362,7 +369,7 @@ $("#page3Prev-btn").click(function(){
 
 $("#page4Prev-btn").click(function(){
   $("#page1").show();
-  $("#index,#page3,#page2,#page4").hide();
+  $("#index,#page3,#page2,#page4,#essenceError").hide();
 });
 
 /* Page 4 button css ends here */

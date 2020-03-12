@@ -1152,9 +1152,21 @@ body{
     transition: all .3s linear;
   }
 /*Scrollbar Desgining ends here*/
-#arrivalError, #departError, #essenceError{
+#arrivalError, #departError{
   color: #fb0000;
   font-size: 12px;
   text-transform: capitalize;
   letter-spacing: 1px;
+}
+
+#essenceError{
+ color: #fb0000;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
 }

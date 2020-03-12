@@ -236,7 +236,7 @@
 		        				<div class="section2-main">
 		        					<h1>PARK ME <span>EN 5 ÉTAPES</span></h1>
 
-		        					<div class="section2-master">
+		        					<div class="section2-master"  data-aos="fade-up" data-aos-duration="1000">
 		        						<div class="section2-box1">
 			        						<div class="section2-box1-img" data-aos="flip-left" data-aos-duration="1000">
 				        						<img src="{{ asset('public/assets/images/section2-img1.png') }}" class="img-fluid" alt="img" />
@@ -323,25 +323,25 @@
 	        			<div class="col-sm-12 col-12">
 	        				<div class="section4-main" data-aos="fade-up" data-aos-duration="1000">
 	        					<h1 class="section4-centeredHeading">NOS SERVICES</h1>
-		        				<div class="section4-box section4-img1">
+		        				<div class="section4-box section4-img1"  data-aos="fade-up" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section4-img1.png') }}" class="image" alt="img" />
 		        					  <div class="overlay">
 									    <div class="text">LAVAGE</div>
 									  </div>
 		        				</div>
-		        				<div class="section4-box section4-img2">
+		        				<div class="section4-box section4-img2"  data-aos="fade-up" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section4-img2.png') }}" class="image" alt="img" />
 		        					  <div class="overlay">
 									    <div class="text">ESSENCE</div>
 									  </div>
 		        				</div>
-		        				<div class="section4-box section4-img3">
+		        				<div class="section4-box section4-img3"  data-aos="fade-up" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section4-img3.png') }}" class="image" alt="img" />
 		        					<div class="overlay">
 									    <div class="text">RÉVISION</div>
 									</div>
 		        				</div>
-		        				<div class="section4-box section4-img4">
+		        				<div class="section4-box section4-img4"  data-aos="fade-up" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section4-img4.png') }}" class="image" alt="img" />
 		        					  <div class="overlay">
 									    <div class="text">NAVETTE</div>
@@ -388,25 +388,25 @@
 		        <div class="section6">
 		        	<div class="container">
 		        		<div class="row">
-		        			<div class="col-sm-3 col-12 border-right">
+		        			<div class="col-sm-3 col-4 border-right">
 		        				<div class="section6-box section6-box1" data-aos="flip-left" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section6-img1.png')}}" class="img-fluid" alt="img" />
 		        					<p>2 MIN AEROPORT</p>
 		        				</div> 
 		        			</div>
-		        			<div class="col-sm-3 col-12 border-right">
+		        			<div class="col-sm-3 border-right d-none d-sm-block">
 		        				<div class="section6-box section6-box2" data-aos="flip-left" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section6-img2.png') }}" class="img-fluid" alt="img" />
 		        					<p>ASSISTANCE <br>TÉLÉPHONE <br>24H/24 7J/7</p>
 		        				</div>
 		        			</div>
-		        			<div class="col-sm-3 col-12 border-right">
+		        			<div class="col-sm-3 col-4 border-right ">
 		        				<div class="section6-box section6-box3" data-aos="flip-left" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section6-img3.png') }}" class="img-fluid" alt="img" />
 		        					<p>32 RUE RAYMOND <br>GRIMAUD <br>31700 BLAGNAC</p>
 		        				</div>
 		        			</div>
-		        			<div class="col-sm-3 col-12">
+		        			<div class="col-sm-3 col-4">
 		        				<div class="section6-box section6-box4" data-aos="flip-left" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section6-img4.png') }}" class="img-fluid" alt="img" />
 		        					<p>NAVATE GRATUITE</p>
@@ -594,7 +594,6 @@
 										<?php $k++; ?>
 										@endforeach
 									</div>
-									<label id="essenceError">Should be Checked</label>
 									
 								</div>
 							</div>
@@ -856,7 +855,9 @@
 							<!--	</div>-->
 							<!--</div>-->
 			    <!--    	</div>-->
-
+        			    <div class="alert alert-danger" role="alert" id="essenceError">
+                          Please Select Any Service
+                        </div>
 			        	<div class="page1-btn">
 			        		<a href="javascript:void(0);" class="custom-btn2" id="page1Prev-btn">retour</a>
 							<!--<a href="javascript:void(0);" class="custom-btn" id="page1Next-btn">SUIVANT</a>-->
@@ -1507,7 +1508,8 @@
 		<script src="{{ asset('public/assets/js/bootstrap.min.js')}}"></script>
 		
         <script type="text/javascript">
-	    	AOS.init({disable: 'mobile'});
+	    	//AOS.init({disable: 'mobile'});
+	    	AOS.init();
 	    </script>
     </body>
 </html>

@@ -2,6 +2,17 @@
 
 /*Mobiles Devices*/
   @media (max-width: 575px) {
+     .section6-box img {
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+    .section6-box p {
+        padding: 0;
+        margin-top: 15px !important;
+        text-align: center;
+        font-weight: 400;
+    }
      .footer-icon p {
         font-size: 14px;
     }
@@ -28,22 +39,20 @@
     
     #arrivalDate,
     #departureDate{
-        padding-bottom: 15px;
+        padding-top: 15px !important;
     }
     
-    .input:-moz-placeholder, :-moz-placeholder, 
-    .input:-moz-placeholder, textarea:-moz-placeholder
-    { 
-        padding-top: 10px; 
-        
-    }
+    /*#name:-moz-placeholder,*/
+    /*#telephoneNumber:-moz-placeholder,*/
+    /*#email:-moz-placeholder*/
+    /*{ */
+    /*    padding-top: 10px; */
+    /*}*/
     
-    .input::-webkit-input-placeholder, ::-webkit-input-placeholder,
-    .textarea::-webkit-input-placeholder
-    { 
-        padding-top: 9px; 
-        
-    }
+    /*input::-webkit-input-placeholder*/
+    /*{ */
+    /*    padding-top: 9px; */
+    /*}*/
     
     .section1-form select{
       color: #9a9a9a;
