@@ -54,6 +54,23 @@
     /*    padding-top: 9px; */
     /*}*/
     
+    element.style {
+        display: table-cell;
+    }
+    
+    #essenceError {
+    color: #fb0000;
+    font-size: 12px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: c;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+    
+    
     .section1-form select{
       color: #9a9a9a;
       height: calc(2.5em + 1rem + 2px);

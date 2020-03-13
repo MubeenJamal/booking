@@ -344,7 +344,7 @@ $("#page2Prev-btn").click(function(){
 
 $("#page3Next-btn").click(function(){
     
-if($('input:radio[name=service]').is(':checked') && $('input:radio[name=service_type]').is(':checked')){
+if($('input:radio[name=car_type]').is(':checked') ){
     
   $("#page4").show();
   $("#index,#page1,#page2,#page3").hide();

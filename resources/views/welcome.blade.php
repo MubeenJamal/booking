@@ -856,7 +856,7 @@
 							<!--</div>-->
 			    <!--    	</div>-->
         			    <div class="alert alert-danger" role="alert" id="essenceError">
-                          Please Select Any Service
+                          Veuillez sélectionner la taille du vehicule
                         </div>
 			        	<div class="page1-btn">
 			        		<a href="javascript:void(0);" class="custom-btn2" id="page1Prev-btn">retour</a>
