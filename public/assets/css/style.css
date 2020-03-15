@@ -1,5 +1,23 @@
 /* Other CSS starts here*/
 
+body{
+  overflow-x: hidden;
+  font-family: "Open Sans", Sans-serif;
+}
+
+.fa-angle-right{
+    font-size: 30px;
+}
+.fa-angle-right:before {
+    top: 3px;
+    position: relative;
+}
+
+.owl-carousel .item img{
+    width: 300px !important;
+    margin: 0 auto;
+}
+
 #serviceHeader p:nth-child(2){
     text-align: center;
     color: #1f1f1f;
@@ -8,7 +26,9 @@
     text-transform: uppercase;
 }
 
-
+/*main{*/
+/*    overflow-x: hidden !important;*/
+/*}*/
 
 .downCarText p{
     /*text-align: center;*/
@@ -40,7 +60,7 @@
 }
 
 .section1-form{
-    padding: 0 15px;
+    padding: 0;
 }
 
 #servicesWithUpCar{
@@ -86,6 +106,18 @@
 
 }
 
+.faq-heading{
+    text-align: center;
+}
+
+.faq-heading h1{
+    font-size: 62px;
+    color: #000;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 #status {
     width: 200px;
     height: 200px;
@@ -98,15 +130,85 @@
     margin: -100px 0 0 -100px;
 }
 
-body{
-  overflow-x: hidden;
-  font-family: "Open Sans", Sans-serif;
+.panel.panel-default {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.panel-title .fa-caret-down{
+    float: right;
+    margin-top: -27px;
+}
+
+.panel-group{
+    border-top: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf; 
+}
+
+.panel.panel-default .panel-title{
+    margin:0;
+    padding: 15px;
+}
+
+.panel.panel-default .panel-title a{
+    text-decoration: none;
+    color: #596068;
+    text-align: center;
+    display: block;
+    font-size:26px;
+}
+
+.faq-section .panel-body{
+    padding: 20px 5px;
+}
+
+.faq-section .panel-body h2{
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+.faq-section .panel-body h3{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.faq-section .panel-body ul{
+    padding-left: 18px;
+    list-style-type:decimal;
+}
+
+.contact p{
+    text-align: center;
+    font-weight: 700;
+}
+
+.location p{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.navbar-nav li{
+    padding: 20px 0;
+}
+
+.faq-section{
+  padding: 60px 0;
+  background-color: #fff;
 }
 
 .section1{
-  padding: 7px 60px;
-  background-color: #121315;
-  margin: 0 60px;
+  /*padding: 7px 60px;*/
+  /*background-color: #121315;*/
+  /*margin: 0 60px;*/
+  
+    padding: 7px 60px;
+    background-color: #121315;
+    margin: 156px 156px;
+    margin-top: 80px;
 }
 
 .section1-header h3{
@@ -566,8 +668,18 @@ body{
 
 /*Section 7 css starts here*/
 
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #000 !important;
+}
+
+.owl-dots .owl-dot span {
+    width: 5px !important;
+    height: 5px !important;
+}
+
 .section7{
-  padding: 50px 0;
+  padding: 35px 0;
+  /*padding: 0px;*/
   background-color: #fff;
 }
 
@@ -580,9 +692,19 @@ body{
   margin-bottom: 20px;
 }
 
+.section7-box2 ul{
+    padding-left: 0;
+    list-style:none;
+}
+
+.section7-box2 ul li{
+    line-height: 25px;
+    color: #000;
+}
+
 .section7-box1 p:nth-child(2){
   text-align: center;
-  color: #1f1f1f;
+  color: #000;
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 5px;
@@ -591,7 +713,7 @@ body{
 
 .section7-box1 p:nth-child(3){
   text-align: center;
-  color: #1f1f1f;
+  color: #000;
   font-size: 14px;
   font-weight: 700;
   margin: 0;
@@ -599,7 +721,7 @@ body{
 
 .section7-box1 p:nth-child(4){
   text-align: center;
-  color: #1f1f1f;
+  color: #000;
   font-size: 14px;
   font-weight: 700;
   margin: 0;
@@ -607,35 +729,49 @@ body{
 }
 
 .section7-box2 h3{
-  color: #1f1f1f;
+  color: #000;
   font-size: 20px;
   font-weight: 600;
-  text-transform: none;
+  text-transform: uppercase;
   letter-spacing: 1.6px;
   margin-bottom: 20px;
 }
 
 .section7-box2 p{
-  color: #1f1f1f;
+  color: #000;
   font-size: 14px;
   font-weight: 400;
   text-transform: none;
   line-height: 2;
 }
 
-.section7-box4 h3{
-  color: #1f1f1f;
-  font-size: 20px;
+.section7-box.section7-box4 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.section7-box2 ul li{
+  color: #000;
+  font-size: 14px;
   font-weight: 600;
   text-transform: none;
+  line-height: 2;
+}
+
+.section7-box4 h3{
+  font-family: 'Lato', sans-serif;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
   letter-spacing: 1.6px;
   margin-bottom: 20px;
 }
 
 .section7-box4 p{
-  color: #1f1f1f;
+  color: #000;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: none;
   line-height: 2;
 }
@@ -644,12 +780,13 @@ body{
 /*Section 6 css starts here*/
 
 .section6{
-  background-color: #1f1f1f;
+  background-color: #000;
+  /*padding: 0 25px;*/
 }
 
 .section6-box{
   text-align: left;
-  padding: 50px 0;
+  padding: 50px 30px;
 }
 
 .border-right{
@@ -669,9 +806,10 @@ body{
 }
 
 .section6-box p{
+  font-family: 'Lato', sans-serif;
   color: #FFFFFF;
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   padding-left: 75px;
   margin: 0;
@@ -682,13 +820,18 @@ body{
 /*Section 5 css starts here*/
 
 .section5{
-  padding: 50px 0;
+  padding: 25px 0;
   background-color: #fff;
 }
 
+.section7-box5 img{
+    margin-top: 30px;
+}
+
 .section5-heading h3{
+  font-family: 'Lato', sans-serif;
   color:  #1f1f1f;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1.3em;
@@ -769,22 +912,29 @@ body{
 
 /*Section 3 css starts here*/
 
+.section3-right {
+    margin-top: 60px;
+}
+
 .section3{
-  padding: 50px 0;
+  padding: 65px 0;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 .section3-right h3{
+  font-family: 'Lato', sans-serif;
   color: #252930;
   font-size: 2.7rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0px;
   text-align: right;
-  margin-top: 20px;
+  /*margin-top: -22px;*/
 }
 
 .section3-right p{
+  font-family: 'Lato', sans-serif;
   color: #252930;
   font-size: 1.2rem;
   font-weight: 400;
@@ -819,42 +969,51 @@ body{
 /*Section 2 css starts here*/
 
 .section2{
-  padding: 20px 0 50px;
+  padding: 0 0 40px;
   background-color: #fff;
   background-image: url(../images/section2-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .section2-master{
   background-color: #141004;
-  padding: 50px;
+  padding: 35px;
+  margin: 0 60px;
 }
 
 .section2-main h1{
+  font-family: "Lato", Sans-serif;
   color:  #fff;
   font-size: 42px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  margin: 30px 0 15px 0;
 }
 
 .section2-box2-text{
-  padding: 0 20px;
+  padding: 0;
   text-align: center;
-  width: 200px;
+  width: 220px;
+  margin-top: 10px;
 }
 
 .section2-box1-img{
-/*   padding: 0 20px; */
+  /* padding: 0 20px; */
   text-align: center;
-  width: 195px;
-  margin-bottom: 20px;
+  width: 226px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .section2-main h1 span{
+  font-family: "Lato", Sans-serif;
   color: #ffd520;
-  font-size: 42px;
+  /*font-size: 42px;*/
   font-weight: 800;
   text-transform: uppercase;
   text-align: center;
@@ -862,7 +1021,7 @@ body{
 
 .line1 {
   border-top: 1px solid #514d41;
-  width: 24%;
+  width: 226px;
   position: relative;
 }
 
@@ -878,7 +1037,7 @@ body{
 
 .line2 {
   border-top: 1px solid #514d41;
-  width: 24%;
+  width: 226px;
   position: relative;
   left: -5px;
 }
@@ -895,7 +1054,7 @@ body{
 
 .line3 {
   border-top: 1px solid #514d41;
-  width: 24%;
+  width: 226px;
   position: relative;
   left: -10px;
 }
@@ -912,7 +1071,7 @@ body{
 
 .line4 {
   border-top: 1px solid #514d41;
-  width: 24%;
+  width: 226px;
   position: relative;
   left: -15px;
 }
@@ -930,7 +1089,10 @@ body{
 .line5 {
   border-top: 1px solid #514d41;
   position: relative;
-  left: -20px;
+  /*left: -20px;*/
+  /*width:226px;*/
+  left: -15px;
+  width: 0px;
 }
 
 .line5:before {
@@ -947,11 +1109,12 @@ body{
   display: inline-block;
 }
 
-.line p{
-  color:  #fff;
-  font-size: 14px;
-  font-weight: 700;
-  padding-top: 10px;
+.line p {
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 10px;
 }
 
 .section2-box2{
@@ -966,11 +1129,13 @@ body{
   justify-content: center;
 }
 
-.section2-box2-text p{
-  color:  #fff;
-  font-size: 14px;
-  font-weight: 700;
-  margin: 0;
+.section2-box2-text p {
+    font-family: "Lato", Sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 15px;
 }
 
 .section2-box2-text small{
@@ -978,7 +1143,10 @@ body{
 }
 
 .section2-box{
-  padding: 0 80px 0 100px;
+  /*padding: 0 80px 0 112px;*/
+      display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /*Section 2 css ends here*/

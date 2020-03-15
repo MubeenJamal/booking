@@ -11,6 +11,7 @@
   		<meta name="author" content="ParkMe">
   		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('public/assets/css/bootstrap.min.css') }}">
 	    <link rel="stylesheet" href="{{ asset('public/assets/fonts/fontawesome/css/all.css') }}">
 	    <link href="{{ asset('public/assets/fonts/fontawesome/css/css.css') }}" rel="stylesheet">
@@ -42,18 +43,24 @@
 		<!-- Navbar -->
 		<nav class="navbar navbar-expand-sm custom-navbar">
 			<div class="container">
-			    <a class="navbar-brand" href="/">
+			    <a class="navbar-brand" href="{{url('/')}}">
 					<img src="{{ asset('public/assets/images/logo.svg')}}" style="width: 15%;" class="img-fluid" alt="img" />
 				</a>
-			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-			    	<span class="fa fa-bars"></span>
-			    </button>
+				<button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="close">&times;</span>
+                   <span class="navbar-toggler-icon fa fa-bars"></span>
+                </button>
+			    <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">-->
+			    <!--	<span class="fa fa-bars"></span>-->
+			    <!--	<span class="my-1 mx-2 close">X</span>-->
+			    <!--</button>-->
 				<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
 					<ul class="navbar-nav">
-					    <li><a href="#">Accueil</a></li>
-						<li><a href="#">Réserver</a></li>
-						<li><a href="#">Abonnement</a></li>
-						<li><a href="#">Localisation</a></li>
+					    <li id="home-btn"><a href="javascript:void(0)">Accueil</a></li>
+						<li><a href="javascript:void(0)">Réserver</a></li>
+						<li><a href="javascript:void(0)" id="faqs-btn">Vos Questions</a></li>
+						<!--<li><a href="#">Abonnement</a></li>-->
+						<!--<li><a href="#">Localisation</a></li>-->
 					</ul>
 				</div>  
 			</div>
@@ -95,7 +102,7 @@
 
 			            <div class="row">
 
-                    		<div class="col-sm-3 col-6 p-0">
+                    		<div class="col-sm-3 col-6">
 								<div class="section1-form">
 									<div class="form-group">
 			                        	<label><b>ARRIVÉE</b></label>
@@ -110,7 +117,7 @@
 								</div>
 							</div>
 
-							<div class="col-sm-3 col-6 p-0">
+							<div class="col-sm-3 col-6">
 								<div class="section1-form">
 									<div class="form-group">
 									  <label class="invisible" for="arriveeTime">ARRIVÉE</label>
@@ -158,7 +165,7 @@
 								</div>
 							</div>
 
-							<div class="col-sm-3 col-6 p-0">
+							<div class="col-sm-3 col-6">
 								<div class="section1-form">
 									<div class="form-group">
 			                        	<label><b>DÉPART</b></label>
@@ -173,7 +180,7 @@
 								</div>
 							</div>
 
-							<div class="col-sm-3 col-6 p-0">
+							<div class="col-sm-3 col-6">
 								<div class="section1-form">
 									<div class="form-group">
 									  <label class="invisible" for="departTime">DÉPART</label>
@@ -230,13 +237,13 @@
 	        	</div>
 		        
 		        <div class="section2">
-		        	<div class="container">
+		        	<div class="container-fluid">
 		        		<div class="row">
 		        			<div class="col-sm-12 col-12">
 		        				<div class="section2-main">
 		        					<h1>PARK ME <span>EN 5 ÉTAPES</span></h1>
 
-		        					<div class="section2-master"  data-aos="fade-up" data-aos-duration="1000">
+		        					<div class="section2-master d-none d-sm-block"  data-aos="fade-up" data-aos-duration="1000">
 		        						<div class="section2-box1">
 			        						<div class="section2-box1-img" data-aos="flip-left" data-aos-duration="1000">
 				        						<img src="{{ asset('public/assets/images/section2-img1.png') }}" class="img-fluid" alt="img" />
@@ -292,6 +299,60 @@
 			        					</div>
 			        					
 		        					</div>
+		        					
+		        					<div class="section2-master d-block d-sm-none mobile"  data-aos="fade-up" data-aos-duration="1000">
+		        						<div class="section2-box1">
+		        						    
+			        						<div class="section2-box1-img">
+			        						    <div class="line">
+				        						    <p>1</p>
+				        					    </div>
+				        						<img src="{{ asset('public/assets/images/section2-img1.png') }}" class="img-fluid" alt="img" />
+				        						<div class="section2-box2-text">
+    				        						<p>RÉSERVE EN LIGNE</p>
+    				        					</div>
+				        					</div>
+			        						<div class="section2-box1-img">
+			        						    <div class="line">
+				        						    <p>2</p>
+				        					    </div>
+			        							<img src="{{ asset('public/assets/images/section2-img2.png') }}" class="img-fluid" alt="img" />
+			        							<div class="section2-box2-text">
+    			        							<p>GARER VOTRE VOITURE</p>
+    			        						</div>
+			        						</div>
+			        						<div class="section2-box1-img">
+			        						    <div class="line">
+				        						    <p>3</p>
+				        					    </div>
+			        							<img src="{{ asset('public/assets/images/section2-img3.png') }}" class="img-fluid" alt="img" />
+			        							<div class="section2-box2-text">
+    			        							<p>TRANSPORTÉ VERS AEROPORT</p>
+    			        							<small>NAVETTE PARKME</small>
+    			        						</div>
+			        						</div>
+			        						<div class="section2-box1-img">
+			        						    <div class="line">
+				        						    <p>4</p>
+				        					    </div>
+			        							<img src="{{ asset('public/assets/images/section2-img4.png') }}" class="img-fluid" alt="img" />
+			        							<div class="section2-box2-text">
+    			        							<p>PENDANT MON VOYAGE</p>
+    			        							<small>LAVAGE | ESSENCE</small>
+    			        						</div>
+			        						</div>
+			        						<div class="section2-box1-img">
+			        						    <div class="line">
+				        						    <p>5</p>
+				        					    </div>
+			        							<img src="{{ asset('public/assets/images/section2-img5.png') }}" class="img-fluid" alt="img" />
+			        							<div class="section2-box2-text">
+    			        							<p>RETOUR J'APPELLE NAVETTE</p>
+    			        						</div>
+			        						</div>
+			        					</div>
+			        					
+		        					</div>
 		        				</div>
 		        			</div>
 		        		</div>
@@ -299,20 +360,41 @@
 		        </div>
 
 		        
-		        <div class="section3">
+		        <div class="section3 d-none d-sm-block">
 		        	<div class="container">
 		        		<div class="row">
-		        			<div class="col-sm-6 col-12">
-		        				<div class="section3-left" data-aos="fade-right" data-aos-duration="1000">
+		        		    <div class="col-sm-6 col-12">
+		        		        <div class="section3-left" data-aos="fade-right" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section3-img.png') }}" class="img-fluid" alt="img" />
 		        				</div>
+		        				
 		        			</div>
 		        			<div class="col-sm-6 col-12">
 		        				<div class="section3-right" data-aos="fade-left" data-aos-duration="1000">
 		        					<h3>NAVETTE GRATUITE</h3>
 		        					<p>Départ et arrivée en 2 minutes.</p>
-		        					<a href="#" class="section3-btn">Je réserve</a>
 		        				</div>
+		        				<a href="#" class="section3-btn">Je réserve&nbsp;<i class="fa fa-angle-right"></i> </a>
+		        			</div>
+		        			
+		        		</div>
+	        		</div>
+		        </div>
+		        
+		        <div class="section3 d-block d-sm-none">
+		        	<div class="container">
+		        		<div class="row">
+		        		    <div class="col-12">
+		        				<div class="section3-right" data-aos="fade-left" data-aos-duration="1000">
+		        					<h3>NAVETTE GRATUITE</h3>
+		        					<p>Départ et arrivée en 2 minutes.</p>
+		        				</div>
+		        			</div>
+		        		    <div class="col-12">
+		        		        <div class="section3-left" data-aos="fade-right" data-aos-duration="1000">
+		        					<img src="{{ asset('public/assets/images/section3-img.png') }}" class="img-fluid" alt="img" />
+		        				</div>
+		        				<a href="#" class="section3-btn">Je réserve&nbsp;<i class="fa fa-angle-right"></i></a>
 		        			</div>
 		        		</div>
 	        		</div>
@@ -364,20 +446,17 @@
 		        		<div class="row">
 		        			<div class="col-sm-12 col-12">
 		        				<div class="owl-carousel owl-theme" data-aos="fade-up" data-aos-duration="1000">
-								    <div class="item">
-								    	<img src="{{ asset('public/assets/images/allianz.png') }}" class="img-fluid" alt="img" />
+		        				    <div class="item">
+								    	<img src="{{ asset('public/assets/images/blag.png') }}" class="img-fluid" alt="img" />
 								    </div>
 								    <div class="item">
-								    	<img src="{{ asset('public/assets/images/armond-1.png') }}" class="img-fluid" alt="img" />
+								    	<img src="{{ asset('public/assets/images/allianz-300x300.png') }}" class="img-fluid" alt="img" />
 								    </div>
 								    <div class="item">
 								    	<img src="{{ asset('public/assets/images/blag.png') }}" class="img-fluid" alt="img" />
 								    </div>
 								    <div class="item">
-								    	<img src="{{ asset('public/assets/images/armond-1.png') }}" class="img-fluid" alt="img" />
-								    </div>
-								    <div class="item">
-								    	<img src="{{ asset('public/assets/images/blag.png') }}" class="img-fluid" alt="img" />
+								    	<img src="{{ asset('public/assets/images/allianz-300x300.png') }}" class="img-fluid" alt="img" />
 								    </div>
 								</div> 
 		        			</div>
@@ -386,7 +465,7 @@
 		        </div>
 
 		        <div class="section6">
-		        	<div class="container">
+		        	<div class="container-fluid">
 		        		<div class="row">
 		        			<div class="col-sm-3 col-4 border-right">
 		        				<div class="section6-box section6-box1" data-aos="flip-left" data-aos-duration="1000">
@@ -397,19 +476,19 @@
 		        			<div class="col-sm-3 border-right d-none d-sm-block">
 		        				<div class="section6-box section6-box2" data-aos="flip-left" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section6-img2.png') }}" class="img-fluid" alt="img" />
-		        					<p>ASSISTANCE <br>TÉLÉPHONE <br>24H/24 7J/7</p>
+		        					<p>ASSISTANCE TÉLÉPHONE <br>24H/24 7J/7</p>
 		        				</div>
 		        			</div>
 		        			<div class="col-sm-3 col-4 border-right ">
 		        				<div class="section6-box section6-box3" data-aos="flip-left" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section6-img3.png') }}" class="img-fluid" alt="img" />
-		        					<p>32 RUE RAYMOND <br>GRIMAUD <br>31700 BLAGNAC</p>
+		        					<p>32 RUE RAYMOND GRIMAUD <br>31700 BLAGNAC</p>
 		        				</div>
 		        			</div>
 		        			<div class="col-sm-3 col-4">
 		        				<div class="section6-box section6-box4" data-aos="flip-left" data-aos-duration="1000">
 		        					<img src="{{ asset('public/assets/images/section6-img4.png') }}" class="img-fluid" alt="img" />
-		        					<p>NAVATE GRATUITE</p>
+		        					<p>NAVETTE GRATUITE</p>
 		        				</div>
 		        			</div>
 		        		</div>
@@ -419,32 +498,42 @@
 		        <div class="section7">
 		        	<div class="container" data-aos="fade-up" data-aos-duration="1000">
 		        		<div class="row">
-		        			<div class="col-sm-2 col-12">
+		        			<div class="order-4 order-sm-1 col-sm-2 col-6">
+		        				
 		        				<div class="section7-box section7-box1">
 		        					<img src="{{ asset('public/assets/images/call-icon.png') }}" class="img-fluid" alt="img" />
 		        					<p>ASSISTANCE</p>
-		        					<p>0778682047</p>
-		        					<p>parkmemat@gmail.com</p>
-		        				</div> 
-		        			</div>
-		        			<div class="col-sm-3 col-12">
-		        				<div class="section7-box section7-box2">
-		        					<h3>Reserve a spot</h3>
-		        					<p>Lorem ipsum dolor sit amet, consectetur</p>
+		        					<p>07 86 28 86 71</p>
+		        					<p>contact@parkme.fr</p>
 		        				</div>
 		        			</div>
-		        			<div class="col-sm-2 col-12">
-		        				<div class="section7-box section7-box3">
+		        			<div class="order-1 order-sm-2 col-sm-3 col-6">
+		        				<div class="section7-box section7-box2">
+		        					<h3>Menu</h3>
+		        					<p>
+		        					    <ul>
+		        					        <li>Accueli</li>
+		        					        <li>Réserver</li>
+		        					        <li>Vos questions</li>
+		        					    </ul>
+		        					</p>
+		        				</div>
+		        			</div>
+		        			<div class="order-3 order-sm-3 col-sm-2 col-12">
+		        				<div class="section7-box section7-box3 d-none d-sm-block">
 		        					<img src="{{ asset('public/assets/images/footer-logo.png') }}" class="img-fluid" alt="img" />
 		        				</div>
-		        			</div>
-		        			<div class="col-sm-3 col-12">
-		        				<div class="section7-box section7-box4">
-		        					<h3>Reserve a spot</h3>
-		        					<p>Lorem ipsum dolor sit amet, consectetur</p>
+		        				<div class="section7-box section7-box3 d-block d-sm-none">
+		        					<img src="{{ asset('public/assets/images/mobile-footer-logo.png') }}" class="img-fluid" alt="img" />
 		        				</div>
 		        			</div>
-		        			<div class="col-sm-2 col-12">
+		        			<div class="order-2 order-sm-4 col-sm-3 col-6">
+		        				<div class="section7-box section7-box4">
+		        					<h3>Méntions légales</h3>
+		        					<p>Conditions générales de ventes</p>
+		        				</div>
+		        			</div>
+		        			<div class="order-5 order-sm-5 col-sm-2 col-6">
 		        				<div class="section7-box section7-box5">
 		        					<img src="{{ asset('public/assets/images/fb-icon.png') }}" class="img-fluid" alt="img" />
 		        				</div>
@@ -1496,6 +1585,192 @@
 		        </div>
 		    </section>
 		    <!-- Page 4 Ends -->
+		    
+		    <!-- FAQs page -->
+		    <section id="faqs">
+	        	<div class="faq-section">
+	        	   
+	        	    <div class="container">
+	        	         <div class="row">
+	        	            <div class="col">
+        	        	        <div class="faq-heading">
+        	        	            <h1>f.a.q</h1>
+        	        	        </div>
+    	        	        </div>
+    	        	    </div>
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1">RÉSERVER</a>
+                                        <i class="fa fa-caret-down"></i>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <h3>-COMMENT RÉSERVER ?</h3>
+                                        <p>Site internet uniquement “parkme.fr” sur la page d’accueil OU dans le menu en haut en cliquant sur “Réserver”</p>
+
+                                        <h3>-COMMENT ÇA MARCHE ?</h3>
+                                        <p>Aller:</p>
+                                        <ul>
+                                            <li>RÉSERVE EN LIGNE</li>
+                                            <li>GARER VOTRE VOITURE</li>
+                                            <li>TRANSPORTÉ VERS AÉROPORT EN 2 MIN. (Navette PARKME)</li>
+                                            <li>DURANT VOTRE VOYAGE (Lavage/Carburant) voir séction “nos services” dans F.A.Q)</li>
+                                        </ul>
+                                        <h3>Retour:</h3>
+                                        <ul>
+                                            <li>J’APPELLE NAVETTE</li>
+                                            <li>JE RÉCUPÈRE MA VOITURE</li>
+                                        </ul>
+                                        <h3>-MODIFIER OU ANNULER MA RÉSERVATION</h3>
+                                        <p>Envoyer un message à adresse mail: contact@parkme.fr</p>
+
+                                        <h3>-COMBIEN DE TEMPS J’AI POUR RÉSERVER AVANT MON ARRIVÉE ?</h3>
+                                        <p>Minimum 12h avant votre arrivée.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">NOS SERVICES</a>
+                                        <i class="fa fa-caret-down"></i>
+                                    </h4>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <h3>-OÙ SÉLECTIONNER DES SERVICES ?</h3>
+                                        <p>Lors de votre réservation après avoir sélectionné des dates.</p>
+                                        
+                                        <h3>-QUELLES SONT VOS SERVICES ?</h3>
+                                        <ul>
+                                            <li><b>Navette:</b> Notre navette parkme vous transporte gratuitement à l’aller et au retour en 2 min, au retour vous n’avez juste qu’à appeler ce numéro: 0786288671.</li>
+                                            <li><b>Lavage:</b> Récupérer votre voiture lavée à l’exterieur ET/OU à l’intérieur selon vos choix.</li>
+                                            <li><b>Carburant:</b> Récupérer votre voiture avec le plein de carburant.</li>
+                                            <li><b>Révision:</b> Contrôle téchnique, pneu, liquide, huile, profitez d’un pannel de révision à sélectionner lors de la réservation.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3">LOCALISATION</a>
+                                        <i class="fa fa-caret-down"></i>
+                                    </h4>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse">
+                                    <div class="panel-body location">
+                                        <p>Adresse: 32 rue Raymond Grimaud, 31700, Blagnac.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4">PAIEMENT</a>
+                                        <i class="fa fa-caret-down"></i>
+                                    </h4>
+                                </div>
+                                <div id="collapse4" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <h3>-QUELLES MÉTHODES DE PAIEMENT ACCEPTEZ-VOUS?</h3>
+                                        <p>Carte Bancaire, Paypal.</p>
+                                        
+                                        <h3>-MON PAIEMENT A-T-IL ÉTÉ EFFECTUÉ AVEC SUCCÈS?</h3>
+                                        <p>Si votre paiement a été effectué avec succès, vous recevrez un mail de confirmation de commande.</p>
+                                        
+                                        
+                                        <h2>-SÉCURITÉ ET DEVISE</h2>
+                                        
+                                        <h3>-MES DONNÉES DE PAIEMENT SONT-ELLES SÉCURISÉES?</h3>
+                                        <p>Nous utilisons le leader de paiement Stripe qui assure une sécurité optimale de vos données de paiement.</p>
+                                        
+                                        <h3>-CONSERVEZ-VOUS MES DONNÉES DE PAIEMENT?</h3>
+                                        <p>Non, nous ne conservons pas vos données de paiement.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5">CONTACT</a>
+                                        <i class="fa fa-caret-down"></i>
+                                    </h4>
+                                </div>
+                                <div id="collapse5" class="panel-collapse collapse">
+                                    <div class="panel-body contact">
+                                        <p><b>MAIL:</b> contact@parkme.fr</p>
+                                        <p><b>NUMÉRO DE TÉLÉPHONE:</b> 0786288671</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+	        	</div>
+
+		        <div class="section7">
+		        	<div class="container" data-aos="fade-up" data-aos-duration="1000">
+		        		<div class="row">
+		        			<div class="col-sm-2 col-6">
+		        				<div class="section7-box section7-box1">
+		        					<img src="{{ asset('public/assets/images/call-icon.png') }}" class="img-fluid" alt="img" />
+		        					<p>ASSISTANCE</p>
+		        					<p>0778682047</p>
+		        					<p>parkmemat@gmail.com</p>
+		        				</div> 
+		        			</div>
+		        			<div class="col-sm-3 col-6">
+		        				<div class="section7-box section7-box2">
+		        					<h3>Menu</h3>
+		        					<p><ul>
+		        					        <li>Accueli</li>
+		        					        <li>Réserver</li>
+		        					        <li>Vos questions</li>
+		        					    </ul>
+		        					</p>
+		        				</div>
+		        			</div>
+		        			<div class="col-sm-2 col-12">
+		        				<div class="section7-box section7-box3 d-none d-sm-block">
+		        					<img src="{{ asset('public/assets/images/footer-logo.png') }}" class="img-fluid" alt="img" />
+		        				</div>
+		        				<div class="section7-box section7-box3 d-block d-sm-none">
+		        					<img src="{{ asset('public/assets/images/mobile-footer-logo.png') }}" class="img-fluid" alt="img" />
+		        				</div>
+		        			</div>
+		        			<div class="col-sm-3 col-6">
+		        				<div class="section7-box section7-box4">
+		        					<h3>Mentions legales</h3>
+		        					<p>Conditions générales de ventes</p>
+		        				</div>
+		        			</div>
+		        			<div class="col-sm-2 col-6">
+		        				<div class="section7-box section7-box5">
+		        					<img src="{{ asset('public/assets/images/fb-icon.png') }}" class="img-fluid" alt="img" />
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div>
+		        </div>
+
+		        <div class="footerSection">
+		        	<div class="container">
+		        		<div class="row">
+		        			<div class="col">
+		        				<div class="footerText">
+		        					<p>&copy; Copyright 2020 Park Me - All Rights Reserved</p>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div>
+		        </div>
+		    </section>
+		    <!-- FAQs Ends -->
+		    
+		    
 			</form>
 		</main>
 		

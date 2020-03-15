@@ -175,7 +175,7 @@ $(".serviceImg3").click(function(){
 
 /* Index button css starts here */
 
-$("#page1, #page2, #page3, #page4, #arrivalError, #departError, #essenceError").hide();
+$("#page1, #page2, #page3, #page4, #arrivalError, #departError, #essenceError, #faqs").hide();
 $("#index").show();
 
 $("#index-btn").click(function(){
@@ -294,7 +294,7 @@ $("#page1Next-btn").click(function(){
   $("#index,#page1,#page2").hide();
 });
 
-$("#page1Prev-btn").click(function(){
+$("#page1Prev-btn,#home-btn").click(function(){
   $("#index").show();
   $("#page1,#page2,#page3").hide();
   $("body").removeClass("inner-bg");
@@ -374,6 +374,20 @@ $("#page4Prev-btn").click(function(){
 
 /* Page 4 button css ends here */
 
+/* FAQs Page css starts here */
+
+$("#faqs-btn").click(function(){
+  $("#faqs").show();
+  $("#index,#page1,#page3,#page2,#page4,#essenceError").hide();
+  $("body").addClass("inner-bg");
+  $("body").removeClass("bg-img");
+  $(".navbar").addClass("inner-custom-navbar");
+  $(".navbar").removeClass("custom-navbar");
+  $("#collapsibleNavbar ul li:last-child").addClass("active");
+});
+
+/* FAQs page button javascript ends here */
+
 
 /*Credit Card Form Validation start here*/
 // Disable form submissions if there are invalid fields
@@ -401,17 +415,17 @@ $(document).ready(function () {
 $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
- 	dotsEach: true,
+ 	dots: true,
  	nav:false,
     responsive:{
         0:{
             items:1
         },
         600:{
-            items:3
+            items:2
         },
         1000:{
-            items:3
+            items:2
         }
     }
 })
