@@ -17,6 +17,9 @@ body{
     width: 300px !important;
     margin: 0 auto;
 }
+#reserver_btn{
+    color:#FFCF00;
+}
 
 #serviceHeader p:nth-child(2){
     text-align: center;

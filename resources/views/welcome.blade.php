@@ -57,7 +57,7 @@
 				<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
 					<ul class="navbar-nav">
 					    <li id="home-btn"><a href="javascript:void(0)">Accueil</a></li>
-						<li><a href="javascript:void(0)">Réserver</a></li>
+						<li><a href="javascript:void(0)"><span id="reserver_btn">Réserver</span></a></li>
 						<li><a href="javascript:void(0)" id="faqs-btn">Vos Questions</a></li>
 						<!--<li><a href="#">Abonnement</a></li>-->
 						<!--<li><a href="#">Localisation</a></li>-->
@@ -512,7 +512,7 @@
 		        					<h3>Menu</h3>
 		        					<p>
 		        					    <ul>
-		        					        <li>Accueli</li>
+		        					        <li>Accueil</li>
 		        					        <li>Réserver</li>
 		        					        <li>Vos questions</li>
 		        					    </ul>
