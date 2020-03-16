@@ -668,7 +668,7 @@
 										<div class="col-sm-6 col-8">
 											
 											  <div class="custom-control custom-radio">
-											    <input type="radio" class="custom-control-input" id="customRadio.{{$k}}" name="service" value="{{$wash->service_name.'-'.$wash->price}}">
+											    <input type="checkbox" onChange="setSelectedValues()" class="custom-control-input" id="customRadio.{{$k}}" name="service[]" value="{{$wash->service_name.'-'.$wash->price}}">
 											    <label class="custom-control-label" for="customRadio.{{$k}}">{{$wash->service_name}}</label>
 											  </div>
 											
@@ -724,7 +724,7 @@
 										<div class="col-sm-6 col-8">
 											  <div class="custom-control custom-radio">
 
-											    <input type="radio" class="custom-control-input" id="customRadio1.{{$k}}" name="service" value="{{$fuel->service_name.'-'.$fuel->price}}">
+											    <input type="checkbox" onChange="setSelectedValues()" class="custom-control-input" id="customRadio1.{{$k}}" name="service[]" value="{{$fuel->service_name.'-'.$fuel->price}}">
 
 											    <label class="custom-control-label" for="customRadio1.{{$k}}">{{$fuel->service_name}}</label>
 											  </div>
@@ -794,7 +794,7 @@
 										<div class="col-sm-6 col-8">
 											  <div class="custom-control custom-radio">
 
-											    <input type="radio" class="custom-control-input" id="customRadio2.{{$k}}" name="service" value="{{$mechanic->service_name.'-'.$mechanic->price}}">
+											    <input type="checkbox" onChange="setSelectedValues()" class="custom-control-input" id="customRadio2.{{$k}}" name="service[]" value="{{$mechanic->service_name.'-'.$mechanic->price}}">
 
 											    <label class="custom-control-label" for="customRadio2.{{$k}}">{{$mechanic->service_name}}</label>
 											  </div>
@@ -841,7 +841,7 @@
 								<div class="col-sm-4 col-4">
 									<div class="footer-icon">
 										<label>
-											<input type="radio" name="service_type" value="Lavage" onChange="setSelectedValues()"/>
+											<input type="checkbox" name="service_type[]" value="Lavage" onChange="setSelectedValues()"/>
 											<img src="{{ asset('public/assets/images/img1.png')}}" class="img-fluid img1 serviceImg1" alt="img" />
 											<p>Lavage</p>
 										</label>
@@ -850,7 +850,7 @@
 								<div class="col-sm-4 col-4">
 									<div class="footer-icon">
 										<label>
-											<input type="radio" name="service_type" value="Essence" onChange="setSelectedValues()"/>
+											<input type="checkbox" name="service_type[]" value="Essence" onChange="setSelectedValues()"/>
 										    <img src="{{ asset('public/assets/images/img2.png')}}" class="img-fluid img2 serviceImg2" alt="img" />
 										    <p>Essence</p>
 										</label>
@@ -859,7 +859,7 @@
 								<div class="col-sm-4 col-4">
 									<div class="footer-icon">
 										<label>
-											<input type="radio" name="service_type" value="Entretien" onChange="setSelectedValues()"/>
+											<input type="checkbox" name="service_type[]" value="Entretien" onChange="setSelectedValues()"/>
 											<img src="{{ asset('public/assets/images/img3.png')}}" class="img-fluid img3 serviceImg3" alt="img" />
 											<p>Entretien</p>
 										</label>

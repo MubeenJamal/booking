@@ -14,8 +14,12 @@ class BookingController extends Controller
     public function paypalPayment(Request $request)
     {
         $booking_data = $request->except(['_token','card_holder','card_number','csv','expiry']);
-        $booking_data['service'] = explode('-',$request->service)[0];
-        // $booking_data['price'] = explode('-',$request->service)[1];
+        $services = ",";
+        foreach($booking_data['service'] as $k => $service)
+           $services .= explode('-',$service)[0];
+
+        $booking_data['service'] = $services;
+        $booking_data['service_type'] = implode(',',$request->service_type);
         $booking_data['price'] = $request->total;
         $ins = Booking::create($booking_data);
         $data = [];

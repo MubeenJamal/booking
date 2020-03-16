@@ -256,31 +256,42 @@ function setSelectedValues(){
      {
          $parkCharges = 12 + (3 * $days);
      }
-	$price = $("input[name='service']:checked").val();
-	if($price){
-    $('.final_sevice').html($price.split('-')[0]);
-    $('.setServiceType').html($price.split('-')[0]);
-    $price = $price.split('-')[1];
-    // $price = Number($price)+Number($parkCharges);
-    // $total_value = $("#total-price1").val();
-    // console.log($total_value);
+     $serviceType = "";
+     $price = 0;
+     $("input[name='service[]'][type=checkbox]").each(function () {
+       if(this.checked){
+         $split = $(this).val().split('-');
+          $('.final_sevice').html($split[0]);
+          $serviceType += $split[0] + "<br>";
+          $('.setServiceType').html($serviceType);
+          $sp = $split[1];
+          $price = Number($sp)+Number($price);
+       }
+      });
+
     $price = Number($price)+Number($parkCharges);
-		$('.total-price').html($price + '€');
+    $('.total-price').html($price + '€');
     $('.final_sevice_price').html($price + '€');
     $('#total_amt').val($price);
 
-	}
+	// $price = $("input[name='service']:checked").val();
+	// if($price){
+  //   $('.final_sevice').html($price.split('-')[0]);
+  //   $('.setServiceType').html($price.split('-')[0]);
+  //   $price = $price.split('-')[1];
+  //   $price = Number($price)+Number($parkCharges);
+	// 	$('.total-price').html($price + '€');
+  //   $('.final_sevice_price').html($price + '€');
+  //   $('#total_amt').val($price);
+
+	// }
 
 }
 
-// Change on Service radio button
-$('input[type=radio][name=service]').change(function() {
-  setSelectedValues();
-});
 
 $('#clearCheck').click(function() {
 
-  $("input:radio[name=service]").each(function(i) {
+  $("input:radio[name=service[]]").each(function(i) {
     this.checked = false;
   });
   setSelectedValues();
@@ -316,19 +327,19 @@ $("#page1Prev-btn,#home-btn").click(function(){
 
 $("#page2Next-btn").click(function(){
 
-    if($('input:radio[name=service]').is(':not(:checked)')){
+    if($('input:radio[name=service[]]').is(':not(:checked)')){
      $("#essenceError").show();
     }
 
-    if($('input:radio[name=service_type]').is(':not(:checked)')){
+    if($('input:radio[name=service_type[]]').is(':not(:checked)')){
       $("#essenceError").html('Service type is not selected');
       $("#essenceError").show();
      }
 
-    if($('input:radio[name=service]').is(':checked') && $('input:radio[name=service_type]').is(':checked')){
+    if($('input:radio[name=service[]]').is(':checked') && $('input:radio[name=service_type[]]').is(':checked')){
       setSelectedValues();
       $("#page3").show();
-      console.log($('.setServiceType').text($("input[name='service_type']:checked").val()));
+      console.log($('.setServiceType').text($("input[name='service_type[]']:checked").val()));
       $("#index,#page1,#page2").hide();
     }
 });
