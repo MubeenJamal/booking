@@ -341,7 +341,7 @@ body{
     content: '';
     background-image: url(../images/parking-lines.png);
     width: 220px;
-    height: 101px;
+    height: 100%;
     display: inline-block;
     position: absolute;
     background-size: 100%;
@@ -360,7 +360,7 @@ body{
     content: '';
     background-image: url(../images/parking-lines.png);
     width: 220px;
-    height: 101px;
+    height: 100%;
     display: inline-block;
     position: absolute;
     background-size: 100%;
@@ -579,7 +579,7 @@ body{
 
 
 /* HIDE RADIO */
-.footer-icon [type="radio"] { 
+.footer-icon [type="checkbox"] { 
   position: absolute;
   opacity: 0;
   width: 0;
@@ -591,12 +591,12 @@ body{
 }
 
 /* IMAGE STYLES */
-.footer-icon [type="radio"] + img {
+.footer-icon [type="checkbox"] + img {
   cursor: pointer;
 }
 
 /* CHECKED STYLES */
-.footer-icon [type="radio"]:checked + img {
+.footer-icon [type="checkbox"]:checked + img {
   opacity: .8;
   border: 2px solid #949494;
 }
