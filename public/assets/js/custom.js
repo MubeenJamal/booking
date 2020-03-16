@@ -258,8 +258,10 @@ function setSelectedValues(){
      }
      $serviceType = "";
      $price = 0;
+     $counter = 0
      $("input[name='service[]'][type=checkbox]").each(function () {
        if(this.checked){
+         $counter++;
          $split = $(this).val().split('-');
           $('.final_sevice').html($split[0]);
           $serviceType += $split[0] + "<br>";
@@ -268,6 +270,10 @@ function setSelectedValues(){
           $price = Number($sp)+Number($price);
        }
       });
+
+      if($counter == 0){
+        $('.setServiceType').html('--');
+      }
 
     $price = Number($price)+Number($parkCharges);
     $('.total-price').html($price + '€');
