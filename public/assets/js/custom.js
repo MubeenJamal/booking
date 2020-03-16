@@ -134,8 +134,14 @@ $(".serviceImg1").click(function(){
 });
 
 $(".page2-back-service").click(function(){
+//     alert(7777);
+//     if($("#customRadio.0").prop('checked') == false){
+//     //do something
+//     alert(8888888);
+// }
   $(".box2,.box3,.box1").hide();
   $("#servicesWithUpCar").show();
+  
 });
 
 $(".serviceImg2").click(function(){
@@ -311,7 +317,7 @@ $("#page1Next-btn").click(function(){
   $("#index,#page1,#page2").hide();
 });
 
-$("#page1Prev-btn,#home-btn").click(function(){
+$("#page1Prev-btn,#home-btn,#reserver_btn").click(function(){
   $("#index").show();
   $("#page1,#page2,#page3").hide();
   $("body").removeClass("inner-bg");

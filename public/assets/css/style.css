@@ -17,7 +17,7 @@ body{
     width: 300px !important;
     margin: 0 auto;
 }
-#reserver_btn{
+#reserver_btn a{
     color:#FFCF00;
 }
 
@@ -458,7 +458,7 @@ body{
 
 .page2-radio .custom-control .custom-control-label{
   text-align: left;
-  color: #1f1f1f;
+  color: #00b90e;
   font-size: 24px;
   font-weight: 700;
   text-transform: capitalize;

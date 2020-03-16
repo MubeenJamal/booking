@@ -57,8 +57,8 @@
 				<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
 					<ul class="navbar-nav">
 					    <li id="home-btn"><a href="javascript:void(0)">Accueil</a></li>
-						<li><a href="javascript:void(0)"><span id="reserver_btn">Réserver</span></a></li>
-						<li><a href="javascript:void(0)" id="faqs-btn">Vos Questions</a></li>
+						<li id="reserver_btn"><a href="javascript:void(0)"><span >Réserver</span></a></li>
+						<li id="faqs-btn"><a href="javascript:void(0)" >Vos Questions</a></li>
 						<!--<li><a href="#">Abonnement</a></li>-->
 						<!--<li><a href="#">Localisation</a></li>-->
 					</ul>
@@ -529,8 +529,8 @@
 		        			</div>
 		        			<div class="order-2 order-sm-4 col-sm-3 col-6">
 		        				<div class="section7-box section7-box4">
-		        					<h3>Méntions légales</h3>
-		        					<p>Conditions générales de ventes</p>
+		        					<a href="https://parkme.fr/pdf/condition_general_parkme_de_ventes.pdf" target="_blank"><h3>Méntions légales</h3>
+		        					<p>Conditions générales de ventes</p></a>
 		        				</div>
 		        			</div>
 		        			<div class="order-5 order-sm-5 col-sm-2 col-6">
@@ -624,7 +624,7 @@
 				                </div>
 				                <div class="col-sm-12 col-12" id="carHeader">
 				                    <div class="page1-header" >
-				                        <p>cliquer sur taille du vecicule</p>
+				                        <p>cliquer sur taille de votre véhicule</p>
 				                    </div>
 				                </div>
 				            </div>
@@ -747,16 +747,17 @@
 			            </div>
 
 			            <div class="row">
-			            	<div class="col-sm-6 p-0">
+			            	<div class="col-sm-12">
 			            		<div class="black-bg">
-									<p>Le cout de la prestation (<span>10E</span>) <br> est <span>paye maintenant</span></p>
+									<p>1. Le coût de la prestation (<span>10€</span>) est <span>payé maintenant.</span></p>
+									<p>2. Gràce à la <span>facture,</span>  vous réglez <span>à votre retour.</span></p>
 			            		</div>
 			            	</div>
-			            	<div class="col-sm-6 p-0">
-			            		<div class="black-bg">
-			            			<p>Grace a la <span>facture</span> du lein de carburant<br> vous reglez <span>a votre retour</span></p>
-			            		</div>
-			            	</div>
+			            	<!--<div class="col-sm-6 p-0">-->
+			            	<!--	<div class="black-bg">-->
+			            	<!--		<p>Grâce â la <span>facture,</span>  vous réglez <span>â votre retour.</span></p>-->
+			            	<!--	</div>-->
+			            	<!--</div>-->
 			            </div>
 
 			            <div class="row">
@@ -815,14 +816,15 @@
 			            </div>
 
 			            <div class="row">
-			            	<div class="col-sm-6 p-0">
+			      <!--      	<div class="col-sm-6 p-0">-->
+			      <!--      		<div class="black-bg">-->
+									<!--<p>Le cout de la prestation (<span>10E</span>) <br> est <span>paye maintenant</span></p>-->
+			      <!--      		</div>-->
+			      <!--      	</div>-->
+			            	<div class="col-sm-12 col-12">
 			            		<div class="black-bg">
-									<p>Le cout de la prestation (<span>10E</span>) <br> est <span>paye maintenant</span></p>
-			            		</div>
-			            	</div>
-			            	<div class="col-sm-6 p-0">
-			            		<div class="black-bg">
-			            			<p>Grace a la <span>facture</span> du lein de carburant<br> vous reglez <span>a votre retour</span></p>
+			            			<p>1. Le coût de la prestation (<span>10€</span>) est <span>payé maintenant.</span></p>
+									<p>2. Gràce à la <span>facture,</span>  vous réglez <span>à votre retour.</span></p>
 			            		</div>
 			            	</div>
 			            </div>
@@ -1348,14 +1350,15 @@
 			            </div>
 
 			            <div class="row">
-			            	<div class="col-sm-6 p-0">
+			      <!--      	<div class="col-sm-6 p-0">-->
+			      <!--      		<div class="black-bg">-->
+									<!--<p>Le cout de la prestation (<span>10E</span>) <br> est <span>paye maintenant</span></p>-->
+			      <!--      		</div>-->
+			      <!--      	</div>-->
+			            	<div class="col-sm-12 col-12">
 			            		<div class="black-bg">
-									<p>Le cout de la prestation (<span>10E</span>) <br> est <span>paye maintenant</span></p>
-			            		</div>
-			            	</div>
-			            	<div class="col-sm-6 p-0">
-			            		<div class="black-bg">
-			            			<p>Grace a la <span>facture</span> du lein de carburant<br> vous reglez <span>a votre retour</span></p>
+			            		    <p>Le cout de la prestation (<span>10E</span>) est <span>paye maintenant</span></p>
+			            			<p>Grace a la <span>facture</span> du lein de carburant vous reglez <span>a votre retour</span></p>
 			            		</div>
 			            	</div>
 			            </div>
@@ -1477,7 +1480,7 @@
 								      </div>
 
 								      <div class="col">
-								        <input type="text" class="form-control form-control-lg form-check-input" placeholder="Numero de telephone" id="telephoneNumber" name="phone" required />
+								        <input type="text" class="form-control form-control-lg form-check-input" placeholder="N° de téléphone" id="telephoneNumber" name="phone" required />
 								        <div class="valid-feedback">Valid.</div>
 	    								<div class="invalid-feedback">Telephone Number Required.</div>
 								      </div>
@@ -1495,7 +1498,7 @@
 									    <div class="col">
 									        <!--<input type="number" class="form-control form-control-lg form-check-input" placeholder="Numero de personne (Navette)" name="no_of_seats" required />-->
 									        <select class="form-control custom-select-lg" name="no_of_seats" required>
-									            <option value="" disabled selected>Numero de personne (Navette)</option>
+									            <option value="" disabled selected>Nombre de personne (Navette)</option>
         									    <option value="1">1</option>
         									    <option value="2">2</option>
         									    <option value="3">3</option>
