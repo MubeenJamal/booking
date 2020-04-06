@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Srmklive\PayPal\Services\ExpressCheckout;
 use Illuminate\Http\Request;
 use App\Booking;
+use Stripe;
 class BookingController extends Controller
 {
     public function booking_from(Request $request)
@@ -38,11 +39,54 @@ class BookingController extends Controller
         $data['cancel_url'] = route('payment.cancel');
         $data['total'] = $booking_data['price'];
 
-        $provider = new ExpressCheckout;
-        // $response = $provider->setExpressCheckout($data);
-        $response = $provider->setExpressCheckout($data, true);
-        $redirect_url = $response['paypal_link'];
-        return redirect($redirect_url);
+        //PAYPAL INTEGRATION
+        // $provider = new ExpressCheckout;
+        // // $response = $provider->setExpressCheckout($data);
+        // $response = $provider->setExpressCheckout($data, true);
+        // $redirect_url = $response['paypal_link'];
+        // return redirect($redirect_url);
+
+        //STRIPE INTEGRATION
+        try {
+            $card_detail = array(
+                'card' => [
+                    'number' => $request->card_number,
+                    'exp_month' => $request->exp_month,
+                    'exp_year' => $request->exp_year,
+                    'cvc' => $request->cvc,
+                  ]
+            );
+            $token = Stripe\Token::create($card_detail);
+            if(!$token->error){
+                $detail = array(
+                    "amount" => $booking_data['price'],
+                    "currency" => 'EUR',
+                    "source" => $token->id,
+                    "description" => "ParkMe Payment",
+                    'transfer_group' =>$ins->id
+                );
+                $charge = Stripe\Charge::create($detail);
+                if(isset($charge->id) && !empty($charge->id)){
+                    $this->_responseData['status'] = 1;
+                    $this->_responseData['message'] = "Charged has been made";
+                    $this->_responseData['data'] = $charge;
+                }else{
+                    $this->_responseData['status'] = 0;
+                    $this->_responseData['message'] = "Failed to charged";
+                }
+            }else{
+                $this->_responseData['status'] = 0;
+                $this->_responseData['message'] = $token->message;
+            }
+
+        }catch (Exception $e) {
+            // Something else happened, completely unrelated to Stripe
+            $body = $e->getJsonBody();
+            $err  = $body['error'];
+            $this->_responseData['status'] = 0;
+            $this->_responseData['message'] = $err['message'];
+        }
+        echo $this->_responseData['message'];
     }
 
         /**

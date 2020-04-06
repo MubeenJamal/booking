@@ -1562,19 +1562,19 @@
     									    <div class="row mb-3">
     
     									      <div class="col">
-    									        <input type="text" class="form-control form-control-lg form-check-input card-expiry-month" placeholder="Date d'expiration (MM/AA)" name="expiry" id="expiryDate" required />
+    									        <input type="text" class="form-control form-control-lg form-check-input card-expiry-month" placeholder="Date d'expiration (MM/AA)" name="exp_month" id="expiryDate" required />
     									        <div class="valid-feedback">Valid.</div>
     	    									<div class="invalid-feedback">Please fill out this field.</div>
     									      </div>
     									      
     									      <div class="col">
-    									        <input type="text" class="form-control form-control-lg form-check-input card-expiry-year" placeholder="Date d'expiration (MM/AA)" name="expiry" id="expiryDate" required />
+    									        <input type="text" class="form-control form-control-lg form-check-input card-expiry-year" placeholder="Date d'expiration (MM/AA)" name="exp_year" id="expiryDate" required />
     									        <div class="valid-feedback">Valid.</div>
     	    									<div class="invalid-feedback">Please fill out this field.</div>
     									      </div>
     
     									      <div class="col">
-    									        <input type="text" class="form-control form-control-lg form-check-input card-cvc" placeholder="Code de securitees" name="csv"  required />
+    									        <input type="text" class="form-control form-control-lg form-check-input card-cvc" placeholder="Code de securitees" name="cvc"  required />
     									        <div class="valid-feedback">Valid.</div>
     	    									<div class="invalid-feedback">Please fill out this field.</div>
     									      </div>
