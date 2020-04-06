@@ -180,12 +180,13 @@
 
     #arrivalDate::placeholder,
     #departureDate::placeholder{
-        font-size: 12px;
+        font-size: 11.5px;
     }
     
     #arrivalDate,
     #departureDate{
         padding-top: 18px !important;
+        padding-left: 3px;
     }
     
     /*#name:-moz-placeholder,*/

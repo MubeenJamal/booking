@@ -44,4 +44,5 @@ Route::get('paypal', function () {
 });
 Route::get('payment', 'PayPalController@payment')->name('payment');
 Route::get('cancel', 'PayPalController@cancel')->name('payment.cancel');
+Route::post('stripe', 'HomeController@stripePost')->name('stripe.post');
 
