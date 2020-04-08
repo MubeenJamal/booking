@@ -48,6 +48,7 @@ class BookingController extends Controller
 
         //STRIPE INTEGRATION
         try {
+            Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
             $card_detail = array(
                 'card' => [
                     'number' => $request->card_number,
